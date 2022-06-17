@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Impresoras.Config;
 
-namespace Impresoras
+namespace Impresoras.Views
 {
-    public partial class Form1 : Form
+    public partial class vwPrincipal : Form
     {
-        public Form1()
+        public vwPrincipal()
         {
+            DBImpresora cnx= new DBImpresora();
             InitializeComponent();
+            MessageBox.Show("Conexion Exitosa" + cnx.getConnection());
         }
     }
 }
