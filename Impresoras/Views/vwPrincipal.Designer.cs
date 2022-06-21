@@ -47,7 +47,7 @@
             this.iconBtnDashboard = new FontAwesome.Sharp.IconButton();
             this.pnlSlideMenuImg = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlForm = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlForm = new System.Windows.Forms.Panel();
             this.pnlFormBar.SuspendLayout();
             this.pnlFormAction.SuspendLayout();
             this.pnlHeaderCaption.SuspendLayout();
@@ -361,6 +361,7 @@
             // 
             // pnlForm
             // 
+            this.pnlForm.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForm.Location = new System.Drawing.Point(170, 30);
             this.pnlForm.Name = "pnlForm";
@@ -416,6 +417,6 @@
         private FontAwesome.Sharp.IconButton iconBtnAlta;
         private FontAwesome.Sharp.IconButton iconBtnPrint;
         private FontAwesome.Sharp.IconButton iconBtnDashboard;
-        private System.Windows.Forms.FlowLayoutPanel pnlForm;
+        private System.Windows.Forms.Panel pnlForm;
     }
 }
