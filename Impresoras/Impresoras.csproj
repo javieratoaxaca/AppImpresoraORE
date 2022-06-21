@@ -105,6 +105,7 @@
   <ItemGroup>
     <Content Include="Config\Guna.UI.dll" />
     <Content Include="Config\MySql.Data.dll" />
+    <None Include="Resources\Perfil.png" />
     <None Include="Resources\Autodidacta cuadro.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
