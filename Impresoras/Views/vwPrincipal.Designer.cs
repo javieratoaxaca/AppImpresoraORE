@@ -39,22 +39,23 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.pctIconForm = new System.Windows.Forms.PictureBox();
             this.pnlSlideMenu = new System.Windows.Forms.Panel();
+            this.iconBtnConfiguracion = new FontAwesome.Sharp.IconButton();
+            this.pnlSubMenuCatalogo = new System.Windows.Forms.Panel();
+            this.iconBtnAsignacion = new FontAwesome.Sharp.IconButton();
+            this.iconBtnAlta = new FontAwesome.Sharp.IconButton();
+            this.iconBtnPrint = new FontAwesome.Sharp.IconButton();
+            this.iconBtnDashboard = new FontAwesome.Sharp.IconButton();
             this.pnlSlideMenuImg = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconBtnDashboard = new FontAwesome.Sharp.IconButton();
-            this.iconBtnPrint = new FontAwesome.Sharp.IconButton();
-            this.pnlSubMenuCatalogo = new System.Windows.Forms.Panel();
-            this.iconBtnAlta = new FontAwesome.Sharp.IconButton();
-            this.iconBtnAsignacion = new FontAwesome.Sharp.IconButton();
-            this.iconBtnConfiguracion = new FontAwesome.Sharp.IconButton();
+            this.pnlForm = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlFormBar.SuspendLayout();
             this.pnlFormAction.SuspendLayout();
             this.pnlHeaderCaption.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctIconForm)).BeginInit();
             this.pnlSlideMenu.SuspendLayout();
+            this.pnlSubMenuCatalogo.SuspendLayout();
             this.pnlSlideMenuImg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlSubMenuCatalogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlFormBar
@@ -219,45 +220,79 @@
             this.pnlSlideMenu.Size = new System.Drawing.Size(170, 795);
             this.pnlSlideMenu.TabIndex = 4;
             // 
-            // pnlSlideMenuImg
+            // iconBtnConfiguracion
             // 
-            this.pnlSlideMenuImg.Controls.Add(this.pictureBox1);
-            this.pnlSlideMenuImg.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSlideMenuImg.Location = new System.Drawing.Point(0, 0);
-            this.pnlSlideMenuImg.Name = "pnlSlideMenuImg";
-            this.pnlSlideMenuImg.Size = new System.Drawing.Size(170, 134);
-            this.pnlSlideMenuImg.TabIndex = 0;
+            this.iconBtnConfiguracion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconBtnConfiguracion.FlatAppearance.BorderSize = 0;
+            this.iconBtnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnConfiguracion.ForeColor = System.Drawing.Color.White;
+            this.iconBtnConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.iconBtnConfiguracion.IconColor = System.Drawing.Color.White;
+            this.iconBtnConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnConfiguracion.IconSize = 30;
+            this.iconBtnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnConfiguracion.Location = new System.Drawing.Point(0, 317);
+            this.iconBtnConfiguracion.Name = "iconBtnConfiguracion";
+            this.iconBtnConfiguracion.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.iconBtnConfiguracion.Size = new System.Drawing.Size(170, 46);
+            this.iconBtnConfiguracion.TabIndex = 4;
+            this.iconBtnConfiguracion.Text = "           Configuracion";
+            this.iconBtnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnConfiguracion.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pnlSubMenuCatalogo
             // 
-            this.pictureBox1.Image = global::Impresoras.Properties.Resources.Perfil;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pnlSubMenuCatalogo.BackColor = System.Drawing.Color.DimGray;
+            this.pnlSubMenuCatalogo.Controls.Add(this.iconBtnAsignacion);
+            this.pnlSubMenuCatalogo.Controls.Add(this.iconBtnAlta);
+            this.pnlSubMenuCatalogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuCatalogo.Location = new System.Drawing.Point(0, 225);
+            this.pnlSubMenuCatalogo.Name = "pnlSubMenuCatalogo";
+            this.pnlSubMenuCatalogo.Size = new System.Drawing.Size(170, 92);
+            this.pnlSubMenuCatalogo.TabIndex = 3;
             // 
-            // iconBtnDashboard
+            // iconBtnAsignacion
             // 
-            this.iconBtnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnDashboard.FlatAppearance.BorderSize = 0;
-            this.iconBtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnDashboard.ForeColor = System.Drawing.Color.White;
-            this.iconBtnDashboard.IconChar = FontAwesome.Sharp.IconChar.LaptopCode;
-            this.iconBtnDashboard.IconColor = System.Drawing.Color.White;
-            this.iconBtnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnDashboard.IconSize = 30;
-            this.iconBtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnDashboard.Location = new System.Drawing.Point(0, 134);
-            this.iconBtnDashboard.Name = "iconBtnDashboard";
-            this.iconBtnDashboard.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.iconBtnDashboard.Size = new System.Drawing.Size(170, 46);
-            this.iconBtnDashboard.TabIndex = 1;
-            this.iconBtnDashboard.Text = "           Dashboard";
-            this.iconBtnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnDashboard.UseVisualStyleBackColor = true;
+            this.iconBtnAsignacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconBtnAsignacion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.iconBtnAsignacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnAsignacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnAsignacion.ForeColor = System.Drawing.Color.White;
+            this.iconBtnAsignacion.IconChar = FontAwesome.Sharp.IconChar.PeopleCarry;
+            this.iconBtnAsignacion.IconColor = System.Drawing.Color.White;
+            this.iconBtnAsignacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnAsignacion.IconSize = 25;
+            this.iconBtnAsignacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnAsignacion.Location = new System.Drawing.Point(0, 46);
+            this.iconBtnAsignacion.Name = "iconBtnAsignacion";
+            this.iconBtnAsignacion.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.iconBtnAsignacion.Size = new System.Drawing.Size(170, 46);
+            this.iconBtnAsignacion.TabIndex = 3;
+            this.iconBtnAsignacion.Text = "          Asignación";
+            this.iconBtnAsignacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnAsignacion.UseVisualStyleBackColor = true;
+            // 
+            // iconBtnAlta
+            // 
+            this.iconBtnAlta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconBtnAlta.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.iconBtnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnAlta.ForeColor = System.Drawing.Color.White;
+            this.iconBtnAlta.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.iconBtnAlta.IconColor = System.Drawing.Color.White;
+            this.iconBtnAlta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnAlta.IconSize = 25;
+            this.iconBtnAlta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnAlta.Location = new System.Drawing.Point(0, 0);
+            this.iconBtnAlta.Name = "iconBtnAlta";
+            this.iconBtnAlta.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.iconBtnAlta.Size = new System.Drawing.Size(170, 46);
+            this.iconBtnAlta.TabIndex = 2;
+            this.iconBtnAlta.Text = "          Alta";
+            this.iconBtnAlta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnAlta.UseVisualStyleBackColor = true;
             // 
             // iconBtnPrint
             // 
@@ -281,79 +316,56 @@
             this.iconBtnPrint.UseVisualStyleBackColor = true;
             this.iconBtnPrint.Click += new System.EventHandler(this.iconBtnPrint_Click);
             // 
-            // pnlSubMenuCatalogo
+            // iconBtnDashboard
             // 
-            this.pnlSubMenuCatalogo.BackColor = System.Drawing.Color.DimGray;
-            this.pnlSubMenuCatalogo.Controls.Add(this.iconBtnAsignacion);
-            this.pnlSubMenuCatalogo.Controls.Add(this.iconBtnAlta);
-            this.pnlSubMenuCatalogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuCatalogo.Location = new System.Drawing.Point(0, 225);
-            this.pnlSubMenuCatalogo.Name = "pnlSubMenuCatalogo";
-            this.pnlSubMenuCatalogo.Size = new System.Drawing.Size(170, 92);
-            this.pnlSubMenuCatalogo.TabIndex = 3;
+            this.iconBtnDashboard.AccessibleDescription = "Dashboard";
+            this.iconBtnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconBtnDashboard.FlatAppearance.BorderSize = 0;
+            this.iconBtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnDashboard.ForeColor = System.Drawing.Color.White;
+            this.iconBtnDashboard.IconChar = FontAwesome.Sharp.IconChar.LaptopCode;
+            this.iconBtnDashboard.IconColor = System.Drawing.Color.White;
+            this.iconBtnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnDashboard.IconSize = 30;
+            this.iconBtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnDashboard.Location = new System.Drawing.Point(0, 134);
+            this.iconBtnDashboard.Name = "iconBtnDashboard";
+            this.iconBtnDashboard.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.iconBtnDashboard.Size = new System.Drawing.Size(170, 46);
+            this.iconBtnDashboard.TabIndex = 1;
+            this.iconBtnDashboard.Tag = "";
+            this.iconBtnDashboard.Text = "           Dashboard";
+            this.iconBtnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnDashboard.UseVisualStyleBackColor = true;
+            this.iconBtnDashboard.Click += new System.EventHandler(this.iconBtnDashboard_Click);
             // 
-            // iconBtnAlta
+            // pnlSlideMenuImg
             // 
-            this.iconBtnAlta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnAlta.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.iconBtnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnAlta.ForeColor = System.Drawing.Color.White;
-            this.iconBtnAlta.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.iconBtnAlta.IconColor = System.Drawing.Color.White;
-            this.iconBtnAlta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnAlta.IconSize = 25;
-            this.iconBtnAlta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnAlta.Location = new System.Drawing.Point(0, 0);
-            this.iconBtnAlta.Name = "iconBtnAlta";
-            this.iconBtnAlta.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.iconBtnAlta.Size = new System.Drawing.Size(170, 46);
-            this.iconBtnAlta.TabIndex = 2;
-            this.iconBtnAlta.Text = "          Alta";
-            this.iconBtnAlta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnAlta.UseVisualStyleBackColor = true;
+            this.pnlSlideMenuImg.Controls.Add(this.pictureBox1);
+            this.pnlSlideMenuImg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSlideMenuImg.Location = new System.Drawing.Point(0, 0);
+            this.pnlSlideMenuImg.Name = "pnlSlideMenuImg";
+            this.pnlSlideMenuImg.Size = new System.Drawing.Size(170, 134);
+            this.pnlSlideMenuImg.TabIndex = 0;
             // 
-            // iconBtnAsignacion
+            // pictureBox1
             // 
-            this.iconBtnAsignacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnAsignacion.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.iconBtnAsignacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnAsignacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnAsignacion.ForeColor = System.Drawing.Color.White;
-            this.iconBtnAsignacion.IconChar = FontAwesome.Sharp.IconChar.PeopleCarry;
-            this.iconBtnAsignacion.IconColor = System.Drawing.Color.White;
-            this.iconBtnAsignacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnAsignacion.IconSize = 25;
-            this.iconBtnAsignacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnAsignacion.Location = new System.Drawing.Point(0, 46);
-            this.iconBtnAsignacion.Name = "iconBtnAsignacion";
-            this.iconBtnAsignacion.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.iconBtnAsignacion.Size = new System.Drawing.Size(170, 46);
-            this.iconBtnAsignacion.TabIndex = 3;
-            this.iconBtnAsignacion.Text = "          Asignación";
-            this.iconBtnAsignacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnAsignacion.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::Impresoras.Properties.Resources.Perfil;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // iconBtnConfiguracion
+            // pnlForm
             // 
-            this.iconBtnConfiguracion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnConfiguracion.FlatAppearance.BorderSize = 0;
-            this.iconBtnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnConfiguracion.ForeColor = System.Drawing.Color.White;
-            this.iconBtnConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.iconBtnConfiguracion.IconColor = System.Drawing.Color.White;
-            this.iconBtnConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnConfiguracion.IconSize = 30;
-            this.iconBtnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnConfiguracion.Location = new System.Drawing.Point(0, 317);
-            this.iconBtnConfiguracion.Name = "iconBtnConfiguracion";
-            this.iconBtnConfiguracion.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.iconBtnConfiguracion.Size = new System.Drawing.Size(170, 46);
-            this.iconBtnConfiguracion.TabIndex = 4;
-            this.iconBtnConfiguracion.Text = "           Configuracion";
-            this.iconBtnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnConfiguracion.UseVisualStyleBackColor = true;
+            this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlForm.Location = new System.Drawing.Point(170, 30);
+            this.pnlForm.Name = "pnlForm";
+            this.pnlForm.Size = new System.Drawing.Size(1038, 795);
+            this.pnlForm.TabIndex = 5;
             // 
             // vwPrincipal
             // 
@@ -361,6 +373,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1208, 825);
+            this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.pnlSlideMenu);
             this.Controls.Add(this.pnlFormBar);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -375,9 +388,9 @@
             this.pnlHeaderCaption.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctIconForm)).EndInit();
             this.pnlSlideMenu.ResumeLayout(false);
+            this.pnlSubMenuCatalogo.ResumeLayout(false);
             this.pnlSlideMenuImg.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlSubMenuCatalogo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -403,5 +416,6 @@
         private FontAwesome.Sharp.IconButton iconBtnAlta;
         private FontAwesome.Sharp.IconButton iconBtnPrint;
         private FontAwesome.Sharp.IconButton iconBtnDashboard;
+        private System.Windows.Forms.FlowLayoutPanel pnlForm;
     }
 }

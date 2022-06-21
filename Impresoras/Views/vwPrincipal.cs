@@ -14,6 +14,8 @@ namespace Impresoras.Views
 {
     public partial class vwPrincipal : Form
     {
+
+        private Form frmActivo;
         DBImpresora cnx = new DBImpresora();
         /// <summary> Seccion para el manejo de los eventos de los botonos de la pantalla
         /// 
@@ -154,6 +156,43 @@ namespace Impresoras.Views
         private void iconBtnPrint_Click(object sender, EventArgs e)
         {
             ShowSubMenu(pnlSubMenuCatalogo);
+            activeBtn(iconBtnPrint);
+            frmShow(new frmPrint());
+        }
+
+        #region Metodo Formularios
+        private void frmShow(Form frm)
+        {
+            activeFrmClose();
+            frmActivo = frm;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            
+            pnlForm.Controls.Add(frm);
+            pnlForm.Tag = frm;
+            frm.BringToFront();
+            frm.Show();
+        }
+
+        private void activeFrmClose()
+        {
+            if (frmActivo != null)
+                frmActivo.Close();
+        }
+
+        private void activeBtn(Button frmActivo)
+        {
+            foreach (Control ctrl in pnlSlideMenu.Controls)
+                ctrl.ForeColor = Color.White;
+
+            frmActivo.ForeColor = Color.Red;
+        }
+        #endregion
+
+        private void iconBtnDashboard_Click(object sender, EventArgs e)
+        {
+            activeBtn(iconBtnDashboard);
+            activeFrmClose();
         }
     }
 }
