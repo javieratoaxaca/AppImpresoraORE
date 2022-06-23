@@ -69,11 +69,17 @@
     <Compile Include="Models\mdImpresora.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\frmDashBoard.cs">
+    <Compile Include="Views\frmPrints.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmDashBoard.Designer.cs">
-      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    <Compile Include="Views\frmPrints.Designer.cs">
+      <DependentUpon>frmPrints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmPrintUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmPrintUp.Designer.cs">
+      <DependentUpon>frmPrintUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\vwPrincipal.cs">
       <SubType>Form</SubType>
@@ -91,8 +97,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Views\frmDashBoard.resx">
-      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmPrints.resx">
+      <DependentUpon>frmPrints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmPrintUp.resx">
+      <DependentUpon>frmPrintUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\vwPrincipal.resx">
       <DependentUpon>vwPrincipal.cs</DependentUpon>
@@ -114,6 +123,60 @@
   <ItemGroup>
     <Content Include="Config\Guna.UI.dll" />
     <Content Include="Config\MySql.Data.dll" />
+    <None Include="Resources\vacuum_cleaner_128px.png" />
+    <None Include="Resources\vacuum_cleaner_64px.png" />
+    <None Include="Resources\vacuum_cleaner_60px.png" />
+    <None Include="Resources\regreso.png" />
+    <None Include="Resources\min_64px.png" />
+    <None Include="Resources\microsoft_excel_52px.png" />
+    <None Include="Resources\max_64px.png" />
+    <None Include="Resources\icons8_usb_connected_48px.png" />
+    <None Include="Resources\icons8_university_100px_1.png" />
+    <None Include="Resources\icons8_sort_left_52px.png" />
+    <None Include="Resources\icons8_sort_left_48px.png" />
+    <None Include="Resources\icons8_sort_left_48px - copia.png" />
+    <None Include="Resources\icons8_skip_to_start_48px.png" />
+    <None Include="Resources\icons8_skip_to_start_48px - copia1.png" />
+    <None Include="Resources\icons8_skip_to_start_48px - copia.png" />
+    <None Include="Resources\icons8_search_48px_1.png" />
+    <None Include="Resources\icons8_search_48px.png" />
+    <None Include="Resources\icons8_save_as_100px_1.png" />
+    <None Include="Resources\icons8_save_as_48px.png" />
+    <None Include="Resources\icons8_save_48px_3.png" />
+    <None Include="Resources\icons8_save_48px_1.png" />
+    <None Include="Resources\icons8_save_48px.png" />
+    <None Include="Resources\icons8_previous_100px_1.png" />
+    <None Include="Resources\icons8_previous_100px.png" />
+    <None Include="Resources\icons8_previous_52px.png" />
+    <None Include="Resources\icons8_next_52px.png" />
+    <None Include="Resources\icons8_microsoft_excel_60px.png" />
+    <None Include="Resources\icons8_google_web_search_60px.png" />
+    <None Include="Resources\icons8_end_48px_1.png" />
+    <None Include="Resources\icons8_end_48px.png" />
+    <None Include="Resources\icons8_edit_file_100px.png" />
+    <None Include="Resources\icons8_edit_60px.png" />
+    <None Include="Resources\icons8_delete_trash_64px.png" />
+    <None Include="Resources\icons8_delete_file_48px.png" />
+    <None Include="Resources\icons8_database_import_100px_1.png" />
+    <None Include="Resources\icons8_data_grid_60px.png" />
+    <None Include="Resources\icons8_classroom_52px_1.png" />
+    <None Include="Resources\icons8_cancel_subscription_48px_1.png" />
+    <None Include="Resources\icons8_cancel_subscription_48px.png" />
+    <None Include="Resources\icons8_cancel_64px.png" />
+    <None Include="Resources\icons8_camera_100px.png" />
+    <None Include="Resources\icons8_brick_60px_1.png" />
+    <None Include="Resources\icons8_back_arrow_48px.png" />
+    <None Include="Resources\icons8_add_new_48px_1.png" />
+    <None Include="Resources\icons8_add_new_48px.png" />
+    <None Include="Resources\guardar-el-archivo.png" />
+    <None Include="Resources\FirmaATBack1.png" />
+    <None Include="Resources\FirmaATBack.png" />
+    <None Include="Resources\exit_64px.png" />
+    <None Include="Resources\estadisticas.png" />
+    <None Include="Resources\disquete.png" />
+    <None Include="Resources\add_48px.png" />
+    <None Include="Resources\41QvEmRG0OL.jpg" />
+    <None Include="Resources\2022-06-22_10h47_34.jpg" />
     <None Include="Resources\Perfil.png" />
     <None Include="Resources\Autodidacta cuadro.ico" />
   </ItemGroup>

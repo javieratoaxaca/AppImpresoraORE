@@ -16,5 +16,10 @@ namespace Impresoras.Views
         {
             InitializeComponent();
         }
+
+        private void lblMsnDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

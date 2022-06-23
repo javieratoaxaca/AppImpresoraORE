@@ -194,5 +194,12 @@ namespace Impresoras.Views
             activeBtn(iconBtnDashboard);
             activeFrmClose();
         }
+
+        private void iconBtnAlta_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlSubMenuCatalogo);
+            activeBtn(iconBtnPrint);
+            frmShow(new frmPrintUp());
+        }
     }
 }
