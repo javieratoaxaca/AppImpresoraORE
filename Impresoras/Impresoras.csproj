@@ -123,6 +123,8 @@
   <ItemGroup>
     <Content Include="Config\Guna.UI.dll" />
     <Content Include="Config\MySql.Data.dll" />
+    <None Include="Resources\icons8_qr_code_48px_1.png" />
+    <None Include="Resources\icons8_qr_code_48px.png" />
     <None Include="Resources\vacuum_cleaner_128px.png" />
     <None Include="Resources\vacuum_cleaner_64px.png" />
     <None Include="Resources\vacuum_cleaner_60px.png" />

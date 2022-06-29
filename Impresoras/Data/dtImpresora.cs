@@ -9,7 +9,6 @@ namespace Impresoras.Data
     class dtImpresora
     {
         int idInventarioEquipo;
-        int idAccesorioEquipo;
         string numeroEquipo;
         string nombreEquipo;
         string serieEquipo;
@@ -31,18 +30,6 @@ namespace Impresoras.Data
             }
         }
 
-        public int IdAccesorioEquipo
-        {
-            get
-            {
-                return idAccesorioEquipo;
-            }
-
-            set
-            {
-                idAccesorioEquipo = value;
-            }
-        }
 
         public string NumeroEquipo
         {

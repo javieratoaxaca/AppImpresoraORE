@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gTxtBuscarODP = new Guna.UI.WinForms.GunaTextBox();
@@ -49,13 +49,13 @@
             this.gTxtSerieEquipo = new Guna.UI.WinForms.GunaTextBox();
             this.gTxtMarcaEquipo = new Guna.UI.WinForms.GunaTextBox();
             this.gTxtModeloEquipo = new Guna.UI.WinForms.GunaTextBox();
-            this.gBtnRegistrarDispositivo = new Guna.UI.WinForms.GunaButton();
-            this.gBtnGuardarDispositivo = new Guna.UI.WinForms.GunaButton();
-            this.gBtnEditarDispositivo = new Guna.UI.WinForms.GunaButton();
-            this.gBtnEliminarDispositivo = new Guna.UI.WinForms.GunaButton();
-            this.gBtnQrDispositivo = new Guna.UI.WinForms.GunaButton();
             this.gunaDataGridView1 = new Guna.UI.WinForms.GunaDataGridView();
             this.pctQr = new System.Windows.Forms.PictureBox();
+            this.gBtnQrDispositivo = new Guna.UI.WinForms.GunaButton();
+            this.gBtnEliminarDispositivo = new Guna.UI.WinForms.GunaButton();
+            this.gBtnEditarDispositivo = new Guna.UI.WinForms.GunaButton();
+            this.gBtnRegistrarDispositivo = new Guna.UI.WinForms.GunaButton();
+            this.gBtnGuardarDispositivo = new Guna.UI.WinForms.GunaButton();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
@@ -175,7 +175,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(148, 99);
+            this.gunaLabel1.Location = new System.Drawing.Point(72, 99);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(128, 25);
             this.gunaLabel1.TabIndex = 29;
@@ -192,12 +192,12 @@
             this.gTxtNoEquipo.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtNoEquipo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.gTxtNoEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtNoEquipo.Location = new System.Drawing.Point(292, 83);
+            this.gTxtNoEquipo.Location = new System.Drawing.Point(216, 83);
             this.gTxtNoEquipo.Name = "gTxtNoEquipo";
             this.gTxtNoEquipo.PasswordChar = '\0';
             this.gTxtNoEquipo.Radius = 15;
             this.gTxtNoEquipo.SelectedText = "";
-            this.gTxtNoEquipo.Size = new System.Drawing.Size(455, 50);
+            this.gTxtNoEquipo.Size = new System.Drawing.Size(296, 50);
             this.gTxtNoEquipo.TabIndex = 28;
             // 
             // gunaLabel3
@@ -205,7 +205,7 @@
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(122, 256);
+            this.gunaLabel3.Location = new System.Drawing.Point(46, 256);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(154, 25);
             this.gunaLabel3.TabIndex = 30;
@@ -216,7 +216,7 @@
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel4.Location = new System.Drawing.Point(123, 175);
+            this.gunaLabel4.Location = new System.Drawing.Point(47, 175);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(153, 25);
             this.gunaLabel4.TabIndex = 31;
@@ -227,7 +227,7 @@
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel6.Location = new System.Drawing.Point(100, 417);
+            this.gunaLabel6.Location = new System.Drawing.Point(24, 417);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(176, 25);
             this.gunaLabel6.TabIndex = 32;
@@ -238,7 +238,7 @@
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gunaLabel7.Location = new System.Drawing.Point(112, 339);
+            this.gunaLabel7.Location = new System.Drawing.Point(36, 339);
             this.gunaLabel7.Name = "gunaLabel7";
             this.gunaLabel7.Size = new System.Drawing.Size(164, 25);
             this.gunaLabel7.TabIndex = 33;
@@ -255,12 +255,12 @@
             this.gTxtNomEquipo.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtNomEquipo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.gTxtNomEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtNomEquipo.Location = new System.Drawing.Point(292, 159);
+            this.gTxtNomEquipo.Location = new System.Drawing.Point(216, 159);
             this.gTxtNomEquipo.Name = "gTxtNomEquipo";
             this.gTxtNomEquipo.PasswordChar = '\0';
             this.gTxtNomEquipo.Radius = 15;
             this.gTxtNomEquipo.SelectedText = "";
-            this.gTxtNomEquipo.Size = new System.Drawing.Size(455, 50);
+            this.gTxtNomEquipo.Size = new System.Drawing.Size(296, 50);
             this.gTxtNomEquipo.TabIndex = 34;
             // 
             // gTxtSerieEquipo
@@ -274,12 +274,12 @@
             this.gTxtSerieEquipo.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtSerieEquipo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.gTxtSerieEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtSerieEquipo.Location = new System.Drawing.Point(292, 240);
+            this.gTxtSerieEquipo.Location = new System.Drawing.Point(216, 240);
             this.gTxtSerieEquipo.Name = "gTxtSerieEquipo";
             this.gTxtSerieEquipo.PasswordChar = '\0';
             this.gTxtSerieEquipo.Radius = 15;
             this.gTxtSerieEquipo.SelectedText = "";
-            this.gTxtSerieEquipo.Size = new System.Drawing.Size(455, 50);
+            this.gTxtSerieEquipo.Size = new System.Drawing.Size(296, 50);
             this.gTxtSerieEquipo.TabIndex = 35;
             // 
             // gTxtMarcaEquipo
@@ -293,12 +293,12 @@
             this.gTxtMarcaEquipo.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtMarcaEquipo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.gTxtMarcaEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtMarcaEquipo.Location = new System.Drawing.Point(292, 323);
+            this.gTxtMarcaEquipo.Location = new System.Drawing.Point(216, 323);
             this.gTxtMarcaEquipo.Name = "gTxtMarcaEquipo";
             this.gTxtMarcaEquipo.PasswordChar = '\0';
             this.gTxtMarcaEquipo.Radius = 15;
             this.gTxtMarcaEquipo.SelectedText = "";
-            this.gTxtMarcaEquipo.Size = new System.Drawing.Size(455, 50);
+            this.gTxtMarcaEquipo.Size = new System.Drawing.Size(296, 50);
             this.gTxtMarcaEquipo.TabIndex = 36;
             // 
             // gTxtModeloEquipo
@@ -312,13 +312,156 @@
             this.gTxtModeloEquipo.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtModeloEquipo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.gTxtModeloEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtModeloEquipo.Location = new System.Drawing.Point(292, 401);
+            this.gTxtModeloEquipo.Location = new System.Drawing.Point(216, 401);
             this.gTxtModeloEquipo.Name = "gTxtModeloEquipo";
             this.gTxtModeloEquipo.PasswordChar = '\0';
             this.gTxtModeloEquipo.Radius = 15;
             this.gTxtModeloEquipo.SelectedText = "";
-            this.gTxtModeloEquipo.Size = new System.Drawing.Size(455, 50);
+            this.gTxtModeloEquipo.Size = new System.Drawing.Size(296, 50);
             this.gTxtModeloEquipo.TabIndex = 37;
+            // 
+            // gunaDataGridView1
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gunaDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gunaDataGridView1.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
+            this.gunaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gunaDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gunaDataGridView1.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gunaDataGridView1.EnableHeadersVisualStyles = false;
+            this.gunaDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDataGridView1.Location = new System.Drawing.Point(29, 484);
+            this.gunaDataGridView1.Name = "gunaDataGridView1";
+            this.gunaDataGridView1.RowHeadersVisible = false;
+            this.gunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gunaDataGridView1.Size = new System.Drawing.Size(820, 284);
+            this.gunaDataGridView1.TabIndex = 43;
+            this.gunaDataGridView1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gunaDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.gunaDataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.gunaDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gunaDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            this.gunaDataGridView1.ThemeStyle.ReadOnly = false;
+            this.gunaDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gunaDataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gunaDataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.gunaDataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gunaDataGridView1.ThemeStyle.RowsStyle.Height = 22;
+            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // pctQr
+            // 
+            this.pctQr.Location = new System.Drawing.Point(859, 484);
+            this.pctQr.Name = "pctQr";
+            this.pctQr.Size = new System.Drawing.Size(346, 281);
+            this.pctQr.TabIndex = 44;
+            this.pctQr.TabStop = false;
+            // 
+            // gBtnQrDispositivo
+            // 
+            this.gBtnQrDispositivo.AnimationHoverSpeed = 0.07F;
+            this.gBtnQrDispositivo.AnimationSpeed = 0.03F;
+            this.gBtnQrDispositivo.BackColor = System.Drawing.Color.Transparent;
+            this.gBtnQrDispositivo.BaseColor = System.Drawing.Color.White;
+            this.gBtnQrDispositivo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gBtnQrDispositivo.BorderSize = 2;
+            this.gBtnQrDispositivo.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gBtnQrDispositivo.FocusedColor = System.Drawing.Color.Empty;
+            this.gBtnQrDispositivo.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBtnQrDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnQrDispositivo.Image = global::Impresoras.Properties.Resources.icons8_qr_code_48px_1;
+            this.gBtnQrDispositivo.ImageSize = new System.Drawing.Size(40, 40);
+            this.gBtnQrDispositivo.Location = new System.Drawing.Point(1035, 177);
+            this.gBtnQrDispositivo.Name = "gBtnQrDispositivo";
+            this.gBtnQrDispositivo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gBtnQrDispositivo.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnQrDispositivo.OnHoverForeColor = System.Drawing.Color.White;
+            this.gBtnQrDispositivo.OnHoverImage = null;
+            this.gBtnQrDispositivo.OnPressedColor = System.Drawing.Color.Black;
+            this.gBtnQrDispositivo.Radius = 10;
+            this.gBtnQrDispositivo.Size = new System.Drawing.Size(170, 77);
+            this.gBtnQrDispositivo.TabIndex = 42;
+            this.gBtnQrDispositivo.Text = "GenerarQr";
+            // 
+            // gBtnEliminarDispositivo
+            // 
+            this.gBtnEliminarDispositivo.AnimationHoverSpeed = 0.07F;
+            this.gBtnEliminarDispositivo.AnimationSpeed = 0.03F;
+            this.gBtnEliminarDispositivo.BackColor = System.Drawing.Color.Transparent;
+            this.gBtnEliminarDispositivo.BaseColor = System.Drawing.Color.White;
+            this.gBtnEliminarDispositivo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gBtnEliminarDispositivo.BorderSize = 2;
+            this.gBtnEliminarDispositivo.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gBtnEliminarDispositivo.FocusedColor = System.Drawing.Color.Empty;
+            this.gBtnEliminarDispositivo.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBtnEliminarDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnEliminarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_delete_file_48px;
+            this.gBtnEliminarDispositivo.ImageSize = new System.Drawing.Size(40, 40);
+            this.gBtnEliminarDispositivo.Location = new System.Drawing.Point(1035, 376);
+            this.gBtnEliminarDispositivo.Name = "gBtnEliminarDispositivo";
+            this.gBtnEliminarDispositivo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gBtnEliminarDispositivo.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnEliminarDispositivo.OnHoverForeColor = System.Drawing.Color.White;
+            this.gBtnEliminarDispositivo.OnHoverImage = null;
+            this.gBtnEliminarDispositivo.OnPressedColor = System.Drawing.Color.Black;
+            this.gBtnEliminarDispositivo.Radius = 10;
+            this.gBtnEliminarDispositivo.Size = new System.Drawing.Size(170, 77);
+            this.gBtnEliminarDispositivo.TabIndex = 41;
+            this.gBtnEliminarDispositivo.Text = "Eliminar";
+            // 
+            // gBtnEditarDispositivo
+            // 
+            this.gBtnEditarDispositivo.AnimationHoverSpeed = 0.07F;
+            this.gBtnEditarDispositivo.AnimationSpeed = 0.03F;
+            this.gBtnEditarDispositivo.BackColor = System.Drawing.Color.Transparent;
+            this.gBtnEditarDispositivo.BaseColor = System.Drawing.Color.White;
+            this.gBtnEditarDispositivo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gBtnEditarDispositivo.BorderSize = 2;
+            this.gBtnEditarDispositivo.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gBtnEditarDispositivo.FocusedColor = System.Drawing.Color.Empty;
+            this.gBtnEditarDispositivo.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBtnEditarDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnEditarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_edit_60px;
+            this.gBtnEditarDispositivo.ImageSize = new System.Drawing.Size(40, 40);
+            this.gBtnEditarDispositivo.Location = new System.Drawing.Point(1035, 272);
+            this.gBtnEditarDispositivo.Name = "gBtnEditarDispositivo";
+            this.gBtnEditarDispositivo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gBtnEditarDispositivo.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnEditarDispositivo.OnHoverForeColor = System.Drawing.Color.White;
+            this.gBtnEditarDispositivo.OnHoverImage = null;
+            this.gBtnEditarDispositivo.OnPressedColor = System.Drawing.Color.Black;
+            this.gBtnEditarDispositivo.Radius = 10;
+            this.gBtnEditarDispositivo.Size = new System.Drawing.Size(170, 77);
+            this.gBtnEditarDispositivo.TabIndex = 40;
+            this.gBtnEditarDispositivo.Text = "Editar";
             // 
             // gBtnRegistrarDispositivo
             // 
@@ -334,7 +477,7 @@
             this.gBtnRegistrarDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gBtnRegistrarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_add_new_48px;
             this.gBtnRegistrarDispositivo.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnRegistrarDispositivo.Location = new System.Drawing.Point(859, 73);
+            this.gBtnRegistrarDispositivo.Location = new System.Drawing.Point(1035, 75);
             this.gBtnRegistrarDispositivo.Name = "gBtnRegistrarDispositivo";
             this.gBtnRegistrarDispositivo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gBtnRegistrarDispositivo.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
@@ -361,7 +504,7 @@
             this.gBtnGuardarDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gBtnGuardarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_add_new_48px;
             this.gBtnGuardarDispositivo.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnGuardarDispositivo.Location = new System.Drawing.Point(859, 73);
+            this.gBtnGuardarDispositivo.Location = new System.Drawing.Point(1035, 75);
             this.gBtnGuardarDispositivo.Name = "gBtnGuardarDispositivo";
             this.gBtnGuardarDispositivo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gBtnGuardarDispositivo.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
@@ -372,149 +515,6 @@
             this.gBtnGuardarDispositivo.Size = new System.Drawing.Size(170, 77);
             this.gBtnGuardarDispositivo.TabIndex = 39;
             this.gBtnGuardarDispositivo.Text = "Guardar";
-            // 
-            // gBtnEditarDispositivo
-            // 
-            this.gBtnEditarDispositivo.AnimationHoverSpeed = 0.07F;
-            this.gBtnEditarDispositivo.AnimationSpeed = 0.03F;
-            this.gBtnEditarDispositivo.BackColor = System.Drawing.Color.Transparent;
-            this.gBtnEditarDispositivo.BaseColor = System.Drawing.Color.White;
-            this.gBtnEditarDispositivo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gBtnEditarDispositivo.BorderSize = 2;
-            this.gBtnEditarDispositivo.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gBtnEditarDispositivo.FocusedColor = System.Drawing.Color.Empty;
-            this.gBtnEditarDispositivo.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBtnEditarDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnEditarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_edit_60px;
-            this.gBtnEditarDispositivo.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnEditarDispositivo.Location = new System.Drawing.Point(859, 270);
-            this.gBtnEditarDispositivo.Name = "gBtnEditarDispositivo";
-            this.gBtnEditarDispositivo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.gBtnEditarDispositivo.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnEditarDispositivo.OnHoverForeColor = System.Drawing.Color.White;
-            this.gBtnEditarDispositivo.OnHoverImage = null;
-            this.gBtnEditarDispositivo.OnPressedColor = System.Drawing.Color.Black;
-            this.gBtnEditarDispositivo.Radius = 10;
-            this.gBtnEditarDispositivo.Size = new System.Drawing.Size(170, 77);
-            this.gBtnEditarDispositivo.TabIndex = 40;
-            this.gBtnEditarDispositivo.Text = "Editar";
-            // 
-            // gBtnEliminarDispositivo
-            // 
-            this.gBtnEliminarDispositivo.AnimationHoverSpeed = 0.07F;
-            this.gBtnEliminarDispositivo.AnimationSpeed = 0.03F;
-            this.gBtnEliminarDispositivo.BackColor = System.Drawing.Color.Transparent;
-            this.gBtnEliminarDispositivo.BaseColor = System.Drawing.Color.White;
-            this.gBtnEliminarDispositivo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gBtnEliminarDispositivo.BorderSize = 2;
-            this.gBtnEliminarDispositivo.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gBtnEliminarDispositivo.FocusedColor = System.Drawing.Color.Empty;
-            this.gBtnEliminarDispositivo.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBtnEliminarDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnEliminarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_delete_file_48px;
-            this.gBtnEliminarDispositivo.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnEliminarDispositivo.Location = new System.Drawing.Point(859, 374);
-            this.gBtnEliminarDispositivo.Name = "gBtnEliminarDispositivo";
-            this.gBtnEliminarDispositivo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.gBtnEliminarDispositivo.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnEliminarDispositivo.OnHoverForeColor = System.Drawing.Color.White;
-            this.gBtnEliminarDispositivo.OnHoverImage = null;
-            this.gBtnEliminarDispositivo.OnPressedColor = System.Drawing.Color.Black;
-            this.gBtnEliminarDispositivo.Radius = 10;
-            this.gBtnEliminarDispositivo.Size = new System.Drawing.Size(170, 77);
-            this.gBtnEliminarDispositivo.TabIndex = 41;
-            this.gBtnEliminarDispositivo.Text = "Eliminar";
-            // 
-            // gBtnQrDispositivo
-            // 
-            this.gBtnQrDispositivo.AnimationHoverSpeed = 0.07F;
-            this.gBtnQrDispositivo.AnimationSpeed = 0.03F;
-            this.gBtnQrDispositivo.BackColor = System.Drawing.Color.Transparent;
-            this.gBtnQrDispositivo.BaseColor = System.Drawing.Color.White;
-            this.gBtnQrDispositivo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gBtnQrDispositivo.BorderSize = 2;
-            this.gBtnQrDispositivo.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gBtnQrDispositivo.FocusedColor = System.Drawing.Color.Empty;
-            this.gBtnQrDispositivo.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBtnQrDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnQrDispositivo.Image = global::Impresoras.Properties.Resources.icons8_edit_60px;
-            this.gBtnQrDispositivo.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnQrDispositivo.Location = new System.Drawing.Point(859, 175);
-            this.gBtnQrDispositivo.Name = "gBtnQrDispositivo";
-            this.gBtnQrDispositivo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.gBtnQrDispositivo.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnQrDispositivo.OnHoverForeColor = System.Drawing.Color.White;
-            this.gBtnQrDispositivo.OnHoverImage = null;
-            this.gBtnQrDispositivo.OnPressedColor = System.Drawing.Color.Black;
-            this.gBtnQrDispositivo.Radius = 10;
-            this.gBtnQrDispositivo.Size = new System.Drawing.Size(170, 77);
-            this.gBtnQrDispositivo.TabIndex = 42;
-            this.gBtnQrDispositivo.Text = "GenerarQr";
-            // 
-            // gunaDataGridView1
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.gunaDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDataGridView1.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
-            this.gunaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.gunaDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.gunaDataGridView1.EnableHeadersVisualStyles = false;
-            this.gunaDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.Location = new System.Drawing.Point(29, 484);
-            this.gunaDataGridView1.Name = "gunaDataGridView1";
-            this.gunaDataGridView1.RowHeadersVisible = false;
-            this.gunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDataGridView1.Size = new System.Drawing.Size(820, 284);
-            this.gunaDataGridView1.TabIndex = 43;
-            this.gunaDataGridView1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView1.ThemeStyle.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.gunaDataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gunaDataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.gunaDataGridView1.ThemeStyle.ReadOnly = false;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.Height = 22;
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // pctQr
-            // 
-            this.pctQr.Location = new System.Drawing.Point(859, 484);
-            this.pctQr.Name = "pctQr";
-            this.pctQr.Size = new System.Drawing.Size(346, 281);
-            this.pctQr.TabIndex = 44;
-            this.pctQr.TabStop = false;
             // 
             // frmPrintUp
             // 
