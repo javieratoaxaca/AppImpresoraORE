@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             this.pnlFormBar = new System.Windows.Forms.Panel();
-            this.pnlFormAction = new System.Windows.Forms.Panel();
-            this.pnlHeaderCaption = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.pnlSlideMenu = new System.Windows.Forms.Panel();
-            this.pnlSubMenuCatalogo = new System.Windows.Forms.Panel();
-            this.pnlSlideMenuImg = new System.Windows.Forms.Panel();
-            this.pnlForm = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.iconBtnConfiguracion = new FontAwesome.Sharp.IconButton();
-            this.iconBtnAsignacion = new FontAwesome.Sharp.IconButton();
-            this.iconBtnAlta = new FontAwesome.Sharp.IconButton();
-            this.iconBtnPrint = new FontAwesome.Sharp.IconButton();
-            this.iconBtnDashboard = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconBtnBar = new FontAwesome.Sharp.IconButton();
+            this.pnlFormAction = new System.Windows.Forms.Panel();
             this.iconBtnMinus = new FontAwesome.Sharp.IconButton();
             this.iconBtnPlus = new FontAwesome.Sharp.IconButton();
             this.iconBtnNormal = new FontAwesome.Sharp.IconButton();
             this.iconBtnClose = new FontAwesome.Sharp.IconButton();
+            this.pnlHeaderCaption = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pctIconForm = new System.Windows.Forms.PictureBox();
+            this.pnlSlideMenu = new System.Windows.Forms.Panel();
+            this.iconBtnConfiguracion = new FontAwesome.Sharp.IconButton();
+            this.pnlSubMenuCatalogo = new System.Windows.Forms.Panel();
+            this.iconBtnAsignacion = new FontAwesome.Sharp.IconButton();
+            this.iconBtnAlta = new FontAwesome.Sharp.IconButton();
+            this.iconBtnPrint = new FontAwesome.Sharp.IconButton();
+            this.iconBtnDashboard = new FontAwesome.Sharp.IconButton();
+            this.pnlSlideMenuImg = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlForm = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlFormBar.SuspendLayout();
             this.pnlFormAction.SuspendLayout();
             this.pnlHeaderCaption.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctIconForm)).BeginInit();
             this.pnlSlideMenu.SuspendLayout();
             this.pnlSubMenuCatalogo.SuspendLayout();
             this.pnlSlideMenuImg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctIconForm)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlFormBar
@@ -70,9 +70,26 @@
             this.pnlFormBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFormBar.Location = new System.Drawing.Point(0, 0);
             this.pnlFormBar.Name = "pnlFormBar";
-            this.pnlFormBar.Size = new System.Drawing.Size(1208, 30);
+            this.pnlFormBar.Size = new System.Drawing.Size(1397, 30);
             this.pnlFormBar.TabIndex = 3;
             this.pnlFormBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindows_MouseDown);
+            // 
+            // iconBtnBar
+            // 
+            this.iconBtnBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconBtnBar.FlatAppearance.BorderSize = 0;
+            this.iconBtnBar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnBar.ForeColor = System.Drawing.Color.White;
+            this.iconBtnBar.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.iconBtnBar.IconColor = System.Drawing.Color.White;
+            this.iconBtnBar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnBar.IconSize = 25;
+            this.iconBtnBar.Location = new System.Drawing.Point(170, 0);
+            this.iconBtnBar.Name = "iconBtnBar";
+            this.iconBtnBar.Size = new System.Drawing.Size(37, 30);
+            this.iconBtnBar.TabIndex = 4;
+            this.iconBtnBar.UseVisualStyleBackColor = true;
+            this.iconBtnBar.Click += new System.EventHandler(this.iconBtnBar_Click);
             // 
             // pnlFormAction
             // 
@@ -81,10 +98,81 @@
             this.pnlFormAction.Controls.Add(this.iconBtnNormal);
             this.pnlFormAction.Controls.Add(this.iconBtnClose);
             this.pnlFormAction.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlFormAction.Location = new System.Drawing.Point(1058, 0);
+            this.pnlFormAction.Location = new System.Drawing.Point(1247, 0);
             this.pnlFormAction.Name = "pnlFormAction";
             this.pnlFormAction.Size = new System.Drawing.Size(150, 30);
             this.pnlFormAction.TabIndex = 0;
+            // 
+            // iconBtnMinus
+            // 
+            this.iconBtnMinus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconBtnMinus.FlatAppearance.BorderSize = 0;
+            this.iconBtnMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnMinus.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            this.iconBtnMinus.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(194)))), ((int)(((byte)(59)))));
+            this.iconBtnMinus.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconBtnMinus.IconSize = 25;
+            this.iconBtnMinus.Location = new System.Drawing.Point(3, 0);
+            this.iconBtnMinus.Name = "iconBtnMinus";
+            this.iconBtnMinus.Size = new System.Drawing.Size(38, 30);
+            this.iconBtnMinus.TabIndex = 1;
+            this.iconBtnMinus.UseMnemonic = false;
+            this.iconBtnMinus.UseVisualStyleBackColor = true;
+            this.iconBtnMinus.Click += new System.EventHandler(this.iconBtnMinus_Click);
+            // 
+            // iconBtnPlus
+            // 
+            this.iconBtnPlus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconBtnPlus.FlatAppearance.BorderSize = 0;
+            this.iconBtnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnPlus.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconBtnPlus.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            this.iconBtnPlus.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(192)))), ((int)(((byte)(58)))));
+            this.iconBtnPlus.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconBtnPlus.IconSize = 25;
+            this.iconBtnPlus.Location = new System.Drawing.Point(41, 0);
+            this.iconBtnPlus.Name = "iconBtnPlus";
+            this.iconBtnPlus.Size = new System.Drawing.Size(37, 30);
+            this.iconBtnPlus.TabIndex = 2;
+            this.iconBtnPlus.UseMnemonic = false;
+            this.iconBtnPlus.UseVisualStyleBackColor = true;
+            this.iconBtnPlus.Click += new System.EventHandler(this.iconBtnPlus_Click);
+            // 
+            // iconBtnNormal
+            // 
+            this.iconBtnNormal.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconBtnNormal.FlatAppearance.BorderSize = 0;
+            this.iconBtnNormal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnNormal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnNormal.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            this.iconBtnNormal.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(192)))), ((int)(((byte)(58)))));
+            this.iconBtnNormal.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconBtnNormal.IconSize = 25;
+            this.iconBtnNormal.Location = new System.Drawing.Point(78, 0);
+            this.iconBtnNormal.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.iconBtnNormal.Name = "iconBtnNormal";
+            this.iconBtnNormal.Size = new System.Drawing.Size(37, 30);
+            this.iconBtnNormal.TabIndex = 3;
+            this.iconBtnNormal.UseMnemonic = false;
+            this.iconBtnNormal.UseVisualStyleBackColor = true;
+            this.iconBtnNormal.Click += new System.EventHandler(this.iconBtnNormal_Click);
+            // 
+            // iconBtnClose
+            // 
+            this.iconBtnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconBtnClose.FlatAppearance.BorderSize = 0;
+            this.iconBtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnClose.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            this.iconBtnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(90)))), ((int)(((byte)(82)))));
+            this.iconBtnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconBtnClose.IconSize = 25;
+            this.iconBtnClose.Location = new System.Drawing.Point(115, 0);
+            this.iconBtnClose.Name = "iconBtnClose";
+            this.iconBtnClose.Size = new System.Drawing.Size(35, 30);
+            this.iconBtnClose.TabIndex = 0;
+            this.iconBtnClose.UseMnemonic = false;
+            this.iconBtnClose.UseVisualStyleBackColor = true;
+            this.iconBtnClose.Click += new System.EventHandler(this.iconBtnClose_Click);
             // 
             // pnlHeaderCaption
             // 
@@ -110,6 +198,17 @@
             this.lblTitle.Text = "App Impresora";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pctIconForm
+            // 
+            this.pctIconForm.BackgroundImage = global::Impresoras.Properties.Resources.Autodidacta_cuadro;
+            this.pctIconForm.Image = global::Impresoras.Properties.Resources.Autodidacta_cuadro;
+            this.pctIconForm.Location = new System.Drawing.Point(4, 3);
+            this.pctIconForm.Name = "pctIconForm";
+            this.pctIconForm.Size = new System.Drawing.Size(25, 25);
+            this.pctIconForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctIconForm.TabIndex = 4;
+            this.pctIconForm.TabStop = false;
+            // 
             // pnlSlideMenu
             // 
             this.pnlSlideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(51)))), ((int)(((byte)(53)))));
@@ -121,51 +220,8 @@
             this.pnlSlideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSlideMenu.Location = new System.Drawing.Point(0, 30);
             this.pnlSlideMenu.Name = "pnlSlideMenu";
-            this.pnlSlideMenu.Size = new System.Drawing.Size(170, 795);
+            this.pnlSlideMenu.Size = new System.Drawing.Size(170, 836);
             this.pnlSlideMenu.TabIndex = 4;
-            // 
-            // pnlSubMenuCatalogo
-            // 
-            this.pnlSubMenuCatalogo.BackColor = System.Drawing.Color.DimGray;
-            this.pnlSubMenuCatalogo.Controls.Add(this.iconBtnAsignacion);
-            this.pnlSubMenuCatalogo.Controls.Add(this.iconBtnAlta);
-            this.pnlSubMenuCatalogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuCatalogo.Location = new System.Drawing.Point(0, 225);
-            this.pnlSubMenuCatalogo.Name = "pnlSubMenuCatalogo";
-            this.pnlSubMenuCatalogo.Size = new System.Drawing.Size(170, 92);
-            this.pnlSubMenuCatalogo.TabIndex = 3;
-            // 
-            // pnlSlideMenuImg
-            // 
-            this.pnlSlideMenuImg.Controls.Add(this.pictureBox1);
-            this.pnlSlideMenuImg.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSlideMenuImg.Location = new System.Drawing.Point(0, 0);
-            this.pnlSlideMenuImg.Name = "pnlSlideMenuImg";
-            this.pnlSlideMenuImg.Size = new System.Drawing.Size(170, 134);
-            this.pnlSlideMenuImg.TabIndex = 0;
-            // 
-            // pnlForm
-            // 
-            this.pnlForm.BackColor = System.Drawing.Color.White;
-            this.pnlForm.Controls.Add(this.pictureBox2);
-            this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlForm.Location = new System.Drawing.Point(170, 30);
-            this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(1038, 795);
-            this.pnlForm.TabIndex = 5;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::Impresoras.Properties.Resources._41QvEmRG0OL;
-            this.pictureBox2.Location = new System.Drawing.Point(269, 147);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(500, 500);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // iconBtnConfiguracion
             // 
@@ -187,6 +243,17 @@
             this.iconBtnConfiguracion.Text = "           Configuracion";
             this.iconBtnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnConfiguracion.UseVisualStyleBackColor = true;
+            // 
+            // pnlSubMenuCatalogo
+            // 
+            this.pnlSubMenuCatalogo.BackColor = System.Drawing.Color.DimGray;
+            this.pnlSubMenuCatalogo.Controls.Add(this.iconBtnAsignacion);
+            this.pnlSubMenuCatalogo.Controls.Add(this.iconBtnAlta);
+            this.pnlSubMenuCatalogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuCatalogo.Location = new System.Drawing.Point(0, 225);
+            this.pnlSubMenuCatalogo.Name = "pnlSubMenuCatalogo";
+            this.pnlSubMenuCatalogo.Size = new System.Drawing.Size(170, 92);
+            this.pnlSubMenuCatalogo.TabIndex = 3;
             // 
             // iconBtnAsignacion
             // 
@@ -277,6 +344,15 @@
             this.iconBtnDashboard.UseVisualStyleBackColor = true;
             this.iconBtnDashboard.Click += new System.EventHandler(this.iconBtnDashboard_Click);
             // 
+            // pnlSlideMenuImg
+            // 
+            this.pnlSlideMenuImg.Controls.Add(this.pictureBox1);
+            this.pnlSlideMenuImg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSlideMenuImg.Location = new System.Drawing.Point(0, 0);
+            this.pnlSlideMenuImg.Name = "pnlSlideMenuImg";
+            this.pnlSlideMenuImg.Size = new System.Drawing.Size(170, 134);
+            this.pnlSlideMenuImg.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Impresoras.Properties.Resources.Perfil;
@@ -287,111 +363,35 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // iconBtnBar
+            // pnlForm
             // 
-            this.iconBtnBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconBtnBar.FlatAppearance.BorderSize = 0;
-            this.iconBtnBar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnBar.ForeColor = System.Drawing.Color.White;
-            this.iconBtnBar.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.iconBtnBar.IconColor = System.Drawing.Color.White;
-            this.iconBtnBar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnBar.IconSize = 25;
-            this.iconBtnBar.Location = new System.Drawing.Point(170, 0);
-            this.iconBtnBar.Name = "iconBtnBar";
-            this.iconBtnBar.Size = new System.Drawing.Size(37, 30);
-            this.iconBtnBar.TabIndex = 4;
-            this.iconBtnBar.UseVisualStyleBackColor = true;
-            this.iconBtnBar.Click += new System.EventHandler(this.iconBtnBar_Click);
+            this.pnlForm.BackColor = System.Drawing.Color.White;
+            this.pnlForm.Controls.Add(this.pictureBox2);
+            this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlForm.Location = new System.Drawing.Point(170, 30);
+            this.pnlForm.Name = "pnlForm";
+            this.pnlForm.Size = new System.Drawing.Size(1227, 836);
+            this.pnlForm.TabIndex = 5;
             // 
-            // iconBtnMinus
+            // pictureBox2
             // 
-            this.iconBtnMinus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconBtnMinus.FlatAppearance.BorderSize = 0;
-            this.iconBtnMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnMinus.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            this.iconBtnMinus.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(194)))), ((int)(((byte)(59)))));
-            this.iconBtnMinus.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconBtnMinus.IconSize = 25;
-            this.iconBtnMinus.Location = new System.Drawing.Point(3, 0);
-            this.iconBtnMinus.Name = "iconBtnMinus";
-            this.iconBtnMinus.Size = new System.Drawing.Size(38, 30);
-            this.iconBtnMinus.TabIndex = 1;
-            this.iconBtnMinus.UseMnemonic = false;
-            this.iconBtnMinus.UseVisualStyleBackColor = true;
-            this.iconBtnMinus.Click += new System.EventHandler(this.iconBtnMinus_Click);
-            // 
-            // iconBtnPlus
-            // 
-            this.iconBtnPlus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconBtnPlus.FlatAppearance.BorderSize = 0;
-            this.iconBtnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnPlus.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconBtnPlus.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            this.iconBtnPlus.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(192)))), ((int)(((byte)(58)))));
-            this.iconBtnPlus.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconBtnPlus.IconSize = 25;
-            this.iconBtnPlus.Location = new System.Drawing.Point(41, 0);
-            this.iconBtnPlus.Name = "iconBtnPlus";
-            this.iconBtnPlus.Size = new System.Drawing.Size(37, 30);
-            this.iconBtnPlus.TabIndex = 2;
-            this.iconBtnPlus.UseMnemonic = false;
-            this.iconBtnPlus.UseVisualStyleBackColor = true;
-            this.iconBtnPlus.Click += new System.EventHandler(this.iconBtnPlus_Click);
-            // 
-            // iconBtnNormal
-            // 
-            this.iconBtnNormal.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconBtnNormal.FlatAppearance.BorderSize = 0;
-            this.iconBtnNormal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnNormal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnNormal.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            this.iconBtnNormal.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(192)))), ((int)(((byte)(58)))));
-            this.iconBtnNormal.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconBtnNormal.IconSize = 25;
-            this.iconBtnNormal.Location = new System.Drawing.Point(78, 0);
-            this.iconBtnNormal.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.iconBtnNormal.Name = "iconBtnNormal";
-            this.iconBtnNormal.Size = new System.Drawing.Size(37, 30);
-            this.iconBtnNormal.TabIndex = 3;
-            this.iconBtnNormal.UseMnemonic = false;
-            this.iconBtnNormal.UseVisualStyleBackColor = true;
-            this.iconBtnNormal.Click += new System.EventHandler(this.iconBtnNormal_Click);
-            // 
-            // iconBtnClose
-            // 
-            this.iconBtnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconBtnClose.FlatAppearance.BorderSize = 0;
-            this.iconBtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnClose.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            this.iconBtnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(90)))), ((int)(((byte)(82)))));
-            this.iconBtnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconBtnClose.IconSize = 25;
-            this.iconBtnClose.Location = new System.Drawing.Point(115, 0);
-            this.iconBtnClose.Name = "iconBtnClose";
-            this.iconBtnClose.Size = new System.Drawing.Size(35, 30);
-            this.iconBtnClose.TabIndex = 0;
-            this.iconBtnClose.UseMnemonic = false;
-            this.iconBtnClose.UseVisualStyleBackColor = true;
-            this.iconBtnClose.Click += new System.EventHandler(this.iconBtnClose_Click);
-            // 
-            // pctIconForm
-            // 
-            this.pctIconForm.BackgroundImage = global::Impresoras.Properties.Resources.Autodidacta_cuadro;
-            this.pctIconForm.Image = global::Impresoras.Properties.Resources.Autodidacta_cuadro;
-            this.pctIconForm.Location = new System.Drawing.Point(4, 3);
-            this.pctIconForm.Name = "pctIconForm";
-            this.pctIconForm.Size = new System.Drawing.Size(25, 25);
-            this.pctIconForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctIconForm.TabIndex = 4;
-            this.pctIconForm.TabStop = false;
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::Impresoras.Properties.Resources._41QvEmRG0OL;
+            this.pictureBox2.Location = new System.Drawing.Point(283, 134);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(689, 541);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // vwPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1208, 825);
+            this.ClientSize = new System.Drawing.Size(1397, 866);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.pnlSlideMenu);
             this.Controls.Add(this.pnlFormBar);
@@ -405,14 +405,13 @@
             this.pnlFormAction.ResumeLayout(false);
             this.pnlHeaderCaption.ResumeLayout(false);
             this.pnlHeaderCaption.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctIconForm)).EndInit();
             this.pnlSlideMenu.ResumeLayout(false);
             this.pnlSubMenuCatalogo.ResumeLayout(false);
             this.pnlSlideMenuImg.ResumeLayout(false);
-            this.pnlForm.ResumeLayout(false);
-            this.pnlForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctIconForm)).EndInit();
+            this.pnlForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

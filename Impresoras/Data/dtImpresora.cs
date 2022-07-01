@@ -16,6 +16,8 @@ namespace Impresoras.Data
         string modeloEquipo;
         bool estadoEquipo;
         string fechaAlta;
+        string obsEquipo;
+        byte[] imgQr;
 
         public int IdInventarioEquipo
         {
@@ -119,6 +121,19 @@ namespace Impresoras.Data
             set
             {
                 fechaAlta = value;
+            }
+        }
+
+        public string ObsEquipo
+        {
+            get
+            {
+                return obsEquipo;
+            }
+
+            set
+            {
+                obsEquipo = value;
             }
         }
     }
