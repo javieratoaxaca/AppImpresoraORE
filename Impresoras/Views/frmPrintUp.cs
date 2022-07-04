@@ -132,7 +132,8 @@ namespace Impresoras.Views
                 dtImpresora.EstadoEquipo = status;
                 dtImpresora.FechaAlta = fechaCaptura;
 
-                
+                byte[] mifoto = imgToByte(pctQr.Image);
+                dtImpresora.ImgQr = mifoto;
 
 
 
@@ -169,6 +170,21 @@ namespace Impresoras.Views
             }
         }
 
+        //Metodos para el manejo de la imagen que se guardara o mostrara en la base de datos
+        // de Byte a Img
+            private static MemoryStream byteToImage(byte[] array)
+        {
+            MemoryStream ms = new MemoryStream();
+            return ms;
+        }
+
+        // de Img a Byte
+        private static byte [] imgToByte(Image imgIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imgIn.Save(ms, ImageFormat.Png);
+            return ms.ToArray();
+        }
         #endregion
 
         private void gBtnRegistrarDispositivo_Click(object sender, EventArgs e)
@@ -206,5 +222,9 @@ namespace Impresoras.Views
 
 
         }
+
+
+
+
     }
 }

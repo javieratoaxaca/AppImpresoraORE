@@ -19,6 +19,19 @@ namespace Impresoras.Data
         string obsEquipo;
         byte[] imgQr;
 
+
+        public byte[] ImgQr
+        {
+            get
+            {
+                return imgQr;
+            }
+
+            set
+            {
+                imgQr = value;
+            }
+        }
         public int IdInventarioEquipo
         {
             get
