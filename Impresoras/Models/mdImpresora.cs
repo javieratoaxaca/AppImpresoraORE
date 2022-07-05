@@ -21,14 +21,37 @@ namespace Impresoras.Models
         public mdImpresora() { }
         public bool insertImpresora(dtImpresora dtPrint) {
 
-            string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
+            /*string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
                                          "modeloEquipo,obsEquipo,statusEquipo,fechaRegistro,imgQr) " +
-                                         "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}'.{8})",
+                                         "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}',{8})",
                                          dtPrint.NumeroEquipo,dtPrint.NombreEquipo,dtPrint.SerieEquipo,dtPrint.MarcaEquipo, 
-                                         dtPrint.ModeloEquipo, dtPrint.ObsEquipo,dtPrint.EstadoEquipo,dtPrint.FechaAlta,dtPrint.ImgQr);
+                                         dtPrint.ModeloEquipo, dtPrint.ObsEquipo,dtPrint.EstadoEquipo,dtPrint.FechaAlta,dtPrint.ImgQr.ToArray());*/
+            string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
+            "modeloEquipo,obsEquipo,statusEquipo,fechaRegistro,imgQr) " +
+            //"VALUES(@numEquipo,@nombreEquipo,@serieEquipo,@marcaEquipo,@modeloEquipo,@obsEquipo,@statusEquipo,@fechaRegistro,@imgQr)");
+            "VALUES(?,?,?,?,?,?,?,?,?)");
+
+            MySqlParameter pramImg = new MySqlParameter("@imgQr", (dtPrint.ImgQr));
+            pramImg.MySqlDbType = MySqlDbType.Blob;
+
+            var lista = new List<MySqlParameter>{
+                new MySqlParameter("@numEquipo",dtPrint.NumeroEquipo),
+                new MySqlParameter("@nombreEquipo",dtPrint.NombreEquipo),
+                new MySqlParameter("@serieEquipo",dtPrint.SerieEquipo),
+                new MySqlParameter("@marcaEquipo",dtPrint.MarcaEquipo),
+                new MySqlParameter("@modeloEquipo",dtPrint.ModeloEquipo),
+                new MySqlParameter("@obsEquipo",dtPrint.ObsEquipo),
+                new MySqlParameter("@statusEquipo",dtPrint.EstadoEquipo),
+                new MySqlParameter("@fechaRegistro",dtPrint.FechaAlta),
+                pramImg
+            };
+
+            //MySqlCommand
             try
             {
-                int result = ExecuteQuery(Query);
+                Console.Write(Query);
+
+                int result = ExecuteQuery(Query, lista.ToArray());
                 if (result > 0)
                     return true;
             }

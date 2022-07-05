@@ -132,7 +132,7 @@ namespace Impresoras.Views
                 dtImpresora.EstadoEquipo = status;
                 dtImpresora.FechaAlta = fechaCaptura;
 
-                byte[] mifoto = imgToByte(pctQr.Image);
+                byte[] mifoto = imgToByte(pctQr.BackgroundImage);
                 dtImpresora.ImgQr = mifoto;
 
 
@@ -202,6 +202,8 @@ namespace Impresoras.Views
             btnDesActivados();
         }
 
+
+        //Seccion para Generar el Qr
         private void gBtnQrDispositivo_Click(object sender, EventArgs e)
         {
 
