@@ -43,7 +43,7 @@ namespace Impresoras.Models
                 new MySqlParameter("@obsEquipo",dtPrint.ObsEquipo),
                 new MySqlParameter("@statusEquipo",dtPrint.EstadoEquipo),
                 new MySqlParameter("@fechaRegistro",dtPrint.FechaAlta),
-                pramImg
+                pramIm
             };
 
             //MySqlCommand
