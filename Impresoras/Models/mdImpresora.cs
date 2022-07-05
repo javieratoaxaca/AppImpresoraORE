@@ -23,7 +23,7 @@ namespace Impresoras.Models
 
             string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
                                          "modeloEquipo,obsEquipo,statusEquipo,fechaRegistro,imgQr) " +
-                                         "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}'.{8})",
+                                         "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}','{8}')",
                                          dtPrint.NumeroEquipo,dtPrint.NombreEquipo,dtPrint.SerieEquipo,dtPrint.MarcaEquipo, 
                                          dtPrint.ModeloEquipo, dtPrint.ObsEquipo,dtPrint.EstadoEquipo,dtPrint.FechaAlta,dtPrint.ImgQr);
             try
