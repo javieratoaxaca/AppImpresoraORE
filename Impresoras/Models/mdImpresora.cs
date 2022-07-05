@@ -23,7 +23,11 @@ namespace Impresoras.Models
 
             /*string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
                                          "modeloEquipo,obsEquipo,statusEquipo,fechaRegistro,imgQr) " +
+<<<<<<< HEAD
+                                         "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}','{8}')",
+=======
                                          "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}',{8})",
+>>>>>>> d8f35eacdbd1890c1acd8451bacd55ebcdce868f
                                          dtPrint.NumeroEquipo,dtPrint.NombreEquipo,dtPrint.SerieEquipo,dtPrint.MarcaEquipo, 
                                          dtPrint.ModeloEquipo, dtPrint.ObsEquipo,dtPrint.EstadoEquipo,dtPrint.FechaAlta,dtPrint.ImgQr.ToArray());*/
             string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
