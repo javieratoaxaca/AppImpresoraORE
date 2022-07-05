@@ -71,9 +71,10 @@ namespace Impresoras.Models
         {
 
             dtImpresora dtPrint = new dtImpresora();
+            dtPrint.SerieEquipo = serie;
             try
             {
-                string Query = string.Format("SELECT serieEquipo FROM inventarioequipo WHERE serieEquipo LIKE '{0}'", serie);
+                string Query = string.Format("SELECT serieEquipo FROM inventarioequipo WHERE serieEquipo LIKE '{0}'", dtPrint.SerieEquipo);
                 MySqlDataReader dr = GetDataReader(Query);
                 return dr.HasRows;
             }
@@ -100,13 +101,35 @@ namespace Impresoras.Models
 
             return false;
         }*/
+        //Metodo para Buscar un dato en la Base 
+        public void cargaGridBuscador(DataGridView grid, string txtBuscar)
+        {
+            try
+            {
+                string query = string.Format("Select numEquipo,nombreEquipo,serieEquipo,marcaEquipo,modeloEquipo,obsEquipo,fechaRegistro,imgQr From inventarioequipo Where serieEquipo LIKE '%{0}%' OR modeloEquipo LIKE '%{0}%' OR numEquipo LIKE '%{0}%'",txtBuscar);
+                MySqlCommand cmd = new MySqlCommand(query, getConnection());
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                grid.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+
 
         //Metodo para llenar el DataGridView
         public void llenargrid(DataGridView grid)
         {
             try
             {
-                string Query = string.Format("select * from inventarioequipo");
+                string Query = string.Format("select numEquipo, nombreEquipo,serieEquipo,marcaEquipo,modeloEquipo,obsEquipo,fechaRegistro,imgQr  from inventarioequipo");
                 MySqlCommand Query2 = new MySqlCommand(Query, getConnection());
                 MySqlDataAdapter da = new MySqlDataAdapter(Query2);
                 DataTable dt = new DataTable();

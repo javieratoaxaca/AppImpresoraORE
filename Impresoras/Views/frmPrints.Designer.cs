@@ -34,12 +34,14 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.gTxtBuscarODP = new Guna.UI.WinForms.GunaTextBox();
+            this.gTxtBuscarPrint = new Guna.UI.WinForms.GunaTextBox();
             this.gcmbRegion = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.dtgvPrints = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPrints)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,8 +85,9 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.dtgvPrints);
             this.panel3.Controls.Add(this.gunaLabel5);
-            this.panel3.Controls.Add(this.gTxtBuscarODP);
+            this.panel3.Controls.Add(this.gTxtBuscarPrint);
             this.panel3.Controls.Add(this.gcmbRegion);
             this.panel3.Controls.Add(this.gunaLabel2);
             this.panel3.Location = new System.Drawing.Point(3, 3);
@@ -103,24 +106,25 @@
             this.gunaLabel5.TabIndex = 32;
             this.gunaLabel5.Text = "BUSCAR:";
             // 
-            // gTxtBuscarODP
+            // gTxtBuscarPrint
             // 
-            this.gTxtBuscarODP.BackColor = System.Drawing.Color.Transparent;
-            this.gTxtBuscarODP.BaseColor = System.Drawing.Color.White;
-            this.gTxtBuscarODP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
-            this.gTxtBuscarODP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gTxtBuscarODP.FocusedBaseColor = System.Drawing.Color.White;
-            this.gTxtBuscarODP.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.gTxtBuscarODP.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtBuscarODP.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.gTxtBuscarODP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtBuscarODP.Location = new System.Drawing.Point(394, 72);
-            this.gTxtBuscarODP.Name = "gTxtBuscarODP";
-            this.gTxtBuscarODP.PasswordChar = '\0';
-            this.gTxtBuscarODP.Radius = 15;
-            this.gTxtBuscarODP.SelectedText = "";
-            this.gTxtBuscarODP.Size = new System.Drawing.Size(455, 41);
-            this.gTxtBuscarODP.TabIndex = 31;
+            this.gTxtBuscarPrint.BackColor = System.Drawing.Color.Transparent;
+            this.gTxtBuscarPrint.BaseColor = System.Drawing.Color.White;
+            this.gTxtBuscarPrint.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtBuscarPrint.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gTxtBuscarPrint.FocusedBaseColor = System.Drawing.Color.White;
+            this.gTxtBuscarPrint.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gTxtBuscarPrint.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gTxtBuscarPrint.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.gTxtBuscarPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gTxtBuscarPrint.Location = new System.Drawing.Point(394, 72);
+            this.gTxtBuscarPrint.Name = "gTxtBuscarPrint";
+            this.gTxtBuscarPrint.PasswordChar = '\0';
+            this.gTxtBuscarPrint.Radius = 15;
+            this.gTxtBuscarPrint.SelectedText = "";
+            this.gTxtBuscarPrint.Size = new System.Drawing.Size(455, 41);
+            this.gTxtBuscarPrint.TabIndex = 31;
+            this.gTxtBuscarPrint.TextChanged += new System.EventHandler(this.gTxtBuscarODP_TextChanged);
             // 
             // gcmbRegion
             // 
@@ -157,6 +161,17 @@
             this.gunaLabel2.TabIndex = 29;
             this.gunaLabel2.Text = "FILTRO:";
             // 
+            // dtgvPrints
+            // 
+            this.dtgvPrints.AllowUserToAddRows = false;
+            this.dtgvPrints.AllowUserToDeleteRows = false;
+            this.dtgvPrints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvPrints.Location = new System.Drawing.Point(115, 142);
+            this.dtgvPrints.Name = "dtgvPrints";
+            this.dtgvPrints.ReadOnly = true;
+            this.dtgvPrints.Size = new System.Drawing.Size(1001, 570);
+            this.dtgvPrints.TabIndex = 33;
+            // 
             // frmPrint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +188,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPrints)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,8 +201,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaTextBox gTxtBuscarODP;
+        private Guna.UI.WinForms.GunaTextBox gTxtBuscarPrint;
         private Guna.UI.WinForms.GunaComboBox gcmbRegion;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private System.Windows.Forms.DataGridView dtgvPrints;
     }
 }

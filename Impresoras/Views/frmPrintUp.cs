@@ -1,19 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 //libreria para Conexion
-using System.Data;
-using System.Data.OleDb;
-using System.Text.RegularExpressions;
-using MySql.Data.Types;
-using MySql.Data.MySqlClient;
 using Impresoras.Data;
 using Impresoras.Models;
 using Gma.QrCodeNet.Encoding;
@@ -140,13 +129,12 @@ namespace Impresoras.Views
                     MessageBox.Show("Debe Completar la información");
                     return;
                 }
-                 if (!mdPrint.ExistePrint(dtImpresora.SerieEquipo))
+                 else if (!mdPrint.ExistePrint(dtImpresora.SerieEquipo))
                 {
                     if (mdPrint.insertImpresora(dtImpresora))
                     {
                         MessageBox.Show("Se Guardo Exitosamente");
                         mdPrint.llenargrid(dtgvPrint);
-                       // scProducto.llenargrid(dtgvProductos);
                        // scInventario.llenargridInv(dtgvInventario);
                     }
                 }
