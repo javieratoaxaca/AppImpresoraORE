@@ -40,7 +40,7 @@ namespace Impresoras.Views
         }
         public void InitializeSetting()
         {
-            this.FormBorderStyle = FormBorderStyle.None;
+            //this.FormBorderStyle = FormBorderStyle.None;
             HideSubMenus();
         }
 
@@ -150,7 +150,7 @@ namespace Impresoras.Views
 
         private void vwPrincipal_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Conexion Exitosa" + cnx.getConnection());
+           // MessageBox.Show("Conexion Exitosa" + cnx.getConnection());
         }
 
         private void iconBtnPrint_Click(object sender, EventArgs e)

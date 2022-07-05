@@ -17,10 +17,10 @@ namespace Impresoras.Data
         bool estadoEquipo;
         string fechaAlta;
         string obsEquipo;
-        byte[] imgQr;
+        string imgQr;
 
 
-        public byte[] ImgQr
+        public string ImgQr
         {
             get
             {

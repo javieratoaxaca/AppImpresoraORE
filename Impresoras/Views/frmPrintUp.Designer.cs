@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gTxtBuscarODP = new Guna.UI.WinForms.GunaTextBox();
@@ -49,7 +46,6 @@
             this.gTxtSerieEquipo = new Guna.UI.WinForms.GunaTextBox();
             this.gTxtMarcaEquipo = new Guna.UI.WinForms.GunaTextBox();
             this.gTxtModeloEquipo = new Guna.UI.WinForms.GunaTextBox();
-            this.dtgvPrint = new Guna.UI.WinForms.GunaDataGridView();
             this.pctQr = new System.Windows.Forms.PictureBox();
             this.gBtnQrDispositivo = new Guna.UI.WinForms.GunaButton();
             this.gBtnEliminarDispositivo = new Guna.UI.WinForms.GunaButton();
@@ -58,15 +54,16 @@
             this.gBtnGuardarDispositivo = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gGroupBox = new Guna.UI.WinForms.GunaGroupBox();
-            this.gChBoxAccesorio1 = new Guna.UI.WinForms.GunaCheckBox();
-            this.gChBoxAccesorio2 = new Guna.UI.WinForms.GunaCheckBox();
             this.gChBoxAccesorio3 = new Guna.UI.WinForms.GunaCheckBox();
+            this.gChBoxAccesorio2 = new Guna.UI.WinForms.GunaCheckBox();
+            this.gChBoxAccesorio1 = new Guna.UI.WinForms.GunaCheckBox();
             this.gTxtObsEquipo = new Guna.UI.WinForms.GunaTextBox();
+            this.dtgvPrint = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvPrint)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctQr)).BeginInit();
             this.gGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPrint)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -327,63 +324,6 @@
             this.gTxtModeloEquipo.Size = new System.Drawing.Size(296, 50);
             this.gTxtModeloEquipo.TabIndex = 37;
             // 
-            // dtgvPrint
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dtgvPrint.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dtgvPrint.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvPrint.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
-            this.dtgvPrint.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvPrint.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvPrint.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvPrint.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dtgvPrint.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvPrint.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dtgvPrint.EnableHeadersVisualStyles = false;
-            this.dtgvPrint.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvPrint.Location = new System.Drawing.Point(29, 484);
-            this.dtgvPrint.Name = "dtgvPrint";
-            this.dtgvPrint.RowHeadersVisible = false;
-            this.dtgvPrint.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvPrint.Size = new System.Drawing.Size(820, 284);
-            this.dtgvPrint.TabIndex = 43;
-            this.dtgvPrint.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.dtgvPrint.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvPrint.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgvPrint.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgvPrint.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgvPrint.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgvPrint.ThemeStyle.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.dtgvPrint.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvPrint.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtgvPrint.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgvPrint.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dtgvPrint.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgvPrint.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgvPrint.ThemeStyle.HeaderStyle.Height = 4;
-            this.dtgvPrint.ThemeStyle.ReadOnly = false;
-            this.dtgvPrint.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvPrint.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvPrint.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dtgvPrint.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgvPrint.ThemeStyle.RowsStyle.Height = 22;
-            this.dtgvPrint.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvPrint.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
             // pctQr
             // 
             this.pctQr.Location = new System.Drawing.Point(859, 484);
@@ -555,17 +495,17 @@
             this.gGroupBox.Text = "Accesorios";
             this.gGroupBox.TextLocation = new System.Drawing.Point(10, 8);
             // 
-            // gChBoxAccesorio1
+            // gChBoxAccesorio3
             // 
-            this.gChBoxAccesorio1.BaseColor = System.Drawing.Color.White;
-            this.gChBoxAccesorio1.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gChBoxAccesorio1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gChBoxAccesorio1.FillColor = System.Drawing.Color.White;
-            this.gChBoxAccesorio1.Location = new System.Drawing.Point(16, 45);
-            this.gChBoxAccesorio1.Name = "gChBoxAccesorio1";
-            this.gChBoxAccesorio1.Size = new System.Drawing.Size(121, 20);
-            this.gChBoxAccesorio1.TabIndex = 3;
-            this.gChBoxAccesorio1.Text = "CABLE ENERGIA";
+            this.gChBoxAccesorio3.BaseColor = System.Drawing.Color.White;
+            this.gChBoxAccesorio3.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gChBoxAccesorio3.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gChBoxAccesorio3.FillColor = System.Drawing.Color.White;
+            this.gChBoxAccesorio3.Location = new System.Drawing.Point(283, 44);
+            this.gChBoxAccesorio3.Name = "gChBoxAccesorio3";
+            this.gChBoxAccesorio3.Size = new System.Drawing.Size(95, 20);
+            this.gChBoxAccesorio3.TabIndex = 5;
+            this.gChBoxAccesorio3.Text = "CD INSTALL";
             // 
             // gChBoxAccesorio2
             // 
@@ -579,17 +519,17 @@
             this.gChBoxAccesorio2.TabIndex = 4;
             this.gChBoxAccesorio2.Text = "CABLE USB";
             // 
-            // gChBoxAccesorio3
+            // gChBoxAccesorio1
             // 
-            this.gChBoxAccesorio3.BaseColor = System.Drawing.Color.White;
-            this.gChBoxAccesorio3.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gChBoxAccesorio3.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gChBoxAccesorio3.FillColor = System.Drawing.Color.White;
-            this.gChBoxAccesorio3.Location = new System.Drawing.Point(283, 44);
-            this.gChBoxAccesorio3.Name = "gChBoxAccesorio3";
-            this.gChBoxAccesorio3.Size = new System.Drawing.Size(95, 20);
-            this.gChBoxAccesorio3.TabIndex = 5;
-            this.gChBoxAccesorio3.Text = "CD INSTALL";
+            this.gChBoxAccesorio1.BaseColor = System.Drawing.Color.White;
+            this.gChBoxAccesorio1.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gChBoxAccesorio1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gChBoxAccesorio1.FillColor = System.Drawing.Color.White;
+            this.gChBoxAccesorio1.Location = new System.Drawing.Point(16, 45);
+            this.gChBoxAccesorio1.Name = "gChBoxAccesorio1";
+            this.gChBoxAccesorio1.Size = new System.Drawing.Size(121, 20);
+            this.gChBoxAccesorio1.TabIndex = 3;
+            this.gChBoxAccesorio1.Text = "CABLE ENERGIA";
             // 
             // gTxtObsEquipo
             // 
@@ -611,17 +551,28 @@
             this.gTxtObsEquipo.Size = new System.Drawing.Size(402, 181);
             this.gTxtObsEquipo.TabIndex = 49;
             // 
+            // dtgvPrint
+            // 
+            this.dtgvPrint.AllowUserToAddRows = false;
+            this.dtgvPrint.AllowUserToDeleteRows = false;
+            this.dtgvPrint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvPrint.Location = new System.Drawing.Point(29, 484);
+            this.dtgvPrint.Name = "dtgvPrint";
+            this.dtgvPrint.ReadOnly = true;
+            this.dtgvPrint.Size = new System.Drawing.Size(801, 281);
+            this.dtgvPrint.TabIndex = 50;
+            // 
             // frmPrintUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1217, 804);
+            this.Controls.Add(this.dtgvPrint);
             this.Controls.Add(this.gTxtObsEquipo);
             this.Controls.Add(this.gGroupBox);
             this.Controls.Add(this.gunaLabel8);
             this.Controls.Add(this.pctQr);
-            this.Controls.Add(this.dtgvPrint);
             this.Controls.Add(this.gBtnQrDispositivo);
             this.Controls.Add(this.gBtnEliminarDispositivo);
             this.Controls.Add(this.gBtnEditarDispositivo);
@@ -645,10 +596,10 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvPrint)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctQr)).EndInit();
             this.gGroupBox.ResumeLayout(false);
             this.gGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPrint)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -679,7 +630,6 @@
         private Guna.UI.WinForms.GunaButton gBtnEditarDispositivo;
         private Guna.UI.WinForms.GunaButton gBtnEliminarDispositivo;
         private Guna.UI.WinForms.GunaButton gBtnQrDispositivo;
-        private Guna.UI.WinForms.GunaDataGridView dtgvPrint;
         private System.Windows.Forms.PictureBox pctQr;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaGroupBox gGroupBox;
@@ -687,5 +637,6 @@
         private Guna.UI.WinForms.GunaCheckBox gChBoxAccesorio2;
         private Guna.UI.WinForms.GunaCheckBox gChBoxAccesorio1;
         private Guna.UI.WinForms.GunaTextBox gTxtObsEquipo;
+        private System.Windows.Forms.DataGridView dtgvPrint;
     }
 }

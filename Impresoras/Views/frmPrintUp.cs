@@ -26,7 +26,8 @@ namespace Impresoras.Views
 
     {
         mdImpresora mdPrint;
-        
+        byte[] aByte=null;
+        string encoded = "";
         public frmPrintUp()
         {
             mdPrint = new mdImpresora();
@@ -99,7 +100,7 @@ namespace Impresoras.Views
             gChBoxAccesorio1.Checked = false;
             gChBoxAccesorio2.Checked = false;
             gChBoxAccesorio3.Checked = false;
-
+            pctQr.Image = null;
 
         }
 
@@ -131,18 +132,15 @@ namespace Impresoras.Views
                 dtImpresora.ObsEquipo = gTxtObsEquipo.Text + "\n Siguientes Accesorios: " + accesorios;
                 dtImpresora.EstadoEquipo = status;
                 dtImpresora.FechaAlta = fechaCaptura;
+                dtImpresora.ImgQr = encoded;
 
-                byte[] mifoto = imgToByte(pctQr.BackgroundImage);
-                dtImpresora.ImgQr = mifoto;
-
-
-
-
+                
                 if (string.IsNullOrEmpty(gTxtNoEquipo.Text) || string.IsNullOrEmpty(gTxtNomEquipo.Text) || string.IsNullOrEmpty(gTxtSerieEquipo.Text) || string.IsNullOrEmpty(gTxtMarcaEquipo.Text) || string.IsNullOrEmpty(gTxtModeloEquipo.Text) || string.IsNullOrEmpty(gTxtObsEquipo.Text))
                 {
                     MessageBox.Show("Debe Completar la información");
+                    return;
                 }
-                  else if (!mdPrint.ExistePrint(dtImpresora.SerieEquipo))
+                 if (!mdPrint.ExistePrint(dtImpresora.SerieEquipo))
                 {
                     if (mdPrint.insertImpresora(dtImpresora))
                     {
@@ -172,7 +170,7 @@ namespace Impresoras.Views
 
         //Metodos para el manejo de la imagen que se guardara o mostrara en la base de datos
         // de Byte a Img
-            private static MemoryStream byteToImage(byte[] array)
+         /*   private static MemoryStream byteToImage(byte[] array)
         {
             MemoryStream ms = new MemoryStream();
             return ms;
@@ -184,7 +182,7 @@ namespace Impresoras.Views
             MemoryStream ms = new MemoryStream();
             imgIn.Save(ms, ImageFormat.Png);
             return ms.ToArray();
-        }
+        }*/
         #endregion
 
         private void gBtnRegistrarDispositivo_Click(object sender, EventArgs e)
@@ -219,10 +217,10 @@ namespace Impresoras.Views
             var imgTmp = new Bitmap(ms);
             var img = new Bitmap(imgTmp, new Size(new Point(346,281)));
 
-            pctQr.BackgroundImage = img;
-            img.Save("QrImg.png", ImageFormat.Png);
-
-
+            pctQr.Image = img;
+            img.Save(ms, ImageFormat.Png);
+            aByte = ms.ToArray();
+            encoded = Convert.ToBase64String(aByte);
         }
 
 

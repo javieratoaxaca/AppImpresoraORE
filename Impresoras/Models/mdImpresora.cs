@@ -21,16 +21,12 @@ namespace Impresoras.Models
         public mdImpresora() { }
         public bool insertImpresora(dtImpresora dtPrint) {
 
-            /*string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
-                                         "modeloEquipo,obsEquipo,statusEquipo,fechaRegistro,imgQr) " +
-<<<<<<< HEAD
-                                         "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}','{8}')",
-=======
-                                         "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}',{8})",
->>>>>>> d8f35eacdbd1890c1acd8451bacd55ebcdce868f
-                                         dtPrint.NumeroEquipo,dtPrint.NombreEquipo,dtPrint.SerieEquipo,dtPrint.MarcaEquipo, 
-                                         dtPrint.ModeloEquipo, dtPrint.ObsEquipo,dtPrint.EstadoEquipo,dtPrint.FechaAlta,dtPrint.ImgQr.ToArray());*/
             string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
+                                         "modeloEquipo,obsEquipo,statusEquipo,fechaRegistro,imgQr) " +
+                                         "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}','{8}')",
+                                         dtPrint.NumeroEquipo,dtPrint.NombreEquipo,dtPrint.SerieEquipo,dtPrint.MarcaEquipo, 
+                                         dtPrint.ModeloEquipo, dtPrint.ObsEquipo,dtPrint.EstadoEquipo,dtPrint.FechaAlta,dtPrint.ImgQr);
+            /*string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
             "modeloEquipo,obsEquipo,statusEquipo,fechaRegistro,imgQr) " +
             //"VALUES(@numEquipo,@nombreEquipo,@serieEquipo,@marcaEquipo,@modeloEquipo,@obsEquipo,@statusEquipo,@fechaRegistro,@imgQr)");
             "VALUES(?,?,?,?,?,?,?,?,?)");
@@ -47,15 +43,15 @@ namespace Impresoras.Models
                 new MySqlParameter("@obsEquipo",dtPrint.ObsEquipo),
                 new MySqlParameter("@statusEquipo",dtPrint.EstadoEquipo),
                 new MySqlParameter("@fechaRegistro",dtPrint.FechaAlta),
-                pramIm
-            };
+                pramImg
+            };*/
 
             //MySqlCommand
             try
             {
                 Console.Write(Query);
 
-                int result = ExecuteQuery(Query, lista.ToArray());
+                int result = ExecuteQuery(Query);
                 if (result > 0)
                     return true;
             }
@@ -116,7 +112,7 @@ namespace Impresoras.Models
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 grid.DataSource = dt;
-
+                
             }
             catch (Exception ex)
             {
