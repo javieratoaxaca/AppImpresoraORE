@@ -201,5 +201,17 @@ namespace Impresoras.Views
             activeBtn(iconBtnPrint);
             frmShow(new frmPrintUp());
         }
+
+        private void iconBtnAsignacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlSubMenuCatalogo);
+            activeBtn(iconBtnRegion);
+            frmShow(new frmRegion());
+        }
     }
 }

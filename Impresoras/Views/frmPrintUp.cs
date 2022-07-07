@@ -129,7 +129,7 @@ namespace Impresoras.Views
                     MessageBox.Show("Debe Completar la información");
                     return;
                 }
-                 else if (!mdPrint.ExistePrint(dtImpresora.SerieEquipo))
+                 else if (!mdPrint.ExistePrint (dtImpresora.SerieEquipo))
                 {
                     if (mdPrint.insertImpresora(dtImpresora))
                     {

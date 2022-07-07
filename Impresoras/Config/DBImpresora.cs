@@ -43,18 +43,13 @@ namespace Impresoras.Config
         }
 
         //metodo para Ejecucion de Querys
-        public int ExecuteQuery(string querySql,Array param=null)
+        public int ExecuteQuery(string querySql)
         {
             int res = 0;
             try
             {
                 MySqlCommand mySqlCommand = new MySqlCommand(querySql,getConnection());
-                if (param != null)
-                {
-                    mySqlCommand.CommandType = CommandType.Text;
-                    mySqlCommand.Parameters.Add(param);
-                }
-               
+
                 res = mySqlCommand.ExecuteNonQuery();
                 
                 getConnection().Close();
