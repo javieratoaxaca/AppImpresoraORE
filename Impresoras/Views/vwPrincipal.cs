@@ -204,7 +204,9 @@ namespace Impresoras.Views
 
         private void iconBtnAsignacion_Click(object sender, EventArgs e)
         {
-
+            ShowSubMenu(pnlSubMenuCatalogo);
+            activeBtn(iconBtnAsignacion);
+            frmShow(new frmAsignacion());
         }
 
         private void iconButton1_Click(object sender, EventArgs e)

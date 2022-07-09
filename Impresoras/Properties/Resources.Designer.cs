@@ -333,6 +333,16 @@ namespace Impresoras.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_export_pdf_60px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_export_pdf_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_google_web_search_60px {
             get {
                 object obj = ResourceManager.GetObject("icons8_google_web_search_60px", resourceCulture);
@@ -406,6 +416,16 @@ namespace Impresoras.Properties {
         internal static System.Drawing.Bitmap icons8_qr_code_48px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_qr_code_48px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_return_book_60px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_return_book_60px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -543,6 +563,26 @@ namespace Impresoras.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_task_24px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_task_24px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_task_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_task_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_university_100px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_university_100px_1", resourceCulture);
@@ -556,6 +596,16 @@ namespace Impresoras.Properties {
         internal static System.Drawing.Bitmap icons8_usb_connected_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_usb_connected_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_xls_export_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_xls_export_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

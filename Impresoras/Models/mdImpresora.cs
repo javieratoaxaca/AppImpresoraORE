@@ -118,5 +118,35 @@ namespace Impresoras.Models
             }
 
         }
+
+        //Metodo para llenar el ComboBox
+        public void llenarCmbxPrint(ComboBox cmb)
+
+        {
+            cmb.Items.Clear();
+            try
+            {
+                //string Query = string.Format("SELECT CONCAT(idSare,'---', sare)AS Region FROM region; ");
+                string Query = string.Format("SELECT * FROM inventarioequipo; ");
+                //string Query2 = string.Format("SELECT sare  FROM region; ");
+                MySqlDataReader dr = GetDataReader(Query);
+                //MySqlDataReader dr2 = GetDataReader(Query2);
+
+                while (dr.Read())
+                {
+                    cmb.Items.Add(dr[3].ToString() + " -- " + dr[4].ToString() + " -- " + dr[5].ToString());
+                    //cmb.Items.Add(dr[2].ToString())
+
+                }
+                cmb.Items.Insert(0, "--- Selecciona una Impresora ---");
+                cmb.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+        }
     }
 }

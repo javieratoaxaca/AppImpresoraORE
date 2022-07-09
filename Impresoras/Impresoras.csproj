@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Licensing">
+      <HintPath>..\..\..\..\..\Descargas\ftuapps.dev\Bunifu.Licensing\Bunifu.Licensing.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
       <Private>True</Private>
@@ -71,9 +74,16 @@
     <Compile Include="Data\dtImpresora.cs" />
     <Compile Include="Data\dtRegion.cs" />
     <Compile Include="Models\mdImpresora.cs" />
+    <Compile Include="Models\mdlAsignacionPrint.cs" />
     <Compile Include="Models\mdRegion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\frmAsignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmAsignacion.Designer.cs">
+      <DependentUpon>frmAsignacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmPrints.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +118,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\frmAsignacion.resx">
+      <DependentUpon>frmAsignacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPrints.resx">
       <DependentUpon>frmPrints.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +150,11 @@
   <ItemGroup>
     <Content Include="Config\Guna.UI.dll" />
     <Content Include="Config\MySql.Data.dll" />
+    <None Include="Resources\icons8_xls_export_48px.png" />
+    <None Include="Resources\icons8_task_48px.png" />
+    <None Include="Resources\icons8_task_24px_1.png" />
+    <None Include="Resources\icons8_return_book_60px.png" />
+    <None Include="Resources\icons8_export_pdf_60px.png" />
     <None Include="Resources\icons8_qr_code_48px_1.png" />
     <None Include="Resources\icons8_qr_code_48px.png" />
     <None Include="Resources\vacuum_cleaner_128px.png" />

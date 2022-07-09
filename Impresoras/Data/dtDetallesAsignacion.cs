@@ -10,7 +10,6 @@ namespace Impresoras.Data
     {
         int idDetalleAsignacion;
         int idInventarioEquipo;
-        int idAccesorioEquipo;
         int idRegion;
         string fechaAsignacion;
 
@@ -37,19 +36,6 @@ namespace Impresoras.Data
             set
             {
                 idInventarioEquipo = value;
-            }
-        }
-
-        public int IdAccesorioEquipo
-        {
-            get
-            {
-                return idAccesorioEquipo;
-            }
-
-            set
-            {
-                idAccesorioEquipo = value;
             }
         }
 
