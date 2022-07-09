@@ -18,8 +18,11 @@ namespace Impresoras.Views
         dtRegion dtRegiones;
         mdImpresora mdPrint;
         dtImpresora dtImpresora;
+        mdlAsignacionPrint mdlAssign;
+        dtDetallesAsignacion dtAssign;
         int initPrint;
         int initRegion;
+        string fechAsignacion;
 
         public frmAsignacion()
         {
@@ -28,21 +31,20 @@ namespace Impresoras.Views
             dtRegiones = new dtRegion();
             mdPrint = new mdImpresora();
             dtImpresora = new dtImpresora();
+            mdlAssign = new mdlAsignacionPrint();
+            dtAssign = new dtDetallesAsignacion();
         }
         
         private void frmAsignacion_Load(object sender, EventArgs e)
         {
             mdlRegion.llenarCmbxRegion(gcmbxRegion);
             mdPrint.llenarCmbxPrint(gcmbxPrint);
-           
-           
-           
         }
 
         private void gcmbxPrint_SelectedIndexChanged(object sender, EventArgs e)
         {
             gLbl.Text = gcmbxPrint.SelectedIndex.ToString();
-            initPrint =Convert.ToInt32( gLbl.Text);
+            initPrint = Convert.ToInt32( gLbl.Text);
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
