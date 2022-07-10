@@ -76,6 +76,24 @@ namespace Impresoras.Models
 
             return false;
         }*/
+        //Metodo para Actualizar el Registro de Status de la Impresora 0=Baja, 1=Activo ,2 = Asignado se muestre en el Datagrid
+        public bool UpdatePrintStatus(dtImpresora dtPrint,dtDetallesAsignacion dtAssignPrint)
+        {
+            string Query = string.Format("UPDATE inventarioequipo SET statusEquipo={0} Where idInventarioEquipo={1}", dtPrint.EstadoEquipo,dtAssignPrint.IdInventarioEquipo);
+            try
+            {
+                int result = ExecuteQuery(Query);
+                if (result > 0)
+
+                    return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return false;
+        }
         //Metodo para Buscar un dato en la Base 
         public void cargaGridBuscador(DataGridView grid, string txtBuscar)
         {
@@ -127,14 +145,15 @@ namespace Impresoras.Models
             try
             {
                 //string Query = string.Format("SELECT CONCAT(idSare,'---', sare)AS Region FROM region; ");
-                string Query = string.Format("SELECT * FROM inventarioequipo; ");
+                string Query = string.Format("SELECT * FROM inventarioequipo");
                 //string Query2 = string.Format("SELECT sare  FROM region; ");
                 MySqlDataReader dr = GetDataReader(Query);
                 //MySqlDataReader dr2 = GetDataReader(Query2);
 
                 while (dr.Read())
                 {
-                    cmb.Items.Add(dr[3].ToString() + " -- " + dr[4].ToString() + " -- " + dr[5].ToString());
+                    //cmb.Items.Add(dr[3].ToString() + " -- " + dr[4].ToString() + " -- " + dr[5].ToString());
+                    cmb.Items.Add(dr[3].ToString());
                     //cmb.Items.Add(dr[2].ToString())
 
                 }

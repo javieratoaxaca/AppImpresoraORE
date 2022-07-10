@@ -14,7 +14,7 @@ namespace Impresoras.Data
         string serieEquipo;
         string marcaEquipo;
         string modeloEquipo;
-        bool estadoEquipo;
+        int estadoEquipo;
         string fechaAlta;
         string obsEquipo;
         string imgQr;
@@ -111,7 +111,7 @@ namespace Impresoras.Data
             }
         }
 
-        public bool EstadoEquipo
+        public int EstadoEquipo
         {
             get
             {

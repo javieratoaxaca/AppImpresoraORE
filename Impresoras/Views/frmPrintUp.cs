@@ -99,7 +99,7 @@ namespace Impresoras.Views
         {
             string accesorios = "";
             string fechaCaptura = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
-            bool status = true;
+            int status = 1;
             try
             {
                 dtImpresora dtImpresora = new dtImpresora();
