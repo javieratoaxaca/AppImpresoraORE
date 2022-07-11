@@ -23,6 +23,7 @@ namespace Impresoras.Views
         int intPrint;
         int intRegion;
         string fechAsignacion;
+        string intIdEquipoSerie;
 
         public frmAsignacion()
         {
@@ -35,6 +36,7 @@ namespace Impresoras.Views
             dtAssign = new dtDetallesAsignacion();
             mdlRegion.llenarCmbxRegion(gcmbxRegion);
             mdPrint.llenarCmbxPrint(gcmbxPrint);
+            mdlAssign.llenargrid(dtgvAssignDetails);
         }
         
         private void frmAsignacion_Load(object sender, EventArgs e)
@@ -79,9 +81,9 @@ namespace Impresoras.Views
                     if (mdlAssign.insertAssignPrint(dtAssign) && mdPrint.UpdatePrintStatus(dtImpresora,dtAssign))
                     {
                         MessageBox.Show("Se Guardo Exitosamente");
-                        //mdPrint.llenargrid(dtgvPrint);
-                        // scInventario.llenargridInv(dtgvInventario);
-                    }
+                        mdlAssign.llenargrid(dtgvAssignDetails);
+                    // scInventario.llenargridInv(dtgvInventario);
+                }
                 //}
                 else
                 {
@@ -101,11 +103,64 @@ namespace Impresoras.Views
             }
         }
 
+        private void returnAssignPrint()
+        {
+
+            int status = 1;
+            try
+            {
+
+                dtImpresora.IdInventarioEquipo = Convert.ToInt32(intIdEquipoSerie);
+                dtImpresora.EstadoEquipo = status;
+
+
+                if (mdlAssign.UpdatePrintStatusAssign(dtImpresora))
+                {
+                    MessageBox.Show("Se Guardo Exitosamente U");
+                    mdlAssign.llenargrid(dtgvAssignDetails);
+
+                }
+
+                else
+                {
+                    /*if (scProducto.UpdateProducto(dtImpresora))
+                    {
+                        MessageBox.Show("Se Actualizacion Exitosamente");
+                        scProducto.llenargrid(dtgvProductos);
+                        scInventario.llenargridInv(dtgvInventario);
+                    }*/
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //Metodo para actualizar 
+
         #endregion
 
         private void gbtnAssignPrint_Click(object sender, EventArgs e)
         {
             saveAssignPrint();
+            mdlAssign.llenargrid(dtgvAssignDetails);
+        }
+
+        private void gBtnReturnPrint_Click(object sender, EventArgs e)
+        {
+            returnAssignPrint();
+            mdlAssign.llenargrid(dtgvAssignDetails);
+        }
+
+        private void dtgvAssignDetails_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            intIdEquipoSerie = dtgvAssignDetails.CurrentRow.Cells[4].Value.ToString();
+            dtAssign.IdInventarioEquipo = Convert.ToInt32(intIdEquipoSerie.ToString());
+            gLblEquipoSerie.Text = dtAssign.IdInventarioEquipo.ToString();
+            
         }
     }
 }

@@ -59,6 +59,7 @@
             this.gChBoxAccesorio1 = new Guna.UI.WinForms.GunaCheckBox();
             this.gTxtObsEquipo = new Guna.UI.WinForms.GunaTextBox();
             this.dtgvPrint = new System.Windows.Forms.DataGridView();
+            this.gLblIdInventarioEquipo = new Guna.UI.WinForms.GunaLabel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctQr)).BeginInit();
@@ -561,6 +562,18 @@
             this.dtgvPrint.ReadOnly = true;
             this.dtgvPrint.Size = new System.Drawing.Size(801, 281);
             this.dtgvPrint.TabIndex = 50;
+            this.dtgvPrint.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPrint_CellClick);
+            // 
+            // gLblIdInventarioEquipo
+            // 
+            this.gLblIdInventarioEquipo.AutoSize = true;
+            this.gLblIdInventarioEquipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gLblIdInventarioEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.gLblIdInventarioEquipo.Location = new System.Drawing.Point(24, 768);
+            this.gLblIdInventarioEquipo.Name = "gLblIdInventarioEquipo";
+            this.gLblIdInventarioEquipo.Size = new System.Drawing.Size(155, 25);
+            this.gLblIdInventarioEquipo.TabIndex = 51;
+            this.gLblIdInventarioEquipo.Text = "Obs.  Equipo:";
             // 
             // frmPrintUp
             // 
@@ -568,6 +581,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1217, 804);
+            this.Controls.Add(this.gLblIdInventarioEquipo);
             this.Controls.Add(this.dtgvPrint);
             this.Controls.Add(this.gTxtObsEquipo);
             this.Controls.Add(this.gGroupBox);
@@ -638,5 +652,6 @@
         private Guna.UI.WinForms.GunaCheckBox gChBoxAccesorio1;
         private Guna.UI.WinForms.GunaTextBox gTxtObsEquipo;
         private System.Windows.Forms.DataGridView dtgvPrint;
+        private Guna.UI.WinForms.GunaLabel gLblIdInventarioEquipo;
     }
 }

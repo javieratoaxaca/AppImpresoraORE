@@ -17,10 +17,13 @@ namespace Impresoras.Views
         mdImpresora mdPrint;
         byte[] aByte=null;
         string encoded = "";
+        string intIdEquipoSerie;
+        string intIdInventarioEquipo;
         public frmPrintUp()
         {
             mdPrint = new mdImpresora();
             InitializeComponent();
+            mdPrint.llenargrid(dtgvPrint);
             txtCajasDesActivadas();
             btnDesActivados();
         }
@@ -211,8 +214,14 @@ namespace Impresoras.Views
             encoded = Convert.ToBase64String(aByte);
         }
 
-
-
-
+        private void dtgvPrint_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            intIdInventarioEquipo = dtgvPrint.CurrentRow.Cells[0].Value.ToString();
+            gLblIdInventarioEquipo.Text = intIdInventarioEquipo;
+            gBtnEditarDispositivo.Enabled = true;
+            /*intIdEquipoSerie = dtgvAssignDetails.CurrentRow.Cells[4].Value.ToString();
+            dtAssign.IdInventarioEquipo = Convert.ToInt32(intIdEquipoSerie.ToString());
+            gLblEquipoSerie.Text = dtAssign.IdInventarioEquipo.ToString();*/
+        }
     }
 }

@@ -16,6 +16,7 @@ namespace Impresoras.Views
             dtRegiones=new dtRegion();
             txtCajasDesactivadas();
             btnDesactivados();
+         
         }
 
         #region Cajas
