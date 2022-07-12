@@ -14,15 +14,15 @@ namespace Impresoras.Models
         
         public mdImpresora() { }
 
-        //Metodo para insertar los datos a la base de datos 
-
-        public dtImpresora GetProducto(int idInventarioPrint)
+        
+        //Metodo para lectura de los datos de la tabla de InventarioEquipo
+        public dtImpresora GetPrint(string serie)
         {
 
             dtImpresora dtPrint = new dtImpresora();
             try
             {
-                string Query = string.Format("SELECT * FROM inventarioequipo  where idInventarioEquipo like '{0}'", idInventarioPrint);
+                string Query = string.Format("SELECT * FROM inventarioequipo  where serieEquipo like '{0}'", serie);
                 // MySqlDataReader dr = GetDataTabla(Query);
                 MySqlDataReader dr = GetDataReader(Query);
 
@@ -49,6 +49,7 @@ namespace Impresoras.Models
             return dtPrint;
         }
 
+        //Metodo para insertar los datos a la base de datos 
         public bool insertImpresora(dtImpresora dtPrint) {
 
             string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
@@ -97,17 +98,15 @@ namespace Impresoras.Models
         //Metodo para Actualizar el Registro Completo y se muestre en el Datagrid
         public bool UpdatePrint(dtImpresora dtPrint)
         {
-            string Query = string.Format("UPDATE inventarioequipo SET numEquipo='{0}',nombreEquipo='{1}',serieEquipo='{2}',marcaEquipo='{3}',modeloEquipo='{4}',obsEquipo='{5}',statusEquipo={6}, fechaRegistro='{7}',imgQr='{8}' WHERE idInventarioEquipo like '{9}'",
+            string Query = string.Format("UPDATE inventarioequipo SET numEquipo='{0}',nombreEquipo='{1}',marcaEquipo='{2}',modeloEquipo='{3}',obsEquipo='{4}',statusEquipo={5},imgQr='{6}' WHERE serieEquipo like '{7}'",
                 dtPrint.NumeroEquipo,
                 dtPrint.NombreEquipo,
-                dtPrint.SerieEquipo,
                 dtPrint.MarcaEquipo,
                 dtPrint.ModeloEquipo,
                 dtPrint.ObsEquipo,
                 dtPrint.EstadoEquipo,
-                dtPrint.FechaAlta,
                 dtPrint.ImgQr,
-                dtPrint.IdInventarioEquipo);
+                dtPrint.SerieEquipo);
             try
             {
                 int result = ExecuteQuery(Query);
@@ -123,9 +122,26 @@ namespace Impresoras.Models
             return false;
         }
         //Metodo para Actualizar el Registro de Status de la Impresora 0=Baja, 1=Activo ,2 = Asignado se muestre en el Datagrid
-        public bool UpdatePrintStatus(dtImpresora dtPrint,dtDetallesAsignacion dtAssignPrint)
+        public bool UpdatePrintStatus(dtImpresora dtPrint,dtDetallesAsignacion dtAssign)
         {
-            string Query = string.Format("UPDATE inventarioequipo SET statusEquipo={0} Where idInventarioEquipo={1}", dtPrint.EstadoEquipo,dtAssignPrint.IdInventarioEquipo);
+            string Query = string.Format("UPDATE inventarioequipo SET statusEquipo={0} Where idInventarioEquipo={1}", dtPrint.EstadoEquipo, dtAssign.IdInventarioEquipo);
+            try
+            {
+                int result = ExecuteQuery(Query);
+                if (result > 0)
+
+                    return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return false;
+        }
+        public bool UpdatePrintStatusDelete(dtImpresora dtPrint)
+        {
+            string Query = string.Format("UPDATE inventarioequipo SET statusEquipo={0} and fechaRegistro='{1}' Where serieEquipo='{2}'", dtPrint.EstadoEquipo,dtPrint.FechaAlta,dtPrint.SerieEquipo );
             try
             {
                 int result = ExecuteQuery(Query);
@@ -165,17 +181,36 @@ namespace Impresoras.Models
 
 
         //Metodo para llenar el DataGridView
-        public void llenargrid(DataGridView grid)
+        public void llenargridAll(DataGridView grid)
         {
             try
             {
-                string Query = string.Format("select idInventarioEquipo as Id,numEquipo as Num_Equipo, nombreEquipo as Nombre_Equipo,serieEquipo as Serie_Equipo,marcaEquipo as Marca_Equipo,modeloEquipo as Modelo_Equipo,obsEquipo as Observaciones,fechaRegistro as Fecha_Alta,imgQr as Qr from inventarioequipo where statusEquipo=1");
+                string Query = string.Format("select idInventarioEquipo as Id,numEquipo as Num_Equipo, nombreEquipo as Nombre_Equipo,serieEquipo as Serie_Equipo,marcaEquipo as Marca_Equipo,modeloEquipo as Modelo_Equipo,obsEquipo as Observaciones,fechaRegistro as Fecha_Alta,statusEquipo as Estado from inventarioequipo ");
                 MySqlCommand Query2 = new MySqlCommand(Query, getConnection());
                 MySqlDataAdapter da = new MySqlDataAdapter(Query2);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 grid.DataSource = dt;
                 
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+        public void llenargridOne(DataGridView grid)
+        {
+            try
+            {
+                string Query = string.Format("select idInventarioEquipo as Id,numEquipo as Num_Equipo, nombreEquipo as Nombre_Equipo,serieEquipo as Serie_Equipo,marcaEquipo as Marca_Equipo,modeloEquipo as Modelo_Equipo,obsEquipo as Observaciones,fechaRegistro as Fecha_Alta,imgQr as Qr from inventarioequipo where statusEquipo=1 ");
+                MySqlCommand Query2 = new MySqlCommand(Query, getConnection());
+                MySqlDataAdapter da = new MySqlDataAdapter(Query2);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                grid.DataSource = dt;
+
             }
             catch (Exception ex)
             {
@@ -192,7 +227,7 @@ namespace Impresoras.Models
             try
             {
                 //string Query = string.Format("SELECT CONCAT(idSare,'---', sare)AS Region FROM region; ");
-                string Query = string.Format("SELECT * FROM inventarioequipo");
+                string Query = string.Format("SELECT * FROM inventarioequipo where statusEquipo=1");
                 //string Query2 = string.Format("SELECT sare  FROM region; ");
                 MySqlDataReader dr = GetDataReader(Query);
                 //MySqlDataReader dr2 = GetDataReader(Query2);

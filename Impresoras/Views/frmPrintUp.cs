@@ -15,15 +15,17 @@ namespace Impresoras.Views
 
     {
         mdImpresora mdPrint;
+        dtImpresora dtPrint;
         byte[] aByte=null;
         string encoded = "";
         string intIdEquipoSerie;
-        string intIdInventarioEquipo;
+        string serie;
         public frmPrintUp()
         {
             mdPrint = new mdImpresora();
+            dtPrint = new dtImpresora();
             InitializeComponent();
-            mdPrint.llenargrid(dtgvPrint);
+            mdPrint.llenargridOne(dtgvPrint);
             txtCajasDesActivadas();
             btnDesActivados();
         }
@@ -101,20 +103,18 @@ namespace Impresoras.Views
         private void savePrint()
         {
             string accesorios = "";
-            string fechaCaptura = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
+            
             int status = 1;
             try
             {
                 dtImpresora dtImpresora = new dtImpresora();
-
+                string fechaCaptura = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
                 if (gChBoxAccesorio1.Checked == true)
                     accesorios += gChBoxAccesorio1.Text +",\n";
                 if (gChBoxAccesorio2.Checked == true)
                     accesorios += gChBoxAccesorio2.Text + ",\n"; 
                 if (gChBoxAccesorio3.Checked == true)
                     accesorios += gChBoxAccesorio3.Text;
-
-
 
                 dtImpresora.NumeroEquipo = gTxtNoEquipo.Text;
                 dtImpresora.NombreEquipo = gTxtNomEquipo.Text;
@@ -132,23 +132,83 @@ namespace Impresoras.Views
                     MessageBox.Show("Debe Completar la información");
                     return;
                 }
-                 else if (!mdPrint.ExistePrint (dtImpresora.SerieEquipo))
+                if (!mdPrint.ExistePrint(dtImpresora.SerieEquipo))
                 {
                     if (mdPrint.insertImpresora(dtImpresora))
                     {
                         MessageBox.Show("Se Guardo Exitosamente");
-                        mdPrint.llenargrid(dtgvPrint);
+                        mdPrint.llenargridOne(dtgvPrint);
                        // scInventario.llenargridInv(dtgvInventario);
                     }
                 }
                 else
                 {
-                    /*if (scProducto.UpdateProducto(dtImpresora))
+                    if (mdPrint.UpdatePrint(dtImpresora))
                     {
                         MessageBox.Show("Se Actualizacion Exitosamente");
-                        scProducto.llenargrid(dtgvProductos);
-                        scInventario.llenargridInv(dtgvInventario);
+                        mdPrint.llenargridOne(dtgvPrint);
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //
+        private void savePrintDelete()
+        {
+            string accesorios = "";
+            string fechaCaptura = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
+            int status = 0;
+            try
+            {
+                dtImpresora dtImpresora = new dtImpresora();
+         
+                if (gChBoxAccesorio1.Checked == true)
+                    accesorios += gChBoxAccesorio1.Text + ",\n";
+                if (gChBoxAccesorio2.Checked == true)
+                    accesorios += gChBoxAccesorio2.Text + ",\n";
+                if (gChBoxAccesorio3.Checked == true)
+                    accesorios += gChBoxAccesorio3.Text;
+
+                dtImpresora.NumeroEquipo = gTxtNoEquipo.Text;
+                dtImpresora.NombreEquipo = gTxtNomEquipo.Text;
+                dtImpresora.SerieEquipo = gTxtSerieEquipo.Text;
+                dtImpresora.MarcaEquipo = gTxtMarcaEquipo.Text;
+                dtImpresora.ModeloEquipo = gTxtModeloEquipo.Text;
+                dtImpresora.ObsEquipo = gTxtObsEquipo.Text + "\n Siguientes Accesorios: " + accesorios;
+                dtImpresora.EstadoEquipo = status;
+                dtImpresora.FechaAlta = fechaCaptura;
+                dtImpresora.ImgQr = encoded;
+
+
+                if (string.IsNullOrEmpty(gTxtNoEquipo.Text) || string.IsNullOrEmpty(gTxtNomEquipo.Text) || string.IsNullOrEmpty(gTxtSerieEquipo.Text) || string.IsNullOrEmpty(gTxtMarcaEquipo.Text) || string.IsNullOrEmpty(gTxtModeloEquipo.Text) || string.IsNullOrEmpty(gTxtObsEquipo.Text))
+                {
+                    MessageBox.Show("Debe Completar la información");
+                    return;
+                }
+                if (!mdPrint.ExistePrint(dtImpresora.SerieEquipo))
+                {
+                   /* if (mdPrint.insertImpresora(dtImpresora))
+                    {
+                        MessageBox.Show("Se Guardo Exitosamente");
+                        mdPrint.llenargridOne(dtgvPrint);
+                        // scInventario.llenargridInv(dtgvInventario);
                     }*/
+                }
+                else
+                {
+                    if (mdPrint.UpdatePrintStatusDelete(dtImpresora))
+                    {
+                        MessageBox.Show("Se Elimino Exitosamente");
+                        mdPrint.llenargridOne(dtgvPrint);
+                    }
+
                 }
 
             }
@@ -161,19 +221,19 @@ namespace Impresoras.Views
 
         //Metodos para el manejo de la imagen que se guardara o mostrara en la base de datos
         // de Byte a Img
-         /*   private static MemoryStream byteToImage(byte[] array)
-        {
-            MemoryStream ms = new MemoryStream();
-            return ms;
-        }
+        /*   private static MemoryStream byteToImage(byte[] array)
+       {
+           MemoryStream ms = new MemoryStream();
+           return ms;
+       }
 
-        // de Img a Byte
-        private static byte [] imgToByte(Image imgIn)
-        {
-            MemoryStream ms = new MemoryStream();
-            imgIn.Save(ms, ImageFormat.Png);
-            return ms.ToArray();
-        }*/
+       // de Img a Byte
+       private static byte [] imgToByte(Image imgIn)
+       {
+           MemoryStream ms = new MemoryStream();
+           imgIn.Save(ms, ImageFormat.Png);
+           return ms.ToArray();
+       }*/
         #endregion
 
         private void gBtnRegistrarDispositivo_Click(object sender, EventArgs e)
@@ -185,7 +245,7 @@ namespace Impresoras.Views
         private void gBtnGuardarDispositivo_Click(object sender, EventArgs e)
         {
             savePrint();
-            mdPrint.llenargrid(dtgvPrint);
+            mdPrint.llenargridOne(dtgvPrint);
             CajasTxtPrintLimpias();
             txtCajasDesActivadas();
             btnDesActivados();
@@ -216,13 +276,43 @@ namespace Impresoras.Views
 
         private void dtgvPrint_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            intIdInventarioEquipo = dtgvPrint.CurrentRow.Cells[0].Value.ToString();
-            gLblIdInventarioEquipo.Text = intIdInventarioEquipo;
+            serie = dtgvPrint.CurrentRow.Cells[3].Value.ToString();
+            gLblIdInventarioEquipo.Text = serie;
             gBtnEditarDispositivo.Enabled = true;
+            gBtnEliminarDispositivo.Enabled = true;
+            dtPrint = mdPrint.GetPrint(serie);
+            gTxtNoEquipo.Text = dtPrint.NumeroEquipo;
+            gTxtNomEquipo.Text = dtPrint.NombreEquipo;
+            gTxtSerieEquipo.Text = dtPrint.SerieEquipo;
+            gTxtMarcaEquipo.Text = dtPrint.MarcaEquipo;
+            gTxtModeloEquipo.Text = dtPrint.ModeloEquipo;
+            gTxtObsEquipo.Text = dtPrint.ObsEquipo;
+            
+        }
 
-            /*intIdEquipoSerie = dtgvAssignDetails.CurrentRow.Cells[4].Value.ToString();
-            dtAssign.IdInventarioEquipo = Convert.ToInt32(intIdEquipoSerie.ToString());
-            gLblEquipoSerie.Text = dtAssign.IdInventarioEquipo.ToString();*/
+        private void gBtnEditarDispositivo_Click(object sender, EventArgs e)
+        {
+            txtCajasActivadas();
+            gBtnRegistrarDispositivo.Enabled = false;
+            gBtnRegistrarDispositivo.Visible = false;
+            gBtnGuardarDispositivo.Enabled = true;
+            gBtnGuardarDispositivo.Visible = true;
+            //gBtnEliminarDispositivo.Enabled = true;
+            //gBtnEliminarDispositivo.Visible = true;
+            gBtnQrDispositivo.Enabled = true;
+            gBtnEditarDispositivo.Enabled = false;
+        }
+
+        private void gBtnEliminarDispositivo_Click(object sender, EventArgs e)
+        {
+            serie = dtgvPrint.CurrentRow.Cells[3].Value.ToString();
+            gLblIdInventarioEquipo.Text = serie;
+            gBtnEditarDispositivo.Enabled = true;
+            savePrintDelete();
+            txtCajasDesActivadas();
+            CajasTxtPrintLimpias();
+            btnDesActivados();
+
         }
     }
 }

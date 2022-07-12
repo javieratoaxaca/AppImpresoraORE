@@ -15,7 +15,7 @@ namespace Impresoras.Views
             InitializeComponent();
             mdPrint = new mdImpresora();
             dtImpresora = new dtImpresora();
-            mdPrint.llenargrid(dtgvPrints);
+            mdPrint.llenargridAll(dtgvPrints);
         }
 
         private void lblMsnDashboard_Click(object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace Impresoras.Views
             if (gTxtBuscarPrint.Text != "")
                 mdPrint.cargaGridBuscador(dtgvPrints, gTxtBuscarPrint.Text);
             else
-                mdPrint.llenargrid(dtgvPrints);
+                mdPrint.llenargridAll(dtgvPrints);
         }
     }
 }

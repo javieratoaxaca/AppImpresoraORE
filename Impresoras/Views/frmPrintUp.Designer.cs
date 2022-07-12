@@ -327,9 +327,9 @@
             // 
             // pctQr
             // 
-            this.pctQr.Location = new System.Drawing.Point(859, 484);
+            this.pctQr.Location = new System.Drawing.Point(882, 484);
             this.pctQr.Name = "pctQr";
-            this.pctQr.Size = new System.Drawing.Size(346, 281);
+            this.pctQr.Size = new System.Drawing.Size(323, 281);
             this.pctQr.TabIndex = 44;
             this.pctQr.TabStop = false;
             // 
@@ -385,6 +385,7 @@
             this.gBtnEliminarDispositivo.Size = new System.Drawing.Size(170, 77);
             this.gBtnEliminarDispositivo.TabIndex = 41;
             this.gBtnEliminarDispositivo.Text = "Eliminar";
+            this.gBtnEliminarDispositivo.Click += new System.EventHandler(this.gBtnEliminarDispositivo_Click);
             // 
             // gBtnEditarDispositivo
             // 
@@ -411,6 +412,7 @@
             this.gBtnEditarDispositivo.Size = new System.Drawing.Size(170, 77);
             this.gBtnEditarDispositivo.TabIndex = 40;
             this.gBtnEditarDispositivo.Text = "Editar";
+            this.gBtnEditarDispositivo.Click += new System.EventHandler(this.gBtnEditarDispositivo_Click);
             // 
             // gBtnRegistrarDispositivo
             // 
@@ -560,7 +562,7 @@
             this.dtgvPrint.Location = new System.Drawing.Point(29, 484);
             this.dtgvPrint.Name = "dtgvPrint";
             this.dtgvPrint.ReadOnly = true;
-            this.dtgvPrint.Size = new System.Drawing.Size(801, 281);
+            this.dtgvPrint.Size = new System.Drawing.Size(847, 281);
             this.dtgvPrint.TabIndex = 50;
             this.dtgvPrint.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPrint_CellClick);
             // 
@@ -571,9 +573,9 @@
             this.gLblIdInventarioEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.gLblIdInventarioEquipo.Location = new System.Drawing.Point(24, 768);
             this.gLblIdInventarioEquipo.Name = "gLblIdInventarioEquipo";
-            this.gLblIdInventarioEquipo.Size = new System.Drawing.Size(155, 25);
+            this.gLblIdInventarioEquipo.Size = new System.Drawing.Size(0, 25);
             this.gLblIdInventarioEquipo.TabIndex = 51;
-            this.gLblIdInventarioEquipo.Text = "Obs.  Equipo:";
+            this.gLblIdInventarioEquipo.Visible = false;
             // 
             // frmPrintUp
             // 

@@ -16,10 +16,10 @@ namespace Impresoras.Models
 
         public mdlAsignacionPrint() { }
         //Metodo para Registrar 
-        public bool insertAssignPrint(dtDetallesAsignacion dtDetailsAssignPrint)
+        public bool insertAssignPrint(dtDetallesAsignacion dtAssign)
         {
             string Query = string.Format("INSERT INTO detalleasignacion (idInventarioEquipo,idRegion,fechaAsignacion)" +
-                                         "VALUES({0},{1},'{2}')",dtDetailsAssignPrint.IdInventarioEquipo,dtDetailsAssignPrint.IdRegion,dtDetailsAssignPrint.FechaAsignacion);
+                                         "VALUES({0},{1},'{2}')", dtAssign.IdInventarioEquipo, dtAssign.IdRegion, dtAssign.FechaAsignacion);
 
             //MySqlCommand
             try

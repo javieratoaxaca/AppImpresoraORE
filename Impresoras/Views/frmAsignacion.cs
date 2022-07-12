@@ -17,11 +17,11 @@ namespace Impresoras.Views
         mdRegion mdlRegion;
         dtRegion dtRegiones;
         mdImpresora mdPrint;
-        dtImpresora dtImpresora;
+        dtImpresora dtPrint;
         mdlAsignacionPrint mdlAssign;
         dtDetallesAsignacion dtAssign;
-        int intPrint;
-        int intRegion;
+        int IdPrint;
+        int IdRegion;
         string fechAsignacion;
         string intIdEquipoSerie;
 
@@ -31,7 +31,7 @@ namespace Impresoras.Views
             mdlRegion = new mdRegion();
             dtRegiones = new dtRegion();
             mdPrint = new mdImpresora();
-            dtImpresora = new dtImpresora();
+            dtPrint = new dtImpresora();
             mdlAssign = new mdlAsignacionPrint();
             dtAssign = new dtDetallesAsignacion();
             mdlRegion.llenarCmbxRegion(gcmbxRegion);
@@ -47,8 +47,13 @@ namespace Impresoras.Views
 
         private void gcmbxPrint_SelectedIndexChanged(object sender, EventArgs e)
         {
-            gLbl.Text = gcmbxPrint.SelectedIndex.ToString();
-            intPrint = int.Parse( gLbl.Text);
+            string serie;
+            gLblItem.Text = gcmbxPrint.SelectedItem.ToString(); 
+            serie = gLblItem.Text;
+            dtPrint = mdPrint.GetPrint(serie);
+            gLblId.Text= Convert.ToString(dtPrint.IdInventarioEquipo);
+            IdPrint = Convert.ToInt32( gLblId.Text);
+            
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
@@ -59,8 +64,12 @@ namespace Impresoras.Views
         }
         private void gcmbxRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            gLblSare.Text = gcmbxRegion.SelectedIndex.ToString();
-            intRegion =int.Parse(gLblSare.Text.ToString());
+            // string sare;
+            gLblItemRegion.Text = gcmbxRegion.SelectedIndex.ToString();
+            //sare = gLblItemRegion.Text;
+            //dtRegiones = mdlRegion.GetRegion(Convert.ToInt32(sare));
+            //gLblIdRegion.Text = Convert.ToString( dtRegiones.IdRegion);
+            IdRegion = Convert.ToInt32(gLblItemRegion.Text);
         }
 
         #region Metodo para Guardar Asignacion
@@ -68,20 +77,43 @@ namespace Impresoras.Views
         {
             
             int status = 2;
+            //Seccion para tomar el valor del idInventarioEquipo 
+            string serie;
+            gLblItem.Text = gcmbxPrint.SelectedItem.ToString(); 
+            serie = gLblItem.Text;
+            dtPrint = mdPrint.GetPrint(serie);
+            gLblId.Text = Convert.ToString(dtPrint.IdInventarioEquipo);
+            IdPrint = Convert.ToInt32(gLblId.Text);
+            //Seccion para tomar el valor del idRegion 
+            /*string sare;
+            gLblItemRegion.Text = gcmbxRegion.SelectedIndex.ToString();
+            sare = gLblItemRegion.Text;
+            dtRegiones = mdlRegion.GetRegion(Convert.ToInt32(sare));
+            gLblIdRegion.Text = Convert.ToString(dtRegiones.IdRegion);
+            IdRegion = Convert.ToInt32(gLblIdRegion.Text);*/
+
+
             try
             {
-                //dtImpresora dtImpresora = new dtImpresora();
-                dtAssign.IdRegion = intRegion;
-                dtAssign.IdInventarioEquipo = intPrint;
+                
+                //los datos que se guardaran en la tabla de Detalleasignacion
+                dtAssign.IdRegion = IdRegion;
+                dtAssign.IdInventarioEquipo = IdPrint;
                 dtAssign.FechaAsignacion = fechAsignacion;
-                dtImpresora.EstadoEquipo = status;
+
+                // los datos que se actualizaran en la tabla de inventarioequipo
+                dtPrint.EstadoEquipo = status;
+          
+                
 
                 // if (!mdlAssign. .ExistePrint(dtImpresora.SerieEquipo))
                // {
-                    if (mdlAssign.insertAssignPrint(dtAssign) && mdPrint.UpdatePrintStatus(dtImpresora,dtAssign))
+                    if (mdlAssign.insertAssignPrint(dtAssign) && mdPrint.UpdatePrintStatus(dtPrint, dtAssign))
                     {
                         MessageBox.Show("Se Guardo Exitosamente");
                         mdlAssign.llenargrid(dtgvAssignDetails);
+                        mdlRegion.llenarCmbxRegion(gcmbxRegion);
+                        mdPrint.llenarCmbxPrint(gcmbxPrint);
                     // scInventario.llenargridInv(dtgvInventario);
                 }
                 //}
@@ -110,13 +142,13 @@ namespace Impresoras.Views
             try
             {
 
-                dtImpresora.IdInventarioEquipo = Convert.ToInt32(intIdEquipoSerie);
-                dtImpresora.EstadoEquipo = status;
+                dtPrint.IdInventarioEquipo = Convert.ToInt32(intIdEquipoSerie);
+                dtPrint.EstadoEquipo = status;
 
 
-                if (mdlAssign.UpdatePrintStatusAssign(dtImpresora))
+                if (mdlAssign.UpdatePrintStatusAssign(dtPrint))
                 {
-                    MessageBox.Show("Se Guardo Exitosamente U");
+                    MessageBox.Show("Gracias por la Devolucion");
                     mdlAssign.llenargrid(dtgvAssignDetails);
 
                 }
@@ -147,12 +179,15 @@ namespace Impresoras.Views
         {
             saveAssignPrint();
             mdlAssign.llenargrid(dtgvAssignDetails);
+            mdPrint.llenarCmbxPrint(gcmbxPrint);
+            
         }
 
         private void gBtnReturnPrint_Click(object sender, EventArgs e)
         {
             returnAssignPrint();
             mdlAssign.llenargrid(dtgvAssignDetails);
+            mdPrint.llenarCmbxPrint(gcmbxPrint);
         }
 
         private void dtgvAssignDetails_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -162,5 +197,7 @@ namespace Impresoras.Views
             gLblEquipoSerie.Text = dtAssign.IdInventarioEquipo.ToString();
             
         }
+
+        
     }
 }
