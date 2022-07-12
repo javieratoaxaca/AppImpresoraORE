@@ -219,6 +219,7 @@ namespace Impresoras.Views
             intIdInventarioEquipo = dtgvPrint.CurrentRow.Cells[0].Value.ToString();
             gLblIdInventarioEquipo.Text = intIdInventarioEquipo;
             gBtnEditarDispositivo.Enabled = true;
+
             /*intIdEquipoSerie = dtgvAssignDetails.CurrentRow.Cells[4].Value.ToString();
             dtAssign.IdInventarioEquipo = Convert.ToInt32(intIdEquipoSerie.ToString());
             gLblEquipoSerie.Text = dtAssign.IdInventarioEquipo.ToString();*/

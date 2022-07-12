@@ -28,16 +28,16 @@ namespace Impresoras.Models
 
                 while (dr.Read())
                 {
-                    /*dtProducto.codbarras = dr["CodBarras"].ToString();
-                    dtProducto.nombreproducto = dr["NombreProducto"].ToString();
-                    dtProducto.descripcion = dr["descripcion"].ToString();
-                    dtProducto.tipounidad = dr["TipoUnidad"].ToString();
-                    dtProducto.preciocosto = Convert.ToSingle(dr["PrecioCosto"]);
-                    dtProducto.precioventa = Convert.ToSingle(dr["PrecioVenta"]);
-                    dtProducto.preciomayoreo = Convert.ToSingle(dr["PrecioMayoreo"]);
-                    dtProducto.preciomenudeo = Convert.ToSingle(dr["PrecioMenudeo"]);
-                    dtProducto.cantproducto = Convert.ToSingle(dr["CantidadProducto"]);
-                    dtProducto.deptocategoria = Convert.ToInt16(dr["IdDeptoCatego"]);*/
+                    dtPrint.IdInventarioEquipo = Convert.ToInt32(dr["idInventarioEquipo"].ToString());
+                    dtPrint.NumeroEquipo = dr["numEquipo"].ToString();
+                    dtPrint.NombreEquipo = dr["nombreEquipo"].ToString();
+                    dtPrint.SerieEquipo = dr["serieEquipo"].ToString();
+                    dtPrint.MarcaEquipo = dr["marcaEquipo"].ToString();
+                    dtPrint.ModeloEquipo = dr["modeloEquipo"].ToString();
+                    dtPrint.ObsEquipo = dr["obsEquipo"].ToString();
+                    dtPrint.EstadoEquipo = Convert.ToInt32(dr["statusEquipo"].ToString());
+                    dtPrint.FechaAlta = dr["fechaRegistro"].ToString();
+                    dtPrint.ImgQr = dr["imgQr"].ToString();
 
                 }
             }
