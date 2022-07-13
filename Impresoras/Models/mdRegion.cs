@@ -14,13 +14,13 @@ namespace Impresoras.Models
         public mdRegion() { }
 
         //Metodo para lectura de los datos de la tabla de Region
-        public dtRegion GetRegion(int sare)
+        public dtRegion GetRegion(string sare)
         {
 
             dtRegion dtRegion = new dtRegion();
             try
             {
-                string Query = string.Format("SELECT * FROM region  where idSare like {0}", sare);
+                string Query = string.Format("SELECT * FROM region  where sare like '{0}'", sare);
                 // MySqlDataReader dr = GetDataTabla(Query);
                 MySqlDataReader dr = GetDataReader(Query);
 
@@ -44,8 +44,6 @@ namespace Impresoras.Models
                     dtRegion.Sare = dr["telefono"].ToString();
                     dtRegion.Sare = dr["latitud"].ToString();
                     dtRegion.Sare = dr["longitud"].ToString();
-
-
 
                 }
             }
@@ -147,7 +145,7 @@ namespace Impresoras.Models
 
                 while (dr.Read())
                 {
-                    cmb.Items.Add(dr[3].ToString());
+                    cmb.Items.Add(dr[4].ToString());
                     //cmb.Items.Add(dr[3].ToString() +" -- " +  dr[4].ToString());
                     //cmb.Items.Add(dr[2].ToString())
 

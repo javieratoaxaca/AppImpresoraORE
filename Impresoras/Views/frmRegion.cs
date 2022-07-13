@@ -16,7 +16,7 @@ namespace Impresoras.Views
             dtRegiones=new dtRegion();
             txtCajasDesactivadas();
             btnDesactivados();
-         
+            mdlRegion.llenarGrid(dtgvRegiones);
         }
 
         #region Cajas

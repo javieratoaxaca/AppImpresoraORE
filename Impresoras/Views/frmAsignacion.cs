@@ -64,12 +64,12 @@ namespace Impresoras.Views
         }
         private void gcmbxRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // string sare;
-            gLblItemRegion.Text = gcmbxRegion.SelectedIndex.ToString();
-            //sare = gLblItemRegion.Text;
-            //dtRegiones = mdlRegion.GetRegion(Convert.ToInt32(sare));
-            //gLblIdRegion.Text = Convert.ToString( dtRegiones.IdRegion);
-            IdRegion = Convert.ToInt32(gLblItemRegion.Text);
+            string sare;
+            gLblItemRegion.Text = gcmbxRegion.SelectedItem.ToString();
+            sare = gLblItemRegion.Text;
+            dtRegiones = mdlRegion.GetRegion(sare);
+            gLblIdRegion.Text = Convert.ToString( dtRegiones.IdRegion);
+            IdRegion = Convert.ToInt32(gLblIdRegion.Text);
         }
 
         #region Metodo para Guardar Asignacion
@@ -85,12 +85,12 @@ namespace Impresoras.Views
             gLblId.Text = Convert.ToString(dtPrint.IdInventarioEquipo);
             IdPrint = Convert.ToInt32(gLblId.Text);
             //Seccion para tomar el valor del idRegion 
-            /*string sare;
-            gLblItemRegion.Text = gcmbxRegion.SelectedIndex.ToString();
+            string sare;
+            gLblItemRegion.Text = gcmbxRegion.SelectedItem.ToString();
             sare = gLblItemRegion.Text;
-            dtRegiones = mdlRegion.GetRegion(Convert.ToInt32(sare));
+            dtRegiones = mdlRegion.GetRegion(sare);
             gLblIdRegion.Text = Convert.ToString(dtRegiones.IdRegion);
-            IdRegion = Convert.ToInt32(gLblIdRegion.Text);*/
+            IdRegion = Convert.ToInt32(gLblIdRegion.Text);
 
 
             try
