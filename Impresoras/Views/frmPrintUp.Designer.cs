@@ -399,7 +399,7 @@
             this.gBtnEditarDispositivo.FocusedColor = System.Drawing.Color.Empty;
             this.gBtnEditarDispositivo.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBtnEditarDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnEditarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_edit_60px;
+            this.gBtnEditarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_edit_file_100px;
             this.gBtnEditarDispositivo.ImageSize = new System.Drawing.Size(40, 40);
             this.gBtnEditarDispositivo.Location = new System.Drawing.Point(1035, 272);
             this.gBtnEditarDispositivo.Name = "gBtnEditarDispositivo";
@@ -426,7 +426,7 @@
             this.gBtnRegistrarDispositivo.FocusedColor = System.Drawing.Color.Empty;
             this.gBtnRegistrarDispositivo.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBtnRegistrarDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnRegistrarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_add_new_48px;
+            this.gBtnRegistrarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_edit_60px;
             this.gBtnRegistrarDispositivo.ImageSize = new System.Drawing.Size(40, 40);
             this.gBtnRegistrarDispositivo.Location = new System.Drawing.Point(1035, 75);
             this.gBtnRegistrarDispositivo.Name = "gBtnRegistrarDispositivo";
@@ -453,7 +453,7 @@
             this.gBtnGuardarDispositivo.FocusedColor = System.Drawing.Color.Empty;
             this.gBtnGuardarDispositivo.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBtnGuardarDispositivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnGuardarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_add_new_48px;
+            this.gBtnGuardarDispositivo.Image = global::Impresoras.Properties.Resources.icons8_save_48px_1;
             this.gBtnGuardarDispositivo.ImageSize = new System.Drawing.Size(40, 40);
             this.gBtnGuardarDispositivo.Location = new System.Drawing.Point(1035, 75);
             this.gBtnGuardarDispositivo.Name = "gBtnGuardarDispositivo";

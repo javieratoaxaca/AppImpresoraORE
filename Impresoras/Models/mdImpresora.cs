@@ -1,20 +1,14 @@
 ﻿using System;
-
 using MySql.Data.MySqlClient;
-
 using System.Data;
 using System.Windows.Forms;
-
 using Impresoras.Data;
 
 namespace Impresoras.Models
 {
     class mdImpresora:Config.DBImpresora
     {
-        
         public mdImpresora() { }
-
-        
         //Metodo para lectura de los datos de la tabla de InventarioEquipo
         public dtImpresora GetPrint(string serie)
         {
@@ -48,7 +42,6 @@ namespace Impresoras.Models
             }
             return dtPrint;
         }
-
         //Metodo para insertar los datos a la base de datos 
         public bool insertImpresora(dtImpresora dtPrint) {
 
@@ -76,8 +69,6 @@ namespace Impresoras.Models
 
             return false;
         }
-
-
         //Metodo para saber si existe una impresora
         public bool ExistePrint(string serie)
         {
@@ -139,6 +130,7 @@ namespace Impresoras.Models
 
             return false;
         }
+        //Metodo para Actualizar el Estado de la Impresora como Baja=0 simulando que es un borrado del registro
         public bool UpdatePrintStatusDelete(dtImpresora dtPrint)
         {
             string Query = string.Format("UPDATE inventarioequipo SET statusEquipo={0} and fechaRegistro='{1}' Where serieEquipo='{2}'", dtPrint.EstadoEquipo,dtPrint.FechaAlta,dtPrint.SerieEquipo );
@@ -156,7 +148,6 @@ namespace Impresoras.Models
 
             return false;
         }
-
         //Metodo para Buscar un dato en la Base 
         public void cargaGridBuscador(DataGridView grid, string txtBuscar)
         {
@@ -178,9 +169,7 @@ namespace Impresoras.Models
                 throw new Exception(ex.Message);
             }
         }
-
-
-        //Metodo para llenar el DataGridView
+        //Metodo para llenar el DataGridView con todos los Estados Baja=0, Activo=1, Asignado=2
         public void llenargridAll(DataGridView grid)
         {
             try
@@ -199,7 +188,7 @@ namespace Impresoras.Models
             }
 
         }
-
+        //metodo para llenar el GridGridView con el Estado del Equipo = 1
         public void llenargridOne(DataGridView grid)
         {
             try
@@ -218,7 +207,6 @@ namespace Impresoras.Models
             }
 
         }
-
         //Metodo para llenar el ComboBox
         public void llenarCmbxPrint(ComboBox cmb)
 
@@ -249,5 +237,7 @@ namespace Impresoras.Models
             }
 
         }
+
+     
     }
 }

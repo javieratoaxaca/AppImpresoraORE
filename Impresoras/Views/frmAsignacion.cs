@@ -68,7 +68,7 @@ namespace Impresoras.Views
             gLblItemRegion.Text = gcmbxRegion.SelectedItem.ToString();
             sare = gLblItemRegion.Text;
             dtRegiones = mdlRegion.GetRegion(sare);
-            gLblIdRegion.Text = Convert.ToString( dtRegiones.IdRegion);
+            gLblIdRegion.Text = Convert.ToString(dtRegiones.IdRegion);
             IdRegion = Convert.ToInt32(gLblIdRegion.Text);
         }
 
@@ -188,6 +188,7 @@ namespace Impresoras.Views
             returnAssignPrint();
             mdlAssign.llenargrid(dtgvAssignDetails);
             mdPrint.llenarCmbxPrint(gcmbxPrint);
+           // mdPrint.llenarCmbxPrint(gcmbxPrint);
         }
 
         private void dtgvAssignDetails_CellClick(object sender, DataGridViewCellEventArgs e)

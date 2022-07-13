@@ -12,7 +12,7 @@ namespace Impresoras.Data
         int idEdo;
         string estado;
 
-        int idSare;
+        string idSare;
         string sare;
         
         string cveOfiLocalidad;
@@ -71,7 +71,7 @@ namespace Impresoras.Data
             }
         }
 
-        public int IdSare
+        public string IdSare
         {
             get
             {

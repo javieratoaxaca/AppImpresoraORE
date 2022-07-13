@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPrueba = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel19 = new Guna.UI.WinForms.GunaLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gunaLabel18 = new Guna.UI.WinForms.GunaLabel();
@@ -72,6 +73,8 @@
             this.gTxtTelefono = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel17 = new Guna.UI.WinForms.GunaLabel();
             this.gTxtLongitud = new Guna.UI.WinForms.GunaTextBox();
+            this.gBtnGenExcel = new Guna.UI.WinForms.GunaButton();
+            this.gBtnGenPdf = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRegiones)).BeginInit();
@@ -79,14 +82,26 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblPrueba);
             this.panel1.Controls.Add(this.gunaLabel19);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1305, 47);
-            this.panel1.TabIndex = 5;
+            this.panel1.Size = new System.Drawing.Size(1252, 47);
+            this.panel1.TabIndex = 0;
+            // 
+            // lblPrueba
+            // 
+            this.lblPrueba.AutoSize = true;
+            this.lblPrueba.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrueba.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.lblPrueba.Location = new System.Drawing.Point(18, 9);
+            this.lblPrueba.Name = "lblPrueba";
+            this.lblPrueba.Size = new System.Drawing.Size(40, 25);
+            this.lblPrueba.TabIndex = 21;
+            this.lblPrueba.Text = "->:";
             // 
             // gunaLabel19
             // 
@@ -96,7 +111,7 @@
             this.gunaLabel19.Location = new System.Drawing.Point(423, 9);
             this.gunaLabel19.Name = "gunaLabel19";
             this.gunaLabel19.Size = new System.Drawing.Size(355, 25);
-            this.gunaLabel19.TabIndex = 89;
+            this.gunaLabel19.TabIndex = 0;
             this.gunaLabel19.Text = "SEDE DE ATENCION REGIONAL";
             // 
             // panel3
@@ -199,22 +214,24 @@
             this.dtgvRegiones.AllowUserToAddRows = false;
             this.dtgvRegiones.AllowUserToDeleteRows = false;
             this.dtgvRegiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvRegiones.Location = new System.Drawing.Point(23, 528);
+            this.dtgvRegiones.Location = new System.Drawing.Point(23, 486);
             this.dtgvRegiones.Name = "dtgvRegiones";
             this.dtgvRegiones.ReadOnly = true;
-            this.dtgvRegiones.Size = new System.Drawing.Size(1236, 281);
-            this.dtgvRegiones.TabIndex = 70;
+            this.dtgvRegiones.Size = new System.Drawing.Size(1221, 282);
+            this.dtgvRegiones.TabIndex = 0;
+            this.dtgvRegiones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvRegiones_CellClick);
             // 
             // gTxtDomicilioSare
             // 
             this.gTxtDomicilioSare.BackColor = System.Drawing.Color.Transparent;
             this.gTxtDomicilioSare.BaseColor = System.Drawing.Color.White;
             this.gTxtDomicilioSare.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtDomicilioSare.BorderSize = 3;
             this.gTxtDomicilioSare.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtDomicilioSare.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtDomicilioSare.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtDomicilioSare.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtDomicilioSare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtDomicilioSare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtDomicilioSare.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtDomicilioSare.Location = new System.Drawing.Point(144, 270);
             this.gTxtDomicilioSare.Multiline = true;
@@ -223,7 +240,7 @@
             this.gTxtDomicilioSare.Radius = 15;
             this.gTxtDomicilioSare.SelectedText = "";
             this.gTxtDomicilioSare.Size = new System.Drawing.Size(417, 121);
-            this.gTxtDomicilioSare.TabIndex = 69;
+            this.gTxtDomicilioSare.TabIndex = 11;
             // 
             // gunaLabel8
             // 
@@ -233,7 +250,7 @@
             this.gunaLabel8.Location = new System.Drawing.Point(562, 282);
             this.gunaLabel8.Name = "gunaLabel8";
             this.gunaLabel8.Size = new System.Drawing.Size(96, 25);
-            this.gunaLabel8.TabIndex = 67;
+            this.gunaLabel8.TabIndex = 0;
             this.gunaLabel8.Text = "Horario:";
             // 
             // gBtnEliminarRegion
@@ -250,7 +267,7 @@
             this.gBtnEliminarRegion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gBtnEliminarRegion.Image = global::Impresoras.Properties.Resources.icons8_delete_file_48px;
             this.gBtnEliminarRegion.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnEliminarRegion.Location = new System.Drawing.Point(926, 425);
+            this.gBtnEliminarRegion.Location = new System.Drawing.Point(652, 406);
             this.gBtnEliminarRegion.Name = "gBtnEliminarRegion";
             this.gBtnEliminarRegion.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gBtnEliminarRegion.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
@@ -258,9 +275,10 @@
             this.gBtnEliminarRegion.OnHoverImage = null;
             this.gBtnEliminarRegion.OnPressedColor = System.Drawing.Color.Black;
             this.gBtnEliminarRegion.Radius = 10;
-            this.gBtnEliminarRegion.Size = new System.Drawing.Size(151, 74);
-            this.gBtnEliminarRegion.TabIndex = 64;
+            this.gBtnEliminarRegion.Size = new System.Drawing.Size(172, 74);
+            this.gBtnEliminarRegion.TabIndex = 19;
             this.gBtnEliminarRegion.Text = "Eliminar";
+            this.gBtnEliminarRegion.Click += new System.EventHandler(this.gBtnEliminarRegion_Click);
             // 
             // gBtnEditarregion
             // 
@@ -274,9 +292,9 @@
             this.gBtnEditarregion.FocusedColor = System.Drawing.Color.Empty;
             this.gBtnEditarregion.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBtnEditarregion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnEditarregion.Image = global::Impresoras.Properties.Resources.icons8_edit_60px;
+            this.gBtnEditarregion.Image = global::Impresoras.Properties.Resources.icons8_edit_file_100px;
             this.gBtnEditarregion.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnEditarregion.Location = new System.Drawing.Point(698, 425);
+            this.gBtnEditarregion.Location = new System.Drawing.Point(443, 406);
             this.gBtnEditarregion.Name = "gBtnEditarregion";
             this.gBtnEditarregion.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gBtnEditarregion.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
@@ -284,9 +302,10 @@
             this.gBtnEditarregion.OnHoverImage = null;
             this.gBtnEditarregion.OnPressedColor = System.Drawing.Color.Black;
             this.gBtnEditarregion.Radius = 10;
-            this.gBtnEditarregion.Size = new System.Drawing.Size(151, 74);
-            this.gBtnEditarregion.TabIndex = 63;
+            this.gBtnEditarregion.Size = new System.Drawing.Size(172, 74);
+            this.gBtnEditarregion.TabIndex = 18;
             this.gBtnEditarregion.Text = "Editar";
+            this.gBtnEditarregion.Click += new System.EventHandler(this.gBtnEditarregion_Click);
             // 
             // gBtnRegistrarRegion
             // 
@@ -300,9 +319,9 @@
             this.gBtnRegistrarRegion.FocusedColor = System.Drawing.Color.Empty;
             this.gBtnRegistrarRegion.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBtnRegistrarRegion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnRegistrarRegion.Image = global::Impresoras.Properties.Resources.icons8_add_new_48px;
+            this.gBtnRegistrarRegion.Image = global::Impresoras.Properties.Resources.icons8_edit_60px;
             this.gBtnRegistrarRegion.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnRegistrarRegion.Location = new System.Drawing.Point(241, 425);
+            this.gBtnRegistrarRegion.Location = new System.Drawing.Point(23, 406);
             this.gBtnRegistrarRegion.Name = "gBtnRegistrarRegion";
             this.gBtnRegistrarRegion.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gBtnRegistrarRegion.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
@@ -310,8 +329,8 @@
             this.gBtnRegistrarRegion.OnHoverImage = null;
             this.gBtnRegistrarRegion.OnPressedColor = System.Drawing.Color.Black;
             this.gBtnRegistrarRegion.Radius = 10;
-            this.gBtnRegistrarRegion.Size = new System.Drawing.Size(154, 74);
-            this.gBtnRegistrarRegion.TabIndex = 61;
+            this.gBtnRegistrarRegion.Size = new System.Drawing.Size(172, 74);
+            this.gBtnRegistrarRegion.TabIndex = 16;
             this.gBtnRegistrarRegion.Text = "Registrar";
             this.gBtnRegistrarRegion.Click += new System.EventHandler(this.gBtnRegistrarRegion_Click);
             // 
@@ -320,11 +339,12 @@
             this.gTxtHorario.BackColor = System.Drawing.Color.Transparent;
             this.gTxtHorario.BaseColor = System.Drawing.Color.White;
             this.gTxtHorario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtHorario.BorderSize = 3;
             this.gTxtHorario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtHorario.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtHorario.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtHorario.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtHorario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtHorario.Location = new System.Drawing.Point(681, 270);
             this.gTxtHorario.Name = "gTxtHorario";
@@ -332,18 +352,19 @@
             this.gTxtHorario.Radius = 15;
             this.gTxtHorario.SelectedText = "";
             this.gTxtHorario.Size = new System.Drawing.Size(223, 50);
-            this.gTxtHorario.TabIndex = 60;
+            this.gTxtHorario.TabIndex = 12;
             // 
             // gTxtLatitud
             // 
             this.gTxtLatitud.BackColor = System.Drawing.Color.Transparent;
             this.gTxtLatitud.BaseColor = System.Drawing.Color.White;
             this.gTxtLatitud.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtLatitud.BorderSize = 3;
             this.gTxtLatitud.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtLatitud.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtLatitud.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtLatitud.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtLatitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtLatitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtLatitud.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtLatitud.Location = new System.Drawing.Point(681, 341);
             this.gTxtLatitud.Name = "gTxtLatitud";
@@ -351,18 +372,19 @@
             this.gTxtLatitud.Radius = 15;
             this.gTxtLatitud.SelectedText = "";
             this.gTxtLatitud.Size = new System.Drawing.Size(223, 50);
-            this.gTxtLatitud.TabIndex = 59;
+            this.gTxtLatitud.TabIndex = 14;
             // 
             // gTxtLocalidad
             // 
             this.gTxtLocalidad.BackColor = System.Drawing.Color.Transparent;
             this.gTxtLocalidad.BaseColor = System.Drawing.Color.White;
             this.gTxtLocalidad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtLocalidad.BorderSize = 3;
             this.gTxtLocalidad.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtLocalidad.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtLocalidad.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtLocalidad.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtLocalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtLocalidad.Location = new System.Drawing.Point(1001, 127);
             this.gTxtLocalidad.Name = "gTxtLocalidad";
@@ -370,18 +392,19 @@
             this.gTxtLocalidad.Radius = 15;
             this.gTxtLocalidad.SelectedText = "";
             this.gTxtLocalidad.Size = new System.Drawing.Size(243, 50);
-            this.gTxtLocalidad.TabIndex = 58;
+            this.gTxtLocalidad.TabIndex = 7;
             // 
             // gTxtCveInegi
             // 
             this.gTxtCveInegi.BackColor = System.Drawing.Color.Transparent;
             this.gTxtCveInegi.BaseColor = System.Drawing.Color.White;
             this.gTxtCveInegi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtCveInegi.BorderSize = 3;
             this.gTxtCveInegi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtCveInegi.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtCveInegi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtCveInegi.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtCveInegi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtCveInegi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtCveInegi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtCveInegi.Location = new System.Drawing.Point(1001, 63);
             this.gTxtCveInegi.Name = "gTxtCveInegi";
@@ -389,7 +412,7 @@
             this.gTxtCveInegi.Radius = 15;
             this.gTxtCveInegi.SelectedText = "";
             this.gTxtCveInegi.Size = new System.Drawing.Size(243, 50);
-            this.gTxtCveInegi.TabIndex = 57;
+            this.gTxtCveInegi.TabIndex = 3;
             // 
             // gunaLabel7
             // 
@@ -399,7 +422,7 @@
             this.gunaLabel7.Location = new System.Drawing.Point(18, 322);
             this.gunaLabel7.Name = "gunaLabel7";
             this.gunaLabel7.Size = new System.Drawing.Size(115, 25);
-            this.gunaLabel7.TabIndex = 56;
+            this.gunaLabel7.TabIndex = 0;
             this.gunaLabel7.Text = "Domicilio:";
             // 
             // gunaLabel6
@@ -410,7 +433,7 @@
             this.gunaLabel6.Location = new System.Drawing.Point(567, 354);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(91, 25);
-            this.gunaLabel6.TabIndex = 55;
+            this.gunaLabel6.TabIndex = 0;
             this.gunaLabel6.Text = "Latitud:";
             // 
             // gunaLabel4
@@ -421,7 +444,7 @@
             this.gunaLabel4.Location = new System.Drawing.Point(855, 76);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(125, 25);
-            this.gunaLabel4.TabIndex = 54;
+            this.gunaLabel4.TabIndex = 0;
             this.gunaLabel4.Text = "Cve. Inegi:";
             // 
             // gunaLabel3
@@ -432,7 +455,7 @@
             this.gunaLabel3.Location = new System.Drawing.Point(874, 141);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(121, 25);
-            this.gunaLabel3.TabIndex = 53;
+            this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Localidad:";
             // 
             // gunaLabel1
@@ -443,7 +466,7 @@
             this.gunaLabel1.Location = new System.Drawing.Point(18, 76);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(94, 25);
-            this.gunaLabel1.TabIndex = 52;
+            this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Id Sare:";
             // 
             // gTxtIdSare
@@ -451,11 +474,12 @@
             this.gTxtIdSare.BackColor = System.Drawing.Color.Transparent;
             this.gTxtIdSare.BaseColor = System.Drawing.Color.White;
             this.gTxtIdSare.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtIdSare.BorderSize = 3;
             this.gTxtIdSare.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtIdSare.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtIdSare.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtIdSare.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtIdSare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtIdSare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtIdSare.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtIdSare.Location = new System.Drawing.Point(120, 63);
             this.gTxtIdSare.Name = "gTxtIdSare";
@@ -463,7 +487,7 @@
             this.gTxtIdSare.Radius = 15;
             this.gTxtIdSare.SelectedText = "";
             this.gTxtIdSare.Size = new System.Drawing.Size(74, 50);
-            this.gTxtIdSare.TabIndex = 51;
+            this.gTxtIdSare.TabIndex = 1;
             // 
             // gBtnGuardarRegion
             // 
@@ -477,9 +501,9 @@
             this.gBtnGuardarRegion.FocusedColor = System.Drawing.Color.Empty;
             this.gBtnGuardarRegion.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBtnGuardarRegion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gBtnGuardarRegion.Image = global::Impresoras.Properties.Resources.icons8_add_new_48px;
+            this.gBtnGuardarRegion.Image = global::Impresoras.Properties.Resources.icons8_save_as_48px;
             this.gBtnGuardarRegion.ImageSize = new System.Drawing.Size(40, 40);
-            this.gBtnGuardarRegion.Location = new System.Drawing.Point(468, 425);
+            this.gBtnGuardarRegion.Location = new System.Drawing.Point(239, 406);
             this.gBtnGuardarRegion.Name = "gBtnGuardarRegion";
             this.gBtnGuardarRegion.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gBtnGuardarRegion.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
@@ -487,8 +511,8 @@
             this.gBtnGuardarRegion.OnHoverImage = null;
             this.gBtnGuardarRegion.OnPressedColor = System.Drawing.Color.Black;
             this.gBtnGuardarRegion.Radius = 10;
-            this.gBtnGuardarRegion.Size = new System.Drawing.Size(154, 74);
-            this.gBtnGuardarRegion.TabIndex = 62;
+            this.gBtnGuardarRegion.Size = new System.Drawing.Size(172, 74);
+            this.gBtnGuardarRegion.TabIndex = 17;
             this.gBtnGuardarRegion.Text = "Guardar";
             this.gBtnGuardarRegion.Click += new System.EventHandler(this.gBtnGuardarRegion_Click);
             // 
@@ -497,11 +521,12 @@
             this.gTxtNameSare.BackColor = System.Drawing.Color.Transparent;
             this.gTxtNameSare.BaseColor = System.Drawing.Color.White;
             this.gTxtNameSare.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtNameSare.BorderSize = 3;
             this.gTxtNameSare.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtNameSare.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtNameSare.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtNameSare.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtNameSare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtNameSare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtNameSare.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtNameSare.Location = new System.Drawing.Point(366, 63);
             this.gTxtNameSare.Name = "gTxtNameSare";
@@ -509,7 +534,7 @@
             this.gTxtNameSare.Radius = 15;
             this.gTxtNameSare.SelectedText = "";
             this.gTxtNameSare.Size = new System.Drawing.Size(458, 50);
-            this.gTxtNameSare.TabIndex = 72;
+            this.gTxtNameSare.TabIndex = 2;
             // 
             // gunaLabel9
             // 
@@ -519,7 +544,7 @@
             this.gunaLabel9.Location = new System.Drawing.Point(219, 76);
             this.gunaLabel9.Name = "gunaLabel9";
             this.gunaLabel9.Size = new System.Drawing.Size(141, 25);
-            this.gunaLabel9.TabIndex = 71;
+            this.gunaLabel9.TabIndex = 0;
             this.gunaLabel9.Text = "Nom. SARE:";
             // 
             // gTxtMunicipio
@@ -527,11 +552,12 @@
             this.gTxtMunicipio.BackColor = System.Drawing.Color.Transparent;
             this.gTxtMunicipio.BaseColor = System.Drawing.Color.White;
             this.gTxtMunicipio.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtMunicipio.BorderSize = 3;
             this.gTxtMunicipio.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtMunicipio.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtMunicipio.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtMunicipio.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtMunicipio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtMunicipio.Location = new System.Drawing.Point(394, 127);
             this.gTxtMunicipio.Name = "gTxtMunicipio";
@@ -539,7 +565,7 @@
             this.gTxtMunicipio.Radius = 15;
             this.gTxtMunicipio.SelectedText = "";
             this.gTxtMunicipio.Size = new System.Drawing.Size(221, 50);
-            this.gTxtMunicipio.TabIndex = 76;
+            this.gTxtMunicipio.TabIndex = 5;
             // 
             // gunaLabel10
             // 
@@ -549,7 +575,7 @@
             this.gunaLabel10.Location = new System.Drawing.Point(265, 141);
             this.gunaLabel10.Name = "gunaLabel10";
             this.gunaLabel10.Size = new System.Drawing.Size(120, 25);
-            this.gunaLabel10.TabIndex = 75;
+            this.gunaLabel10.TabIndex = 0;
             this.gunaLabel10.Text = "Municipio:";
             // 
             // gunaLabel11
@@ -560,7 +586,7 @@
             this.gunaLabel11.Location = new System.Drawing.Point(18, 141);
             this.gunaLabel11.Name = "gunaLabel11";
             this.gunaLabel11.Size = new System.Drawing.Size(175, 25);
-            this.gunaLabel11.TabIndex = 74;
+            this.gunaLabel11.TabIndex = 0;
             this.gunaLabel11.Text = "Cve. Municipio:";
             // 
             // gTxtCveMun
@@ -568,11 +594,12 @@
             this.gTxtCveMun.BackColor = System.Drawing.Color.Transparent;
             this.gTxtCveMun.BaseColor = System.Drawing.Color.White;
             this.gTxtCveMun.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtCveMun.BorderSize = 3;
             this.gTxtCveMun.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtCveMun.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtCveMun.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtCveMun.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtCveMun.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtCveMun.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtCveMun.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtCveMun.Location = new System.Drawing.Point(192, 127);
             this.gTxtCveMun.Name = "gTxtCveMun";
@@ -580,18 +607,19 @@
             this.gTxtCveMun.Radius = 15;
             this.gTxtCveMun.SelectedText = "";
             this.gTxtCveMun.Size = new System.Drawing.Size(66, 50);
-            this.gTxtCveMun.TabIndex = 73;
+            this.gTxtCveMun.TabIndex = 4;
             // 
             // gTxtCupo
             // 
             this.gTxtCupo.BackColor = System.Drawing.Color.Transparent;
             this.gTxtCupo.BaseColor = System.Drawing.Color.White;
             this.gTxtCupo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtCupo.BorderSize = 3;
             this.gTxtCupo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtCupo.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtCupo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtCupo.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtCupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtCupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtCupo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtCupo.Location = new System.Drawing.Point(96, 189);
             this.gTxtCupo.Name = "gTxtCupo";
@@ -599,7 +627,7 @@
             this.gTxtCupo.Radius = 15;
             this.gTxtCupo.SelectedText = "";
             this.gTxtCupo.Size = new System.Drawing.Size(127, 50);
-            this.gTxtCupo.TabIndex = 80;
+            this.gTxtCupo.TabIndex = 8;
             // 
             // gunaLabel12
             // 
@@ -609,7 +637,7 @@
             this.gunaLabel12.Location = new System.Drawing.Point(16, 205);
             this.gunaLabel12.Name = "gunaLabel12";
             this.gunaLabel12.Size = new System.Drawing.Size(74, 25);
-            this.gunaLabel12.TabIndex = 79;
+            this.gunaLabel12.TabIndex = 0;
             this.gunaLabel12.Text = "Cupo:";
             // 
             // gunaLabel13
@@ -620,7 +648,7 @@
             this.gunaLabel13.Location = new System.Drawing.Point(617, 141);
             this.gunaLabel13.Name = "gunaLabel13";
             this.gunaLabel13.Size = new System.Drawing.Size(176, 25);
-            this.gunaLabel13.TabIndex = 78;
+            this.gunaLabel13.TabIndex = 0;
             this.gunaLabel13.Text = "Cve. Localidad:";
             // 
             // gTxtCveLoc
@@ -628,11 +656,12 @@
             this.gTxtCveLoc.BackColor = System.Drawing.Color.Transparent;
             this.gTxtCveLoc.BaseColor = System.Drawing.Color.White;
             this.gTxtCveLoc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtCveLoc.BorderSize = 3;
             this.gTxtCveLoc.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtCveLoc.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtCveLoc.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtCveLoc.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtCveLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtCveLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtCveLoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtCveLoc.Location = new System.Drawing.Point(799, 127);
             this.gTxtCveLoc.Name = "gTxtCveLoc";
@@ -640,18 +669,19 @@
             this.gTxtCveLoc.Radius = 15;
             this.gTxtCveLoc.SelectedText = "";
             this.gTxtCveLoc.Size = new System.Drawing.Size(69, 50);
-            this.gTxtCveLoc.TabIndex = 77;
+            this.gTxtCveLoc.TabIndex = 6;
             // 
             // gTxtJefeSare
             // 
             this.gTxtJefeSare.BackColor = System.Drawing.Color.Transparent;
             this.gTxtJefeSare.BaseColor = System.Drawing.Color.White;
             this.gTxtJefeSare.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtJefeSare.BorderSize = 3;
             this.gTxtJefeSare.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtJefeSare.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtJefeSare.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtJefeSare.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtJefeSare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtJefeSare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtJefeSare.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtJefeSare.Location = new System.Drawing.Point(392, 189);
             this.gTxtJefeSare.Name = "gTxtJefeSare";
@@ -659,7 +689,7 @@
             this.gTxtJefeSare.Radius = 15;
             this.gTxtJefeSare.SelectedText = "";
             this.gTxtJefeSare.Size = new System.Drawing.Size(386, 50);
-            this.gTxtJefeSare.TabIndex = 82;
+            this.gTxtJefeSare.TabIndex = 9;
             // 
             // gunaLabel14
             // 
@@ -669,7 +699,7 @@
             this.gunaLabel14.Location = new System.Drawing.Point(234, 205);
             this.gunaLabel14.Name = "gunaLabel14";
             this.gunaLabel14.Size = new System.Drawing.Size(156, 25);
-            this.gunaLabel14.TabIndex = 81;
+            this.gunaLabel14.TabIndex = 0;
             this.gunaLabel14.Text = "Responsable:";
             // 
             // gTxtEmailSare
@@ -677,11 +707,12 @@
             this.gTxtEmailSare.BackColor = System.Drawing.Color.Transparent;
             this.gTxtEmailSare.BaseColor = System.Drawing.Color.White;
             this.gTxtEmailSare.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtEmailSare.BorderSize = 3;
             this.gTxtEmailSare.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtEmailSare.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtEmailSare.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtEmailSare.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtEmailSare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtEmailSare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtEmailSare.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtEmailSare.Location = new System.Drawing.Point(879, 189);
             this.gTxtEmailSare.Name = "gTxtEmailSare";
@@ -689,7 +720,7 @@
             this.gTxtEmailSare.Radius = 15;
             this.gTxtEmailSare.SelectedText = "";
             this.gTxtEmailSare.Size = new System.Drawing.Size(365, 50);
-            this.gTxtEmailSare.TabIndex = 84;
+            this.gTxtEmailSare.TabIndex = 10;
             // 
             // gunaLabel15
             // 
@@ -699,7 +730,7 @@
             this.gunaLabel15.Location = new System.Drawing.Point(796, 205);
             this.gunaLabel15.Name = "gunaLabel15";
             this.gunaLabel15.Size = new System.Drawing.Size(77, 25);
-            this.gunaLabel15.TabIndex = 83;
+            this.gunaLabel15.TabIndex = 0;
             this.gunaLabel15.Text = "Email:";
             // 
             // gunaLabel16
@@ -710,7 +741,7 @@
             this.gunaLabel16.Location = new System.Drawing.Point(920, 282);
             this.gunaLabel16.Name = "gunaLabel16";
             this.gunaLabel16.Size = new System.Drawing.Size(111, 25);
-            this.gunaLabel16.TabIndex = 86;
+            this.gunaLabel16.TabIndex = 0;
             this.gunaLabel16.Text = "Telefono:";
             // 
             // gTxtTelefono
@@ -718,11 +749,12 @@
             this.gTxtTelefono.BackColor = System.Drawing.Color.Transparent;
             this.gTxtTelefono.BaseColor = System.Drawing.Color.White;
             this.gTxtTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtTelefono.BorderSize = 3;
             this.gTxtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtTelefono.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtTelefono.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtTelefono.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtTelefono.Location = new System.Drawing.Point(1037, 270);
             this.gTxtTelefono.Name = "gTxtTelefono";
@@ -730,7 +762,7 @@
             this.gTxtTelefono.Radius = 15;
             this.gTxtTelefono.SelectedText = "";
             this.gTxtTelefono.Size = new System.Drawing.Size(207, 50);
-            this.gTxtTelefono.TabIndex = 85;
+            this.gTxtTelefono.TabIndex = 13;
             // 
             // gunaLabel17
             // 
@@ -740,7 +772,7 @@
             this.gunaLabel17.Location = new System.Drawing.Point(921, 354);
             this.gunaLabel17.Name = "gunaLabel17";
             this.gunaLabel17.Size = new System.Drawing.Size(110, 25);
-            this.gunaLabel17.TabIndex = 88;
+            this.gunaLabel17.TabIndex = 0;
             this.gunaLabel17.Text = "Longitud:";
             // 
             // gTxtLongitud
@@ -748,11 +780,12 @@
             this.gTxtLongitud.BackColor = System.Drawing.Color.Transparent;
             this.gTxtLongitud.BaseColor = System.Drawing.Color.White;
             this.gTxtLongitud.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gTxtLongitud.BorderSize = 3;
             this.gTxtLongitud.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gTxtLongitud.FocusedBaseColor = System.Drawing.Color.White;
             this.gTxtLongitud.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.gTxtLongitud.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
-            this.gTxtLongitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gTxtLongitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTxtLongitud.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
             this.gTxtLongitud.Location = new System.Drawing.Point(1037, 341);
             this.gTxtLongitud.Name = "gTxtLongitud";
@@ -760,14 +793,70 @@
             this.gTxtLongitud.Radius = 15;
             this.gTxtLongitud.SelectedText = "";
             this.gTxtLongitud.Size = new System.Drawing.Size(207, 50);
-            this.gTxtLongitud.TabIndex = 87;
+            this.gTxtLongitud.TabIndex = 15;
+            // 
+            // gBtnGenExcel
+            // 
+            this.gBtnGenExcel.AnimationHoverSpeed = 0.07F;
+            this.gBtnGenExcel.AnimationSpeed = 0.03F;
+            this.gBtnGenExcel.BackColor = System.Drawing.Color.Transparent;
+            this.gBtnGenExcel.BaseColor = System.Drawing.Color.White;
+            this.gBtnGenExcel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gBtnGenExcel.BorderSize = 2;
+            this.gBtnGenExcel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gBtnGenExcel.FocusedColor = System.Drawing.Color.Empty;
+            this.gBtnGenExcel.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBtnGenExcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnGenExcel.Image = global::Impresoras.Properties.Resources.icons8_xls_export_48px;
+            this.gBtnGenExcel.ImageSize = new System.Drawing.Size(40, 40);
+            this.gBtnGenExcel.Location = new System.Drawing.Point(859, 409);
+            this.gBtnGenExcel.Name = "gBtnGenExcel";
+            this.gBtnGenExcel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gBtnGenExcel.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnGenExcel.OnHoverForeColor = System.Drawing.Color.White;
+            this.gBtnGenExcel.OnHoverImage = null;
+            this.gBtnGenExcel.OnPressedColor = System.Drawing.Color.Black;
+            this.gBtnGenExcel.Radius = 10;
+            this.gBtnGenExcel.Size = new System.Drawing.Size(172, 71);
+            this.gBtnGenExcel.TabIndex = 59;
+            this.gBtnGenExcel.Text = "Generar Excel";
+            this.gBtnGenExcel.Click += new System.EventHandler(this.gBtnGenExcel_Click);
+            // 
+            // gBtnGenPdf
+            // 
+            this.gBtnGenPdf.AnimationHoverSpeed = 0.07F;
+            this.gBtnGenPdf.AnimationSpeed = 0.03F;
+            this.gBtnGenPdf.BackColor = System.Drawing.Color.Transparent;
+            this.gBtnGenPdf.BaseColor = System.Drawing.Color.White;
+            this.gBtnGenPdf.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(143)))), ((int)(((byte)(84)))));
+            this.gBtnGenPdf.BorderSize = 2;
+            this.gBtnGenPdf.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gBtnGenPdf.FocusedColor = System.Drawing.Color.Empty;
+            this.gBtnGenPdf.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBtnGenPdf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnGenPdf.Image = global::Impresoras.Properties.Resources.icons8_export_pdf_60px;
+            this.gBtnGenPdf.ImageSize = new System.Drawing.Size(40, 40);
+            this.gBtnGenPdf.Location = new System.Drawing.Point(1068, 409);
+            this.gBtnGenPdf.Name = "gBtnGenPdf";
+            this.gBtnGenPdf.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.gBtnGenPdf.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(2)))), ((int)(((byte)(32)))));
+            this.gBtnGenPdf.OnHoverForeColor = System.Drawing.Color.White;
+            this.gBtnGenPdf.OnHoverImage = null;
+            this.gBtnGenPdf.OnPressedColor = System.Drawing.Color.Black;
+            this.gBtnGenPdf.Radius = 10;
+            this.gBtnGenPdf.Size = new System.Drawing.Size(172, 71);
+            this.gBtnGenPdf.TabIndex = 58;
+            this.gBtnGenPdf.Text = "Generar Pdf";
+            this.gBtnGenPdf.Click += new System.EventHandler(this.gBtnGenPdf_Click);
             // 
             // frmRegion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1305, 834);
+            this.ClientSize = new System.Drawing.Size(1252, 774);
+            this.Controls.Add(this.gBtnGenExcel);
+            this.Controls.Add(this.gBtnGenPdf);
             this.Controls.Add(this.gunaLabel17);
             this.Controls.Add(this.gTxtLongitud);
             this.Controls.Add(this.gunaLabel16);
@@ -863,5 +952,8 @@
         private Guna.UI.WinForms.GunaTextBox gTxtTelefono;
         private Guna.UI.WinForms.GunaLabel gunaLabel17;
         private Guna.UI.WinForms.GunaTextBox gTxtLongitud;
+        private Guna.UI.WinForms.GunaLabel lblPrueba;
+        private Guna.UI.WinForms.GunaButton gBtnGenExcel;
+        private Guna.UI.WinForms.GunaButton gBtnGenPdf;
     }
 }

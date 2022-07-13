@@ -1,9 +1,7 @@
 ﻿using System;
-using MySql.Data.MySqlClient;
-
 using System.Data;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 using Impresoras.Data;
 using Impresoras.Config;
 
@@ -12,15 +10,14 @@ namespace Impresoras.Models
     class mdRegion:DBImpresora
     {
         public mdRegion() { }
-
         //Metodo para lectura de los datos de la tabla de Region
-        public dtRegion GetRegion(string sare)
+        public dtRegion GetRegion(string sareregion)
         {
 
             dtRegion dtRegion = new dtRegion();
             try
             {
-                string Query = string.Format("SELECT * FROM region  where sare like '{0}'", sare);
+                string Query = string.Format("SELECT * FROM region  where idSare like '{0}'", sareregion);
                 // MySqlDataReader dr = GetDataTabla(Query);
                 MySqlDataReader dr = GetDataReader(Query);
 
@@ -29,7 +26,7 @@ namespace Impresoras.Models
                     dtRegion.IdRegion = Convert.ToInt32(dr["idRegion"].ToString());
                     dtRegion.IdEdo= Convert.ToInt32(dr["idEdo"].ToString());
                     dtRegion.Estado = dr["estado"].ToString();
-                    dtRegion.IdSare= Convert.ToInt32(dr["idSare"].ToString());
+                    dtRegion.IdSare= dr["idSare"].ToString();
                     dtRegion.Sare = dr["sare"].ToString();
                     dtRegion.CveOfiLocalidad = dr["cveOfiLocalidad"].ToString();
                     dtRegion.CveMun = dr["cveMun"].ToString();
@@ -37,13 +34,13 @@ namespace Impresoras.Models
                     dtRegion.CveLocalidad = dr["cveLocalidad"].ToString();
                     dtRegion.Localidad = dr["localidad"].ToString();
                     dtRegion.Cupo = Convert.ToInt32(dr["cupo"].ToString());
-                    dtRegion.Sare = dr["jefeSare"].ToString();
-                    dtRegion.Sare = dr["email"].ToString();
-                    dtRegion.Sare = dr["domicilio"].ToString();
-                    dtRegion.Sare = dr["horario"].ToString();
-                    dtRegion.Sare = dr["telefono"].ToString();
-                    dtRegion.Sare = dr["latitud"].ToString();
-                    dtRegion.Sare = dr["longitud"].ToString();
+                    dtRegion.JefeSare = dr["jefeSare"].ToString();
+                    dtRegion.Email = dr["email"].ToString();
+                    dtRegion.Domicilio = dr["domicilio"].ToString();
+                    dtRegion.Horario = dr["horario"].ToString();
+                    dtRegion.Telefono = dr["telefono"].ToString();
+                    dtRegion.Latitud = dr["latitud"].ToString();
+                    dtRegion.Longitud = dr["longitud"].ToString();
 
                 }
             }
@@ -54,7 +51,6 @@ namespace Impresoras.Models
             }
             return dtRegion;
         }
-
         //Metodo para insertar Datos 
         public bool insertRegiones(dtRegion dtRegiones) {
             string query = string.Format("INSERT INTO region (idEdo,estado,idSare,sare,cveOfiLocalidad,cveMun,municipio,cveLocalidad,localidad,cupo,jefeSare,email,domicilio,horario,telefono,latitud,longitud) VALUES ({0},'{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}',{9},'{10}','{11}','{12}','{13}','{14}','{15}','{16}')",
@@ -90,9 +86,59 @@ namespace Impresoras.Models
             }
             return false;
         }
+        //Metodo para Actualizar la Region
+        public bool UpdateRegion(dtRegion dtRegiones)
+        {
+            string Query = string.Format("UPDATE region SET sare='{0}',cveOfiLocalidad='{1}',cveMun='{2}',municipio='{3}',cveLocalidad='{4}',localidad='{5}',cupo={6},jefeSare='{7}' , email='{8}',domicilio='{9}', horario='{10}',telefono='{11}', latitud ='{12}', longitud='{13}' WHERE idSare like {14}",
+            dtRegiones.Sare,
+            dtRegiones.CveOfiLocalidad,
+            dtRegiones.CveMun,
+            dtRegiones.Municipio,
+            dtRegiones.CveLocalidad,
+            dtRegiones.Localidad,
+            dtRegiones.Cupo,
+            dtRegiones.JefeSare,
+            dtRegiones.Email,
+            dtRegiones.Domicilio,
+            dtRegiones.Horario,
+            dtRegiones.Telefono,
+            dtRegiones.Latitud,
+            dtRegiones.Longitud,
+            dtRegiones.IdSare);
+            try
+            {
+                int result = ExecuteQuery(Query);
+                if (result > 0)
 
-        //Metodo para saber si existe una impresora
-        public bool existeRegion(int sare)
+                    return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return false;
+        }
+        //Metodo para Eliminar la Region
+        public bool deleteRegion(string sareregion)
+        {
+            string Query = string.Format("DELETE from region  WHERE idSare like '{0}' ", sareregion);
+            try
+            {
+                int result = ExecuteQuery(Query);
+                if (result > 0)
+
+                    return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return false;
+        }
+        //Metodo para saber si existe una Region Duplicada
+        public bool existeRegion(string sare)
         {
 
             dtRegion dtRegiones = new dtRegion ();
@@ -108,7 +154,6 @@ namespace Impresoras.Models
                 throw new Exception(ex.Message);
             }
         }
-
         //Metodo para llenar el DataGridView
         public void llenarGrid(DataGridView grid)
         {
@@ -128,9 +173,7 @@ namespace Impresoras.Models
             }
 
         }
-
-        ///Metodos para Llenar el Combobox de Region 
-        ///
+        //Metodos para Llenar el Combobox de Region 
         public void llenarCmbxRegion(ComboBox cmb)
 
         {

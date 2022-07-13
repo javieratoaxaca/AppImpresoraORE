@@ -1,19 +1,13 @@
 ﻿using System;
-
 using MySql.Data.MySqlClient;
-
 using System.Data;
 using System.Windows.Forms;
 using Impresoras.Data;
-
-
 
 namespace Impresoras.Models
 {
     class mdlAsignacionPrint : Config.DBImpresora
     {
-
-
         public mdlAsignacionPrint() { }
         //Metodo para Registrar 
         public bool insertAssignPrint(dtDetallesAsignacion dtAssign)
@@ -39,7 +33,6 @@ namespace Impresoras.Models
 
             return false;
         }
-
         //Metodo para Llenar el DataGridView con los Datos 
         public void llenargrid(DataGridView grid)
         {
@@ -59,7 +52,6 @@ namespace Impresoras.Models
             }
 
         }
-
         //Metodo para actualizar el estado de la impresora cuando se recupera su valor
         public bool UpdatePrintStatusAssign(dtImpresora dtPrint)
         {
