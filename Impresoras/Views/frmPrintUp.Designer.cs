@@ -332,6 +332,7 @@
             this.pctQr.Size = new System.Drawing.Size(323, 281);
             this.pctQr.TabIndex = 44;
             this.pctQr.TabStop = false;
+            this.pctQr.Click += new System.EventHandler(this.pctQr_Click);
             // 
             // gBtnQrDispositivo
             // 

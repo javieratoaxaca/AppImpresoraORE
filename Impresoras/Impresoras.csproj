@@ -90,6 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\clsImagen.cs" />
     <Compile Include="Config\DBImpresora.cs" />
     <Compile Include="Data\dtAccesorios.cs" />
     <Compile Include="Data\dtDetallesAsignacion.cs" />

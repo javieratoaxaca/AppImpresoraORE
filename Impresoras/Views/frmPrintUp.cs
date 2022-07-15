@@ -239,6 +239,8 @@ namespace Impresoras.Views
            imgIn.Save(ms, ImageFormat.Png);
            return ms.ToArray();
        }*/
+
+  
         #endregion
 
         private void gBtnRegistrarDispositivo_Click(object sender, EventArgs e)
@@ -260,26 +262,7 @@ namespace Impresoras.Views
         //Seccion para Generar el Qr
         private void gBtnQrDispositivo_Click(object sender, EventArgs e)
         {
-            //Primer Modo para Generar el QR
-            /*
-               QrEncoder qrEncoder = new QrEncoder(ErrorCorrectionLevel.H);
-               QrCode qrCode = new QrCode();
-               qrEncoder.TryEncode(gTxtNoEquipo.Text.Trim() + "\n" + gTxtNomEquipo.Text.Trim() + "\n" + gTxtSerieEquipo.Text.Trim() + "\n" + gTxtMarcaEquipo.Text.Trim() + "\n" + gTxtModeloEquipo.Text.Trim(),out qrCode);
-
-               GraphicsRenderer renderer = new GraphicsRenderer(new FixedCodeSize(400, QuietZoneModules.Zero), Brushes.Black, Brushes.White);
-
-               MemoryStream ms = new MemoryStream();
-               renderer.WriteToStream(qrCode.Matrix,ImageFormat.Png,ms);
-
-               var imgTmp = new Bitmap(ms);
-               var img = new Bitmap(imgTmp, new Size(new Point(346,281)));
-
-               pctQr.Image = img;
-               img.Save(ms, ImageFormat.Png);
-               aByte = ms.ToArray();
-               encoded = Convert.ToBase64String(aByte);*/
-            
-            // Segundo modo para Generar el QR pero no guarda en la Base de Datos
+           
             Bitmap img;
             MemoryStream ms = new MemoryStream();
             BarcodeWriter QrWriter = new BarcodeWriter();
@@ -333,5 +316,32 @@ namespace Impresoras.Views
             btnDesActivados();
 
         }
+
+        private void pctQr_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+
+//Primer Modo para Generar el QR
+/*
+   QrEncoder qrEncoder = new QrEncoder(ErrorCorrectionLevel.H);
+   QrCode qrCode = new QrCode();
+   qrEncoder.TryEncode(gTxtNoEquipo.Text.Trim() + "\n" + gTxtNomEquipo.Text.Trim() + "\n" + gTxtSerieEquipo.Text.Trim() + "\n" + gTxtMarcaEquipo.Text.Trim() + "\n" + gTxtModeloEquipo.Text.Trim(),out qrCode);
+
+   GraphicsRenderer renderer = new GraphicsRenderer(new FixedCodeSize(400, QuietZoneModules.Zero), Brushes.Black, Brushes.White);
+
+   MemoryStream ms = new MemoryStream();
+   renderer.WriteToStream(qrCode.Matrix,ImageFormat.Png,ms);
+
+   var imgTmp = new Bitmap(ms);
+   var img = new Bitmap(imgTmp, new Size(new Point(346,281)));
+
+   pctQr.Image = img;
+   img.Save(ms, ImageFormat.Png);
+   aByte = ms.ToArray();
+   encoded = Convert.ToBase64String(aByte);*/
+
+// Segundo modo para Generar el QR pero no guarda en la Base de Datos
