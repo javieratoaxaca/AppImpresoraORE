@@ -1,10 +1,12 @@
 ﻿using System.IO;
 using System.Drawing.Imaging;
 using System.Drawing;
+using System;
+using System.Windows.Forms;
 
 namespace Impresoras.Config
 {
-    class clsImagen
+    public class clsImagen
     {
         //Byte a Img
         public static MemoryStream byteToImg(byte [] array)
@@ -17,9 +19,10 @@ namespace Impresoras.Config
         public static byte [] imgToByte(Image imgIn)
         {
             MemoryStream ms = new MemoryStream();
-            imgIn.Save(ms, ImageFormat.Jpeg);
-
+            imgIn.Save(ms, ImageFormat.Png);
             return ms.ToArray();
         }
+
+        
     }
 }

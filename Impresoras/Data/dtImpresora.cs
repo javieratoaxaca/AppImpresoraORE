@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 namespace Impresoras.Data
 {
     class dtImpresora
@@ -17,10 +17,10 @@ namespace Impresoras.Data
         int estadoEquipo;
         string fechaAlta;
         string obsEquipo;
-        string imgQr;
+        PictureBox imgQr;
 
 
-        public string ImgQr
+        public PictureBox ImgQr
         {
             get
             {

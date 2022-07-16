@@ -327,9 +327,9 @@
             // 
             // pctQr
             // 
-            this.pctQr.Location = new System.Drawing.Point(882, 484);
+            this.pctQr.Location = new System.Drawing.Point(964, 484);
             this.pctQr.Name = "pctQr";
-            this.pctQr.Size = new System.Drawing.Size(323, 281);
+            this.pctQr.Size = new System.Drawing.Size(241, 281);
             this.pctQr.TabIndex = 44;
             this.pctQr.TabStop = false;
             this.pctQr.Click += new System.EventHandler(this.pctQr_Click);
@@ -563,7 +563,7 @@
             this.dtgvPrint.Location = new System.Drawing.Point(29, 484);
             this.dtgvPrint.Name = "dtgvPrint";
             this.dtgvPrint.ReadOnly = true;
-            this.dtgvPrint.Size = new System.Drawing.Size(847, 281);
+            this.dtgvPrint.Size = new System.Drawing.Size(929, 281);
             this.dtgvPrint.TabIndex = 50;
             this.dtgvPrint.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPrint_CellClick);
             // 
@@ -609,6 +609,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrintUp";
             this.Text = "frmPrintUp";
+            this.Load += new System.EventHandler(this.frmPrintUp_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);

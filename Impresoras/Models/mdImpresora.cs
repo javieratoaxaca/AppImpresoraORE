@@ -3,12 +3,18 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Windows.Forms;
 using Impresoras.Data;
+using Impresoras.Config;
 
 namespace Impresoras.Models
 {
     class mdImpresora:Config.DBImpresora
     {
-        public mdImpresora() { }
+
+        
+        public mdImpresora() {
+           
+            
+        }
         //Metodo para lectura de los datos de la tabla de InventarioEquipo
         public dtImpresora GetPrint(string serie)
         {
@@ -31,7 +37,7 @@ namespace Impresoras.Models
                     dtPrint.ObsEquipo = dr["obsEquipo"].ToString();
                     dtPrint.EstadoEquipo = Convert.ToInt32(dr["statusEquipo"].ToString());
                     dtPrint.FechaAlta = dr["fechaRegistro"].ToString();
-                    dtPrint.ImgQr = dr["imgQr"].ToString();
+                   // dtPrint.ImgQr = dr["imgQr"].ToString();
 
                 }
             }
@@ -42,14 +48,15 @@ namespace Impresoras.Models
             }
             return dtPrint;
         }
+
         //Metodo para insertar los datos a la base de datos 
         public bool insertImpresora(dtImpresora dtPrint) {
-
+            byte[] mifoto = clsImagen.imgToByte(dtPrint.ImgQr.Image);
             string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
                                          "modeloEquipo,obsEquipo,statusEquipo,fechaRegistro,imgQr) " +
                                          "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}','{8}')",
                                          dtPrint.NumeroEquipo,dtPrint.NombreEquipo,dtPrint.SerieEquipo,dtPrint.MarcaEquipo, 
-                                         dtPrint.ModeloEquipo, dtPrint.ObsEquipo,dtPrint.EstadoEquipo,dtPrint.FechaAlta,dtPrint.ImgQr);
+                                         dtPrint.ModeloEquipo, dtPrint.ObsEquipo,dtPrint.EstadoEquipo,dtPrint.FechaAlta,mifoto);
 
             //MySqlCommand
             try
@@ -188,8 +195,31 @@ namespace Impresoras.Models
             }
 
         }
+        public DataTable llenargridOne()
+        {
+            DataTable table = new DataTable();
+            try
+            {
+                string qry = "select idInventarioEquipo as Id,numEquipo as Num_Equipo, nombreEquipo as Nombre_Equipo,serieEquipo as Serie_Equipo,marcaEquipo as Marca_Equipo,modeloEquipo as Modelo_Equipo,obsEquipo as Observaciones,fechaRegistro as Fecha_Alta,imgQr as Imagen from inventarioequipo where statusEquipo=1 ";
+                MySqlCommand Query2 = new MySqlCommand(qry, getConnection());
+                MySqlDataAdapter da = new MySqlDataAdapter(Query2);
+
+                da.Fill(table);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return table;
+        }
+
+
+
+
         //metodo para llenar el GridGridView con el Estado del Equipo = 1
-        public void llenargridOne(DataGridView grid)
+       /* public void llenargridOne(DataGridView grid)
         {
             try
             {
@@ -206,7 +236,7 @@ namespace Impresoras.Models
                 throw new Exception(ex.Message);
             }
 
-        }
+        }*/
         //Metodo para llenar el ComboBox
         public void llenarCmbxPrint(ComboBox cmb)
 

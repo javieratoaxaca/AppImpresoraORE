@@ -25,12 +25,14 @@ namespace Impresoras.Views
         string encoded = "";
         string intIdEquipoSerie;
         string serie;
+        Bitmap img;
         public frmPrintUp()
         {
             mdPrint = new mdImpresora();
             dtPrint = new dtImpresora();
             InitializeComponent();
-            mdPrint.llenargridOne(dtgvPrint);
+            
+            //mdPrint.llenargridOne();
             txtCajasDesActivadas();
             btnDesActivados();
         }
@@ -129,9 +131,10 @@ namespace Impresoras.Views
                 dtImpresora.ObsEquipo = gTxtObsEquipo.Text + "\n Siguientes Accesorios: " + accesorios;
                 dtImpresora.EstadoEquipo = status;
                 dtImpresora.FechaAlta = fechaCaptura;
-                dtImpresora.ImgQr = encoded;
+                dtImpresora.ImgQr = pctQr;
 
-                
+
+
                 if (string.IsNullOrEmpty(gTxtNoEquipo.Text) || string.IsNullOrEmpty(gTxtNomEquipo.Text) || string.IsNullOrEmpty(gTxtSerieEquipo.Text) || string.IsNullOrEmpty(gTxtMarcaEquipo.Text) || string.IsNullOrEmpty(gTxtModeloEquipo.Text) || string.IsNullOrEmpty(gTxtObsEquipo.Text))
                 {
                     MessageBox.Show("Debe Completar la información");
@@ -142,7 +145,8 @@ namespace Impresoras.Views
                     if (mdPrint.insertImpresora(dtImpresora))
                     {
                         MessageBox.Show("Se Guardo Exitosamente");
-                        mdPrint.llenargridOne(dtgvPrint);
+                        //mdPrint.llenargridOne();
+                        fillGridView();
                        // scInventario.llenargridInv(dtgvInventario);
                     }
                 }
@@ -151,7 +155,7 @@ namespace Impresoras.Views
                     if (mdPrint.UpdatePrint(dtImpresora))
                     {
                         MessageBox.Show("Se Actualizacion Exitosamente");
-                        mdPrint.llenargridOne(dtgvPrint);
+                       // mdPrint.llenargridOne();
                     }
 
                 }
@@ -189,7 +193,7 @@ namespace Impresoras.Views
                 dtImpresora.ObsEquipo = gTxtObsEquipo.Text + "\n Siguientes Accesorios: " + accesorios;
                 dtImpresora.EstadoEquipo = status;
                 dtImpresora.FechaAlta = fechaCaptura;
-                dtImpresora.ImgQr = encoded;
+                dtImpresora.ImgQr = pctQr;
 
 
                 if (string.IsNullOrEmpty(gTxtNoEquipo.Text) || string.IsNullOrEmpty(gTxtNomEquipo.Text) || string.IsNullOrEmpty(gTxtSerieEquipo.Text) || string.IsNullOrEmpty(gTxtMarcaEquipo.Text) || string.IsNullOrEmpty(gTxtModeloEquipo.Text) || string.IsNullOrEmpty(gTxtObsEquipo.Text))
@@ -211,7 +215,7 @@ namespace Impresoras.Views
                     if (mdPrint.UpdatePrintStatusDelete(dtImpresora))
                     {
                         MessageBox.Show("Se Elimino Exitosamente");
-                        mdPrint.llenargridOne(dtgvPrint);
+                        mdPrint.llenargridOne();
                     }
 
                 }
@@ -222,6 +226,14 @@ namespace Impresoras.Views
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        //Meotod para ver los datos de datagrid
+       private void fillGridView()
+        {
+            dtgvPrint.DataSource = mdPrint.llenargridOne();
+            DataGridViewImageColumn column = (DataGridViewImageColumn)dtgvPrint.Columns[8];
+            column.ImageLayout = DataGridViewImageCellLayout.Stretch;
         }
 
         //Metodos para el manejo de la imagen que se guardara o mostrara en la base de datos
@@ -252,7 +264,7 @@ namespace Impresoras.Views
         private void gBtnGuardarDispositivo_Click(object sender, EventArgs e)
         {
             savePrint();
-            mdPrint.llenargridOne(dtgvPrint);
+            mdPrint.llenargridOne();
             CajasTxtPrintLimpias();
             txtCajasDesActivadas();
             btnDesActivados();
@@ -263,7 +275,7 @@ namespace Impresoras.Views
         private void gBtnQrDispositivo_Click(object sender, EventArgs e)
         {
            
-            Bitmap img;
+            
             MemoryStream ms = new MemoryStream();
             BarcodeWriter QrWriter = new BarcodeWriter();
             QrWriter.Format = BarcodeFormat.QR_CODE;  
@@ -272,8 +284,8 @@ namespace Impresoras.Views
             img = QrWriter.Write(gTxtNoEquipo.Text.Trim() + "\n" + gTxtNomEquipo.Text.Trim() + "\n" + gTxtSerieEquipo.Text.Trim() + "\n" + gTxtMarcaEquipo.Text.Trim() + "\n" + gTxtModeloEquipo.Text.Trim());
             pctQr.Image = img;
             img.Save(ms, ImageFormat.Png);
-            aByte = ms.ToArray();
-            encoded = Convert.ToBase64String(aByte);
+            //aByte = ms.ToArray();
+            //encoded = Convert.ToBase64String(aByte);
         }
 
         private void dtgvPrint_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -320,6 +332,11 @@ namespace Impresoras.Views
         private void pctQr_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmPrintUp_Load(object sender, EventArgs e)
+        {
+            fillGridView();
         }
     }
 }
