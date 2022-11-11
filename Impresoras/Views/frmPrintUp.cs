@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+
 //libreria para Conexion
 using Impresoras.Data;
 using Impresoras.Models;
@@ -232,8 +233,8 @@ namespace Impresoras.Views
        private void fillGridView()
         {
             dtgvPrint.DataSource = mdPrint.llenargridOne();
-            DataGridViewImageColumn column = (DataGridViewImageColumn)dtgvPrint.Columns[8];
-            column.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            //DataGridViewImageColumn column = (DataGridViewImageColumn)dtgvPrint.Columns[8];
+            //column.ImageLayout = DataGridViewImageCellLayout.Stretch;
         }
 
         //Metodos para el manejo de la imagen que se guardara o mostrara en la base de datos
@@ -291,7 +292,7 @@ namespace Impresoras.Views
         private void dtgvPrint_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             serie = dtgvPrint.CurrentRow.Cells[3].Value.ToString();
-            gLblIdInventarioEquipo.Text = serie;
+            gLblIdInventarioEqUIpo.Text = serie;
             gBtnEditarDispositivo.Enabled = true;
             gBtnEliminarDispositivo.Enabled = true;
             dtPrint = mdPrint.GetPrint(serie);
@@ -320,7 +321,7 @@ namespace Impresoras.Views
         private void gBtnEliminarDispositivo_Click(object sender, EventArgs e)
         {
             serie = dtgvPrint.CurrentRow.Cells[3].Value.ToString();
-            gLblIdInventarioEquipo.Text = serie;
+            gLblIdInventarioEqUIpo.Text = serie;
             gBtnEditarDispositivo.Enabled = true;
             savePrintDelete();
             txtCajasDesActivadas();

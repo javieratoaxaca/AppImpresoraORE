@@ -12,7 +12,8 @@ namespace Impresoras.Config
         //Constructor
         public DBImpresora()
         {
-            cnx= "Database=impresora; Data Source=localhost;User id=root;password=oportunidades;";
+            cnx= "Database=impresora; Data Source=localhost;User id=root;password=oportunidades;"; //-->Usuario Local
+           // cnx = "SERVER=192.168.0.85; PORT=3306;DATABASE=impresora;UID=user_ext;PASSWORD=oportunidades;"; // -->Usuario Externo
         }
 
         //Metodo para abrir la conexion 

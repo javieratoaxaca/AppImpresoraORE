@@ -51,12 +51,12 @@ namespace Impresoras.Models
 
         //Metodo para insertar los datos a la base de datos 
         public bool insertImpresora(dtImpresora dtPrint) {
-            byte[] mifoto = clsImagen.imgToByte(dtPrint.ImgQr.Image);
+            //byte[] mifoto = clsImagen.imgToByte(dtPrint.ImgQr.Image);
             string Query = string.Format("INSERT INTO inventarioequipo (numEquipo,nombreEquipo,serieEquipo,marcaEquipo," +
-                                         "modeloEquipo,obsEquipo,statusEquipo,fechaRegistro,imgQr) " +
-                                         "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}','{8}')",
+                                         "modeloEquipo,obsEquipo,statusEquipo,fechaRegistro) " +
+                                         "VALUES('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}')",
                                          dtPrint.NumeroEquipo,dtPrint.NombreEquipo,dtPrint.SerieEquipo,dtPrint.MarcaEquipo, 
-                                         dtPrint.ModeloEquipo, dtPrint.ObsEquipo,dtPrint.EstadoEquipo,dtPrint.FechaAlta,mifoto);
+                                         dtPrint.ModeloEquipo, dtPrint.ObsEquipo,dtPrint.EstadoEquipo,dtPrint.FechaAlta);
 
             //MySqlCommand
             try
@@ -160,7 +160,7 @@ namespace Impresoras.Models
         {
             try
             {
-                string query = string.Format("Select numEquipo,nombreEquipo,serieEquipo,marcaEquipo,modeloEquipo,obsEquipo,fechaRegistro,imgQr From inventarioequipo Where serieEquipo LIKE '%{0}%' OR modeloEquipo LIKE '%{0}%' OR numEquipo LIKE '%{0}%'",txtBuscar);
+                string query = string.Format("Select numEquipo,nombreEquipo,serieEquipo,marcaEquipo,modeloEquipo,obsEquipo,fechaRegistro From inventarioequipo Where serieEquipo LIKE '%{0}%' OR modeloEquipo LIKE '%{0}%' OR numEquipo LIKE '%{0}%'",txtBuscar);
                 MySqlCommand cmd = new MySqlCommand(query, getConnection());
 
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -200,7 +200,7 @@ namespace Impresoras.Models
             DataTable table = new DataTable();
             try
             {
-                string qry = "select idInventarioEquipo as Id,numEquipo as Num_Equipo, nombreEquipo as Nombre_Equipo,serieEquipo as Serie_Equipo,marcaEquipo as Marca_Equipo,modeloEquipo as Modelo_Equipo,obsEquipo as Observaciones,fechaRegistro as Fecha_Alta,imgQr as Imagen from inventarioequipo where statusEquipo=1 ";
+                string qry = "select idInventarioEquipo as Id,numEquipo as Num_Equipo, nombreEquipo as Nombre_Equipo,serieEquipo as Serie_Equipo,marcaEquipo as Marca_Equipo,modeloEquipo as Modelo_Equipo,obsEquipo as Observaciones,fechaRegistro as Fecha_Alta from inventarioequipo where statusEquipo=1 ";
                 MySqlCommand Query2 = new MySqlCommand(qry, getConnection());
                 MySqlDataAdapter da = new MySqlDataAdapter(Query2);
 

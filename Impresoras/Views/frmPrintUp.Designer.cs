@@ -3,7 +3,7 @@
     partial class frmPrintUp
     {
         /// <summary>
-        /// Required designer variable.
+        /// ReqUIred designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
@@ -23,7 +23,7 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
+        /// ReqUIred method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -59,7 +59,7 @@
             this.gChBoxAccesorio1 = new Guna.UI.WinForms.GunaCheckBox();
             this.gTxtObsEquipo = new Guna.UI.WinForms.GunaTextBox();
             this.dtgvPrint = new System.Windows.Forms.DataGridView();
-            this.gLblIdInventarioEquipo = new Guna.UI.WinForms.GunaLabel();
+            this.gLblIdInventarioEqUIpo = new Guna.UI.WinForms.GunaLabel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctQr)).BeginInit();
@@ -212,9 +212,9 @@
             this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.gunaLabel3.Location = new System.Drawing.Point(46, 256);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(154, 25);
+            this.gunaLabel3.Size = new System.Drawing.Size(157, 25);
             this.gunaLabel3.TabIndex = 30;
-            this.gunaLabel3.Text = "Serie Equipo:";
+            this.gunaLabel3.Text = "Serie EqUIpo:";
             // 
             // gunaLabel4
             // 
@@ -223,9 +223,9 @@
             this.gunaLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.gunaLabel4.Location = new System.Drawing.Point(47, 175);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(153, 25);
+            this.gunaLabel4.Size = new System.Drawing.Size(156, 25);
             this.gunaLabel4.TabIndex = 31;
-            this.gunaLabel4.Text = "Nom. Equipo:";
+            this.gunaLabel4.Text = "Nom. EqUIpo:";
             // 
             // gunaLabel6
             // 
@@ -234,9 +234,9 @@
             this.gunaLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.gunaLabel6.Location = new System.Drawing.Point(24, 417);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(176, 25);
+            this.gunaLabel6.Size = new System.Drawing.Size(179, 25);
             this.gunaLabel6.TabIndex = 32;
-            this.gunaLabel6.Text = "Modelo Equipo:";
+            this.gunaLabel6.Text = "Modelo EqUIpo:";
             // 
             // gunaLabel7
             // 
@@ -245,9 +245,9 @@
             this.gunaLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.gunaLabel7.Location = new System.Drawing.Point(36, 339);
             this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(164, 25);
+            this.gunaLabel7.Size = new System.Drawing.Size(167, 25);
             this.gunaLabel7.TabIndex = 33;
-            this.gunaLabel7.Text = "Marca Equipo:";
+            this.gunaLabel7.Text = "Marca EqUIpo:";
             // 
             // gTxtNomEquipo
             // 
@@ -476,9 +476,9 @@
             this.gunaLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.gunaLabel8.Location = new System.Drawing.Point(558, 228);
             this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(155, 25);
+            this.gunaLabel8.Size = new System.Drawing.Size(158, 25);
             this.gunaLabel8.TabIndex = 47;
-            this.gunaLabel8.Text = "Obs.  Equipo:";
+            this.gunaLabel8.Text = "Obs.  EqUIpo:";
             // 
             // gGroupBox
             // 
@@ -567,16 +567,16 @@
             this.dtgvPrint.TabIndex = 50;
             this.dtgvPrint.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPrint_CellClick);
             // 
-            // gLblIdInventarioEquipo
+            // gLblIdInventarioEqUIpo
             // 
-            this.gLblIdInventarioEquipo.AutoSize = true;
-            this.gLblIdInventarioEquipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gLblIdInventarioEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.gLblIdInventarioEquipo.Location = new System.Drawing.Point(24, 768);
-            this.gLblIdInventarioEquipo.Name = "gLblIdInventarioEquipo";
-            this.gLblIdInventarioEquipo.Size = new System.Drawing.Size(0, 25);
-            this.gLblIdInventarioEquipo.TabIndex = 51;
-            this.gLblIdInventarioEquipo.Visible = false;
+            this.gLblIdInventarioEqUIpo.AutoSize = true;
+            this.gLblIdInventarioEqUIpo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gLblIdInventarioEqUIpo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.gLblIdInventarioEqUIpo.Location = new System.Drawing.Point(24, 768);
+            this.gLblIdInventarioEqUIpo.Name = "gLblIdInventarioEqUIpo";
+            this.gLblIdInventarioEqUIpo.Size = new System.Drawing.Size(0, 25);
+            this.gLblIdInventarioEqUIpo.TabIndex = 51;
+            this.gLblIdInventarioEqUIpo.Visible = false;
             // 
             // frmPrintUp
             // 
@@ -584,7 +584,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1217, 804);
-            this.Controls.Add(this.gLblIdInventarioEquipo);
+            this.Controls.Add(this.gLblIdInventarioEqUIpo);
             this.Controls.Add(this.dtgvPrint);
             this.Controls.Add(this.gTxtObsEquipo);
             this.Controls.Add(this.gGroupBox);
@@ -656,6 +656,6 @@
         private Guna.UI.WinForms.GunaCheckBox gChBoxAccesorio1;
         private Guna.UI.WinForms.GunaTextBox gTxtObsEquipo;
         private System.Windows.Forms.DataGridView dtgvPrint;
-        private Guna.UI.WinForms.GunaLabel gLblIdInventarioEquipo;
+        private Guna.UI.WinForms.GunaLabel gLblIdInventarioEqUIpo;
     }
 }
