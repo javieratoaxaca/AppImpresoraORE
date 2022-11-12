@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', 'Segoe UI';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            border: 2px dotted #595756;
+            border-radius: 13px 14px;
+        }
+        .imgn{
+            background-image:url('logo1.png');
+            justify-content:space-around;
+        }
+        .menu {
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', 'Segoe UI';
+            max-width: 1200px;
+            margin: auto;
+            font-size: 14px;
+            margin-top: 20px;
+            border: 1px dotted #ffffff;
+            border-radius: 13px 14px;
+            color: #595756;
+        }
+        td.firma{
+            border: 1px solid #595756;
+            border-radius: 13px 14px;
+            height:150px;
+            width:450px;
+        }
+        td.titulo {
+            margin: 5px 0 5px 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px SOLID #909090;
+            background-color: #DBECE3;
+            color: #595756;
+            width: 140px;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bolder;
+        }
+        table.border tr {
+            margin: 5px;
+            padding: 5px;
+        }
+        table.border th {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 5px;
+            padding: 5px;
+            border: 1px dotted #e8e8e8;
+            border-radius: 15px 15px;
+            background-color: #DBECE3;
+            color: #595756;
+            width: 140px;
+            font-size: 13px;
+            text-align: center;
+        }
+        table.border td {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 5px;
+            padding: 5px;
+            /*border: 1px dotted #e8e8e8;*/
+            color: #595756;
+            border-radius: 15px 15px;
+            text-align: center;
+            width: 150px;
+            font-size: 13px;
+        }   
+    </style>
+</head>
+<body>
+
+    <table style="width:90%" align="center" class="menu">
+        <tr>
+            <td style="width:100% auto;">
+                <table style="width:100%">
+                    <tr>
+                        <th style="width:25%" class="imgn"> 
+                            </th>
+                        <td align="center">Formato de Entrega y Condiciones de Uso de Impresora </td>
+                        <th style="width:25%"><img src="./logo2.png" alt="" /></th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+        <!--Encabezado-->
+
+
+        <!--Asignacion de Region y Fecha -->
+        <table style="width:50%" class="menu" align="right">
+            <tr>
+                <td style="width:20% auto; ">
+                    <table class="border" style="width:100%">
+                        <tr>
+                            <th colspan="4">IdRegión:</th>
+                            <td>@anioBaja</td>
+                            <th>Fecha:</th>
+                            <td colspan="2">@BimBaja</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <!--Cuerpo Detalles-->
+        <table style="width:100%; border-radius:13px 14px;" class="menu">
+            <tr>
+                <td style="width:20% auto; "></td>
+            </tr>
+            <tr>
+                <td>
+                    <span>
+                        El presente hace constar que se asignó la Impresora cuyas características se listan abajo, al usuario:@Usuario con CUPO:@cupo	y Puesto:@Puesto por lo que desde ahora se hace responsable del uso del mismo.
+                    </span>
+                </td>
+            </tr>
+        </table>
+        <!--Seccion de Datos de Impresora-->
+        <table style="width:90%" align="center" class="menu">
+            <tr>
+                <td style="width:100% auto;">
+                    <table class="border" style="width:100%">
+                        <tr>
+                            <td class="titulo" colspan="8">Datos Impresora</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">No. Inventario</th>
+                            <td colspan="2">@NumInventario</td>
+                            <th colspan="2">Marca</th>
+                            <td colspan="2">@MarcaImpresora</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Modelo</th>
+                            <td colspan="2">@ModeloImpresora</td>
+                            <th colspan="2">Serie</th>
+                            <td colspan="2">@SerieImpresora</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table style="width:90%" align="center" class="menu">
+            <tr>
+                <td style="width:100% auto;">
+                    <table class="border" style="width:100%">
+                        <tr>
+                            <td class="titulo" colspan="8">Accesorios de Impresora</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="width:100% auto;">
+                    <table class="border" style="width:100%">
+                        <tr>
+                            <th>Cable Energia</th>
+                            <td></td>
+                            <th>Cable Usb</th>
+                            <td></td>
+                            <th>Cable Energia</th>
+                            <td></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table style="width:100%; border-radius:13px 14px;" class="menu">
+            <tr>
+                <td>
+                    <span>
+                        Condiciones de uso:
+                        <br />
+                    </span>
+                    <span>
+                        1. Este dispositivo  es entregado al usuario para uso exclusivo del cumplimiento del encargo en CNBBBJ
+                        por lo que no deberá ingresar configuraciones personales o utilizarlo para fines no institucionales.
+                        <br />
+                    </span>
+                    <span>
+                        2. El mal uso o pérdida del dispositivo es responsabilidad única y exclusiva del resguardante por lo que deberá dar un trato adecuado y cuidar de no dejarlo en condiciones de clima extremo, ni olvidarlo por descuido.
+                        <br />
+                    </span>
+                    <span>
+                        3. Las condiciones anteriores son para asegurar el cumplimiento a la Ley Federal de Transparencia y Acceso a la Información Pública Gubernamental en el Artículo 20 fracción VI que a la letra dice: "Adoptar las medidas necesarias que garanticen la seguridad de los datos personales y eviten su alteración, pérdida, transmisión y acceso no autorizado", además del Artículo 18 Frac. I y II de la misma Ley, Artículo 38 de la Ley de Información Estadística y Geográfica. Todos ellos referentes a la confidencialidad de la información que se maneja en su Representación Estatal.
+                        <br />
+                    </span>
+                    <span>
+                        4. En caso de robo/extravió del Dispositivo, deberá notificar a su jefe inmediato y realizar el procedimiento establecido.
+                        <br />
+                    </span>
+                    <span>
+                        5. En caso de daño del Dispositivo deberá notificar a su jefe inmediato y realizar procedimiento que se establezca.
+                        <br />
+                    </span>
+                    <span>
+                        6. Es su obligación entregar el Dispositivo una vez que haya dejado de prestar sus servicios a CNBBBJ o cuando le sea solicitado, en caso de no hacerlo, se podrá ejercer acción penal en su contra.
+                        <br />
+                    </span>
+                </td>
+            </tr>
+        </table>
+        <table style="width:90%" align="center" class="menu">
+            <tr>
+                <td style="width:100% auto;">
+                    <table class="border" style="width:100%">
+                        <tr>
+                            <th>Entrega</th>
+                            <td></td>
+                            <th>Recibe</th>
+                        </tr>
+                        <tr>
+                            <td class="firma"></td>
+                            <td></td>
+                            <td class="firma"></td>
+                        </tr>
+                        <tr>
+                            <th>Apoyo </th>
+                            <td></td>
+                            <th>Recibe</th>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+</body>
+</html>

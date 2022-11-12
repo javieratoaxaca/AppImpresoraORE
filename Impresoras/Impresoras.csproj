@@ -122,6 +122,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -154,6 +155,11 @@
     <Compile Include="Models\mdRegion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmAsignacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,14 +192,9 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Views\frmAsignacion.resx">
       <DependentUpon>frmAsignacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,22 +229,22 @@
     <Content Include="Config\Guna.UI.dll" />
     <Content Include="Config\MySql.Data.dll" />
     <Content Include="printer.ico" />
-    <None Include="Resources\icons8_xls_export_48px.png" />
-    <None Include="Resources\icons8_task_48px.png" />
-    <None Include="Resources\icons8_task_24px_1.png" />
-    <None Include="Resources\icons8_return_book_60px.png" />
-    <None Include="Resources\icons8_export_pdf_60px.png" />
-    <None Include="Resources\icons8_qr_code_48px_1.png" />
-    <None Include="Resources\icons8_qr_code_48px.png" />
+    <None Include="Resources\index.html" />
+    <None Include="Resources\logo2.png" />
+    <None Include="Resources\logo1.png" />
     <None Include="Resources\vacuum_cleaner_128px.png" />
     <None Include="Resources\vacuum_cleaner_64px.png" />
     <None Include="Resources\vacuum_cleaner_60px.png" />
     <None Include="Resources\regreso.png" />
+    <None Include="Resources\Perfil.png" />
     <None Include="Resources\min_64px.png" />
     <None Include="Resources\microsoft_excel_52px.png" />
     <None Include="Resources\max_64px.png" />
+    <None Include="Resources\icons8_xls_export_48px.png" />
     <None Include="Resources\icons8_usb_connected_48px.png" />
     <None Include="Resources\icons8_university_100px_1.png" />
+    <None Include="Resources\icons8_task_48px.png" />
+    <None Include="Resources\icons8_task_24px_1.png" />
     <None Include="Resources\icons8_sort_left_52px.png" />
     <None Include="Resources\icons8_sort_left_48px.png" />
     <None Include="Resources\icons8_sort_left_48px - copia.png" />
@@ -257,12 +258,16 @@
     <None Include="Resources\icons8_save_48px_3.png" />
     <None Include="Resources\icons8_save_48px_1.png" />
     <None Include="Resources\icons8_save_48px.png" />
+    <None Include="Resources\icons8_return_book_60px.png" />
+    <None Include="Resources\icons8_qr_code_48px_1.png" />
+    <None Include="Resources\icons8_qr_code_48px.png" />
     <None Include="Resources\icons8_previous_100px_1.png" />
     <None Include="Resources\icons8_previous_100px.png" />
     <None Include="Resources\icons8_previous_52px.png" />
     <None Include="Resources\icons8_next_52px.png" />
     <None Include="Resources\icons8_microsoft_excel_60px.png" />
     <None Include="Resources\icons8_google_web_search_60px.png" />
+    <None Include="Resources\icons8_export_pdf_60px.png" />
     <None Include="Resources\icons8_end_48px_1.png" />
     <None Include="Resources\icons8_end_48px.png" />
     <None Include="Resources\icons8_edit_file_100px.png" />
@@ -287,10 +292,8 @@
     <None Include="Resources\estadisticas.png" />
     <None Include="Resources\disquete.png" />
     <None Include="Resources\add_48px.png" />
-    <None Include="Resources\41QvEmRG0OL.jpg" />
     <None Include="Resources\2022-06-22_10h47_34.jpg" />
-    <None Include="Resources\Perfil.png" />
-    <None Include="Resources\Autodidacta cuadro.ico" />
+    <None Include="Resources\41QvEmRG0OL.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

@@ -201,8 +201,8 @@
             // 
             // pctIconForm
             // 
-            this.pctIconForm.BackgroundImage = global::Impresoras.Properties.Resources.Autodidacta_cuadro;
-            this.pctIconForm.Image = global::Impresoras.Properties.Resources.Autodidacta_cuadro;
+            //this.pctIconForm.BackgroundImage = global::Impresoras.Properties.Resources.Autodidacta_cuadro;
+            //this.pctIconForm.Image = global::Impresoras.Properties.Resources.Autodidacta_cuadro;
             this.pctIconForm.Location = new System.Drawing.Point(4, 3);
             this.pctIconForm.Name = "pctIconForm";
             this.pctIconForm.Size = new System.Drawing.Size(25, 25);

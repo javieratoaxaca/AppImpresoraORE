@@ -65,7 +65,7 @@ namespace Impresoras.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _2022_06_22_10h47_34 {
             get {
-                object obj = ResourceManager.GetObject("2022-06-22_10h47_34", resourceCulture);
+                object obj = ResourceManager.GetObject("_2022_06_22_10h47_34", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace Impresoras.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _41QvEmRG0OL {
             get {
-                object obj = ResourceManager.GetObject("41QvEmRG0OL", resourceCulture);
+                object obj = ResourceManager.GetObject("_41QvEmRG0OL", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,16 +86,6 @@ namespace Impresoras.Properties {
         internal static System.Drawing.Bitmap add_48px {
             get {
                 object obj = ResourceManager.GetObject("add_48px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Autodidacta_cuadro {
-            get {
-                object obj = ResourceManager.GetObject("Autodidacta cuadro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -155,7 +145,7 @@ namespace Impresoras.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap guardar_el_archivo {
             get {
-                object obj = ResourceManager.GetObject("guardar-el-archivo", resourceCulture);
+                object obj = ResourceManager.GetObject("guardar_el_archivo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -515,7 +505,7 @@ namespace Impresoras.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap icons8_skip_to_start_48px___copia {
             get {
-                object obj = ResourceManager.GetObject("icons8_skip_to_start_48px - copia", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_skip_to_start_48px___copia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -525,7 +515,7 @@ namespace Impresoras.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap icons8_skip_to_start_48px___copia1 {
             get {
-                object obj = ResourceManager.GetObject("icons8_skip_to_start_48px - copia1", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_skip_to_start_48px___copia1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -545,7 +535,7 @@ namespace Impresoras.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap icons8_sort_left_48px___copia {
             get {
-                object obj = ResourceManager.GetObject("icons8_sort_left_48px - copia", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_sort_left_48px___copia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -606,6 +596,51 @@ namespace Impresoras.Properties {
         internal static System.Drawing.Bitmap icons8_xls_export_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_xls_export_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!doctype html&gt;
+        ///&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+        ///&lt;head&gt;
+        ///    &lt;style&gt;
+        ///        * {
+        ///            font-family: &apos;Gill Sans&apos;, &apos;Gill Sans MT&apos;, &apos;Trebuchet MS&apos;, &apos;Segoe UI&apos;;
+        ///            margin: 0;
+        ///            padding: 0;
+        ///            box-sizing: border-box;
+        ///        }
+        ///        .container{
+        ///            border: 2px dotted #595756;
+        ///            border-radius: 13px 14px;
+        ///        }
+        ///        .menu {
+        ///            font-family: &apos;Gill Sans&apos;, &apos;Gill Sans MT&apos;, &apos;Trebuchet MS&apos;, &apos;Segoe UI&apos;;
+        ///            ma [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string index {
+            get {
+                return ResourceManager.GetString("index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo1 {
+            get {
+                object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo2 {
+            get {
+                object obj = ResourceManager.GetObject("logo2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

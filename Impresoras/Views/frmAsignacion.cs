@@ -9,6 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Impresoras.Data;
 using Impresoras.Models;
+//Librerias para generar el Pdf
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+
 
 namespace Impresoras.Views
 {
@@ -199,6 +205,40 @@ namespace Impresoras.Views
             
         }
 
-        
+        private void gBtnGenerarPdf_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog guardar = new SaveFileDialog();
+            guardar.FileName = string.Format("Prueba.pdf");
+
+            string paginaHtmlText = Properties.Resources.index.ToString();
+            //string font = Properties.Resources.segoeuil.ToString();
+
+
+            if (guardar.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream fS = new FileStream(guardar.FileName, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.LETTER, 35, 25,35,25);
+                    BaseFont fuente = BaseFont.CreateFont(BaseFont.COURIER, BaseFont.CP1250, true);
+
+
+                    iTextSharp.text.Font fontBody = new iTextSharp.text.Font(fuente, 14f, iTextSharp.text.Font.NORMAL, BaseColor.GRAY);
+                    PdfWriter wt = PdfWriter.GetInstance(pdfDoc, fS);
+
+                    pdfDoc.Open();
+                    pdfDoc.Add(new Phrase("", fontBody));
+                    //pdfDoc.Add(new FontStyle(Properties.Resources.segoeuil));
+
+                    using (StringReader sr = new StringReader(paginaHtmlText))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(wt, pdfDoc, sr);
+                        //XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+
+                    }
+                    pdfDoc.Close();
+                    fS.Close();
+                }
+            }
+        }
     }
 }
